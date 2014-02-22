@@ -1,15 +1,9 @@
-var app = require('http').createServer( function(){ return 'HELLO WORLD'; } );
-
-var io = require( 'socket.io' ).listen( app );
-
-
-app.listen( 9002 );
-
-io.sockets.on( 'connection', function( socket ) {
-  var i = 0;
-  setInterval( function( ){
-    socket.emit( 'default', 'hello ' + i );
-    i++;
-  }, 100);
-
-} );
+var WebSocketServer = require('ws').Server
+var wss = new WebSocketServer({port: 9002});
+wss.on('connection', function(ws) {
+  ws.on('message', function(message) {
+    console.log('received: %s', message);
+    ws.send( 'message' );
+  });
+  ws.send('something');
+});

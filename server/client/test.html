@@ -11,7 +11,7 @@
                         var socket = "p5websocket";
 
                         function ready() {
-                                ws = new WebSocket("ws://192.168.1.122:8080/p5websocket");
+                                ws = new WebSocket("ws://127.0.0.1:9002");
 
                                 ws.onopen = function () {
                                   ws.send('Ping');
