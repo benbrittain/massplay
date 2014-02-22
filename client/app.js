@@ -27,8 +27,8 @@ ws.onopen = function( ){
 }
 
 
-ws.onerror = function( err ){
-  alert( err );
+ws.onerror = function( evt,  err ){
+  alert( 'ERROR' );
 
 }
 
