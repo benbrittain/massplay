@@ -8,11 +8,20 @@ canvas#game {
   background: #DDD;
 }
 
-.game-page#chat {
-	float: right;
+.game-page {
+  padding: 40px none;
 }
 
-.game-page {
-  padding: 40px;
+/* Sidebars for chat and menu */
+.sidebar-offcanvas {
+	background: #333;
+  color: #DDD;
 }
+
+#chat-box{
+	float: right;
+	height: 100%;
+	width: 250px;
+}
+
 
