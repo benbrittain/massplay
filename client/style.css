@@ -2,26 +2,46 @@
  * Style sheet augment for bootstrap template
  */
 
-canvas#game {
-	width: 300px;
- 	height: 300px;
-  background: #DDD;
+body,html {
+	height: 100%;
 }
 
-.game-page {
-  padding: 40px none;
+.container-fluid {
+	height: 100%;
 }
+
+canvas#game {
+	width: 90%;
+ 	height: 300px;
+}
+
+/* for everything after the header nav */
+.row {
+	padding-top: 50px;
+	height: 100%;
+} 
+.game-page {
+  padding: 40px;
+}
+
+/* Game browser sidebar */
+.sidebar {
+	background: #DDD;
+	height: 100%;
+}
+
+/* Controller buttons */
+
+
+/* Chat bar */
+.chat {
+	background: #DDD;
+	height: 100%;
+}
+
 
 /* Sidebars for chat and menu */
-.sidebar-offcanvas {
-	background: #333;
-  color: #DDD;
-}
 
 #chat-box{
-	float: right;
-	height: 100%;
-	width: 250px;
+
 }
-
-
