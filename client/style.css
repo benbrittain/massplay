@@ -1,0 +1,18 @@
+/*
+ * Style sheet augment for bootstrap template
+ */
+
+canvas#game {
+	width: 300px;
+ 	height: 300px;
+  background: #DDD;
+}
+
+.game-page#chat {
+	float: right;
+}
+
+.game-page {
+  padding: 40px;
+}
+
