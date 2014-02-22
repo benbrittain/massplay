@@ -1,0 +1,7 @@
+var io = require( 'socket.io' );
+
+io.sockets.on( 'connection', function( socket ) {
+
+  socket.emit( 'default', 'hello world' );
+
+} );
