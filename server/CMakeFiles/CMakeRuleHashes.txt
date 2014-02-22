@@ -1,0 +1,17 @@
+# Hashes of file build rules.
+8444cd072e1d1c6bbad4064c89112699 po/gvbam/CMakeFiles/translations
+8444cd072e1d1c6bbad4064c89112699 po/gvbam/CMakeFiles/translations_1
+dd04ef26009ae3ceb80c9773543cd949 po/gvbam/ca_ES.gmo
+640300425a07238a27fb327d665cb9cb po/gvbam/cs.gmo
+6eb0df6805e15ae149504899f13aa309 po/gvbam/de.gmo
+79ee4f27ed694580843668cba059d10e po/gvbam/en.gmo
+28c166537a3a4cdfa9f0c7bd97d3f9fd po/gvbam/es_ES.gmo
+dacf0b7e9068348410bd1c6181d1c658 po/gvbam/fr.gmo
+ae2992cef899a2fbd8a92ddf6afd9a25 po/gvbam/it_IT.gmo
+ec5f4249723fca6bcb0c009d775b87f8 po/gvbam/nb.gmo
+ee31f4ef1975458840b928017102aad7 po/gvbam/nl.gmo
+75b458fe58db5c64b26b5536f29b3701 po/gvbam/pl.gmo
+79a21ea8911abcf5065a10cb341675b7 po/gvbam/pt_BR.gmo
+d9ba7ba8e24d7e40359d0b2eeadbf132 po/gvbam/sv.gmo
+18ec759d05efb49553651908b25bc0a7 po/gvbam/zh_CN.gmo
+717010b71e80b2036ed4e37d1df7b799 po/gvbam/zh_TW.gmo
