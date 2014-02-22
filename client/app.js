@@ -27,4 +27,10 @@ ws.onopen = function( ){
 }
 
 
+ws.onerror = function( err ){
+  alert( err );
+
+}
+
+
 console.log( ws );
