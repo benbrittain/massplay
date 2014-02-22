@@ -1,8 +1,7 @@
 {
   "dependencies": {
-    "socket.io": "~0.9.16",
-    "socket.io-client": "~0.9.16",
     "jquery": "~2.1.0",
-    "twitter-bootstrap": "~2.1.1"
+    "twitter-bootstrap": "~2.1.1",
+    "ws": "~0.4.31"
   }
 }

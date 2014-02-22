@@ -1,10 +1,20 @@
-var io = require( 'socket.io-client' );
+var WebSocket;
+try{
+  WebSocket = require('ws');
+}catch( e ){
+  WebSocket = WebSocket; // browser 
+}
 
 
-console.log( io );
-
-var socket = io.connect('http://localhost:9002', {transports: ['websocket']} );
-socket.on( 'default' , function(data){
-  console.log( data );
-
+var ws = new WebSocket( 'http://localhost:9002' );
+ws.on( 'message', function( msg ){
+  console.log( msg );
 });
+
+ws.on( 'open', function(){
+  for( var i = 0; i < 1000;  i++ ){
+    ws.send( 'message....' );
+  }
+});
+
+
