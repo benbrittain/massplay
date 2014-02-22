@@ -1175,7 +1175,7 @@ static INSN_REGPARM void thumb40_1(u32 opcode)
 static INSN_REGPARM void thumb40_2(u32 opcode)
 {
   int dest = opcode & 7;
-  u32 value = reg[(opcode >> 3)&7].B.B0;
+  u32 value = reg[(opcode >> 3)&7].B.xB0;
   if(value) {
     if(value == 32) {
       value = 0;
@@ -1197,7 +1197,7 @@ static INSN_REGPARM void thumb40_2(u32 opcode)
 static INSN_REGPARM void thumb40_3(u32 opcode)
 {
   int dest = opcode & 7;
-  u32 value = reg[(opcode >> 3)&7].B.B0;
+  u32 value = reg[(opcode >> 3)&7].B.xB0;
   if(value) {
     if(value == 32) {
       value = 0;
@@ -1219,7 +1219,7 @@ static INSN_REGPARM void thumb40_3(u32 opcode)
 static INSN_REGPARM void thumb41_0(u32 opcode)
 {
   int dest = opcode & 7;
-  u32 value = reg[(opcode >> 3)&7].B.B0;
+  u32 value = reg[(opcode >> 3)&7].B.xB0;
   if(value) {
     if(value < 32) {
       ASR_RD_RS;
@@ -1259,7 +1259,7 @@ static INSN_REGPARM void thumb41_2(u32 opcode)
 static INSN_REGPARM void thumb41_3(u32 opcode)
 {
   int dest = opcode & 7;
-  u32 value = reg[(opcode >> 3)&7].B.B0;
+  u32 value = reg[(opcode >> 3)&7].B.xB0;
 
   if(value) {
     value = value & 0x1f;
@@ -1526,7 +1526,7 @@ static INSN_REGPARM void thumb54(u32 opcode)
   if (busPrefetchCount == 0)
     busPrefetch = busPrefetchEnable;
   u32 address = reg[(opcode>>3)&7].I + reg[(opcode >>6)&7].I;
-  CPUWriteByte(address, reg[opcode & 7].B.B0);
+  CPUWriteByte(address, reg[opcode & 7].B.xB0);
   clockTicks = dataTicksAccess16(address) + codeTicksAccess16(armNextPC) + 2;
 }
 
@@ -1606,7 +1606,7 @@ static INSN_REGPARM void thumb70(u32 opcode)
   if (busPrefetchCount == 0)
     busPrefetch = busPrefetchEnable;
   u32 address = reg[(opcode>>3)&7].I + (((opcode>>6)&31));
-  CPUWriteByte(address, reg[opcode&7].B.B0);
+  CPUWriteByte(address, reg[opcode&7].B.xB0);
   clockTicks = dataTicksAccess16(address) + codeTicksAccess16(armNextPC) + 2;
 }
 
@@ -2245,7 +2245,7 @@ static insnfunc_t thumbInsnTable[1024] = {
   thumbA8,thumbA8,thumbA8,thumbA8,thumbA8,thumbA8,thumbA8,thumbA8,
   thumbA8,thumbA8,thumbA8,thumbA8,thumbA8,thumbA8,thumbA8,thumbA8,
   thumbA8,thumbA8,thumbA8,thumbA8,thumbA8,thumbA8,thumbA8,thumbA8,
-  thumbB0,thumbB0,thumbB0,thumbB0,thumbUI,thumbUI,thumbUI,thumbUI,  // B0
+  thumbB0,thumbB0,thumbB0,thumbB0,thumbUI,thumbUI,thumbUI,thumbUI,  // xB0
   thumbUI,thumbUI,thumbUI,thumbUI,thumbUI,thumbUI,thumbUI,thumbUI,
   thumbB4,thumbB4,thumbB4,thumbB4,thumbB5,thumbB5,thumbB5,thumbB5,
   thumbUI,thumbUI,thumbUI,thumbUI,thumbUI,thumbUI,thumbUI,thumbUI,

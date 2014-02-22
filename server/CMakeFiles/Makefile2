@@ -94,8 +94,8 @@ clean: CMakeFiles/fex.dir/clean
 # Target rules for target CMakeFiles/gvbam.dir
 
 # All Build rule for target.
-CMakeFiles/gvbam.dir/all: CMakeFiles/vbamcore.dir/all
 CMakeFiles/gvbam.dir/all: CMakeFiles/fex.dir/all
+CMakeFiles/gvbam.dir/all: CMakeFiles/vbamcore.dir/all
 	$(MAKE) -f CMakeFiles/gvbam.dir/build.make CMakeFiles/gvbam.dir/depend
 	$(MAKE) -f CMakeFiles/gvbam.dir/build.make CMakeFiles/gvbam.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles  22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39
@@ -130,8 +130,8 @@ clean: CMakeFiles/gvbam.dir/clean
 # Target rules for target CMakeFiles/vbam.dir
 
 # All Build rule for target.
-CMakeFiles/vbam.dir/all: CMakeFiles/vbamcore.dir/all
 CMakeFiles/vbam.dir/all: CMakeFiles/fex.dir/all
+CMakeFiles/vbam.dir/all: CMakeFiles/vbamcore.dir/all
 	$(MAKE) -f CMakeFiles/vbam.dir/build.make CMakeFiles/vbam.dir/depend
 	$(MAKE) -f CMakeFiles/vbam.dir/build.make CMakeFiles/vbam.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles  51 52 53 54 55 56

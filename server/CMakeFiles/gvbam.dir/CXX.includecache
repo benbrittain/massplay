@@ -16,6 +16,32 @@ zlib.h
 System.h
 /home/ben/workspace/massplay/server/src/System.h
 
+/home/ben/workspace/massplay/server/src/common/Array.h
+cstddef
+-
+
+/home/ben/workspace/massplay/server/src/common/RingBuffer.h
+Array.h
+/home/ben/workspace/massplay/server/src/common/Array.h
+cstddef
+-
+algorithm
+-
+cstring
+-
+
+/home/ben/workspace/massplay/server/src/common/SoundDriver.h
+Types.h
+/home/ben/workspace/massplay/server/src/common/Types.h
+
+/home/ben/workspace/massplay/server/src/common/SoundSDL.h
+SoundDriver.h
+/home/ben/workspace/massplay/server/src/common/SoundDriver.h
+RingBuffer.h
+/home/ben/workspace/massplay/server/src/common/RingBuffer.h
+SDL/SDL.h
+/home/ben/workspace/massplay/server/src/common/SDL/SDL.h
+
 /home/ben/workspace/massplay/server/src/common/Types.h
 stdint.h
 -
@@ -66,6 +92,12 @@ GBA.h
 ../System.h
 /home/ben/workspace/massplay/server/src/System.h
 
+/home/ben/workspace/massplay/server/src/gtk/cheatedit.cpp
+cheatedit.h
+/home/ben/workspace/massplay/server/src/gtk/cheatedit.h
+intl.h
+/home/ben/workspace/massplay/server/src/gtk/intl.h
+
 /home/ben/workspace/massplay/server/src/gtk/cheatedit.h
 gtkmm/combobox.h
 -
@@ -80,6 +112,16 @@ gtkmm/treemodel.h
 window.h
 /home/ben/workspace/massplay/server/src/gtk/window.h
 
+/home/ben/workspace/massplay/server/src/gtk/cheatlist.cpp
+cheatlist.h
+/home/ben/workspace/massplay/server/src/gtk/cheatlist.h
+gtkmm/stock.h
+-
+intl.h
+/home/ben/workspace/massplay/server/src/gtk/intl.h
+vector
+-
+
 /home/ben/workspace/massplay/server/src/gtk/cheatlist.h
 gtkmm/toolbutton.h
 -
@@ -88,11 +130,29 @@ cheatedit.h
 window.h
 /home/ben/workspace/massplay/server/src/gtk/window.h
 
+/home/ben/workspace/massplay/server/src/gtk/configfile.cpp
+configfile.h
+/home/ben/workspace/massplay/server/src/gtk/configfile.h
+cstring
+-
+glibmm/fileutils.h
+-
+glibmm/iochannel.h
+-
+
 /home/ben/workspace/massplay/server/src/gtk/configfile.h
 list
 -
 sstream
 -
+
+/home/ben/workspace/massplay/server/src/gtk/directoriesconfig.cpp
+directoriesconfig.h
+/home/ben/workspace/massplay/server/src/gtk/directoriesconfig.h
+gtkmm/stock.h
+-
+intl.h
+/home/ben/workspace/massplay/server/src/gtk/intl.h
 
 /home/ben/workspace/massplay/server/src/gtk/directoriesconfig.h
 gtkmm/dialog.h
@@ -106,6 +166,22 @@ gtkmm/filechooserbutton.h
 configfile.h
 /home/ben/workspace/massplay/server/src/gtk/configfile.h
 
+/home/ben/workspace/massplay/server/src/gtk/displayconfig.cpp
+displayconfig.h
+/home/ben/workspace/massplay/server/src/gtk/displayconfig.h
+gtkmm/stock.h
+-
+gtkmm/frame.h
+-
+gtkmm/radiobutton.h
+-
+gtkmm/liststore.h
+-
+intl.h
+/home/ben/workspace/massplay/server/src/gtk/intl.h
+filters.h
+/home/ben/workspace/massplay/server/src/gtk/filters.h
+
 /home/ben/workspace/massplay/server/src/gtk/displayconfig.h
 gtkmm/dialog.h
 -
@@ -118,9 +194,23 @@ configfile.h
 window.h
 /home/ben/workspace/massplay/server/src/gtk/window.h
 
+/home/ben/workspace/massplay/server/src/gtk/filters.cpp
+filters.h
+/home/ben/workspace/massplay/server/src/gtk/filters.h
+intl.h
+/home/ben/workspace/massplay/server/src/gtk/intl.h
+
 /home/ben/workspace/massplay/server/src/gtk/filters.h
 ../System.h
 /home/ben/workspace/massplay/server/src/System.h
+
+/home/ben/workspace/massplay/server/src/gtk/gameboyadvancecheatlist.cpp
+gameboyadvancecheatlist.h
+/home/ben/workspace/massplay/server/src/gtk/gameboyadvancecheatlist.h
+tools.h
+/home/ben/workspace/massplay/server/src/gtk/tools.h
+vector
+-
 
 /home/ben/workspace/massplay/server/src/gtk/gameboyadvancecheatlist.h
 ../System.h
@@ -134,6 +224,12 @@ window.h
 cheatlist.h
 /home/ben/workspace/massplay/server/src/gtk/cheatlist.h
 
+/home/ben/workspace/massplay/server/src/gtk/gameboyadvanceconfig.cpp
+gameboyadvanceconfig.h
+/home/ben/workspace/massplay/server/src/gtk/gameboyadvanceconfig.h
+intl.h
+/home/ben/workspace/massplay/server/src/gtk/intl.h
+
 /home/ben/workspace/massplay/server/src/gtk/gameboyadvanceconfig.h
 gtkmm/combobox.h
 -
@@ -144,11 +240,31 @@ configfile.h
 window.h
 /home/ben/workspace/massplay/server/src/gtk/window.h
 
+/home/ben/workspace/massplay/server/src/gtk/gameboycheatlist.cpp
+gameboycheatlist.h
+/home/ben/workspace/massplay/server/src/gtk/gameboycheatlist.h
+tools.h
+/home/ben/workspace/massplay/server/src/gtk/tools.h
+vector
+-
+
 /home/ben/workspace/massplay/server/src/gtk/gameboycheatlist.h
 ../gb/gbCheats.h
 /home/ben/workspace/massplay/server/src/gb/gbCheats.h
 cheatlist.h
 /home/ben/workspace/massplay/server/src/gtk/cheatlist.h
+
+/home/ben/workspace/massplay/server/src/gtk/gameboyconfig.cpp
+gameboyconfig.h
+/home/ben/workspace/massplay/server/src/gtk/gameboyconfig.h
+gtkmm/stock.h
+-
+gtkmm/frame.h
+-
+gtkmm/liststore.h
+-
+intl.h
+/home/ben/workspace/massplay/server/src/gtk/intl.h
 
 /home/ben/workspace/massplay/server/src/gtk/gameboyconfig.h
 gtkmm/combobox.h
@@ -159,6 +275,18 @@ configfile.h
 /home/ben/workspace/massplay/server/src/gtk/configfile.h
 window.h
 /home/ben/workspace/massplay/server/src/gtk/window.h
+
+/home/ben/workspace/massplay/server/src/gtk/generalconfig.cpp
+generalconfig.h
+/home/ben/workspace/massplay/server/src/gtk/generalconfig.h
+gtkmm/stock.h
+-
+gtkmm/frame.h
+-
+gtkmm/liststore.h
+-
+intl.h
+/home/ben/workspace/massplay/server/src/gtk/intl.h
 
 /home/ben/workspace/massplay/server/src/gtk/generalconfig.h
 gtkmm.h
@@ -171,6 +299,14 @@ window.h
 /home/ben/workspace/massplay/server/src/gtk/intl.h
 glibmm/i18n.h
 -
+
+/home/ben/workspace/massplay/server/src/gtk/joypadconfig.cpp
+joypadconfig.h
+/home/ben/workspace/massplay/server/src/gtk/joypadconfig.h
+gtkmm/stock.h
+-
+intl.h
+/home/ben/workspace/massplay/server/src/gtk/intl.h
 
 /home/ben/workspace/massplay/server/src/gtk/joypadconfig.h
 vector
@@ -194,14 +330,48 @@ gtkmm/checkbutton.h
 configfile.h
 /home/ben/workspace/massplay/server/src/gtk/configfile.h
 
+/home/ben/workspace/massplay/server/src/gtk/main.cpp
+gtkmm/main.h
+-
+gtkmm/window.h
+-
+gtkmm/messagedialog.h
+-
+gtkmm/gl/init.h
+-
+window.h
+/home/ben/workspace/massplay/server/src/gtk/window.h
+intl.h
+/home/ben/workspace/massplay/server/src/gtk/intl.h
+
+/home/ben/workspace/massplay/server/src/gtk/screenarea-cairo.cpp
+screenarea-cairo.h
+/home/ben/workspace/massplay/server/src/gtk/screenarea-cairo.h
+cstring
+-
+
 /home/ben/workspace/massplay/server/src/gtk/screenarea-cairo.h
 screenarea.h
 /home/ben/workspace/massplay/server/src/gtk/screenarea.h
+
+/home/ben/workspace/massplay/server/src/gtk/screenarea-opengl.cpp
+screenarea-opengl.h
+/home/ben/workspace/massplay/server/src/gtk/screenarea-opengl.h
+intl.h
+/home/ben/workspace/massplay/server/src/gtk/intl.h
+cstring
+-
 
 /home/ben/workspace/massplay/server/src/gtk/screenarea-opengl.h
 screenarea.h
 /home/ben/workspace/massplay/server/src/gtk/screenarea.h
 gtkmm/gl/widget.h
+-
+
+/home/ben/workspace/massplay/server/src/gtk/screenarea.cpp
+screenarea.h
+/home/ben/workspace/massplay/server/src/gtk/screenarea.h
+cstring
 -
 
 /home/ben/workspace/massplay/server/src/gtk/screenarea.h
@@ -211,6 +381,18 @@ gdkmm/cursor.h
 -
 filters.h
 /home/ben/workspace/massplay/server/src/gtk/filters.h
+
+/home/ben/workspace/massplay/server/src/gtk/soundconfig.cpp
+soundconfig.h
+/home/ben/workspace/massplay/server/src/gtk/soundconfig.h
+gtkmm/stock.h
+-
+gtkmm/frame.h
+-
+gtkmm/liststore.h
+-
+intl.h
+/home/ben/workspace/massplay/server/src/gtk/intl.h
 
 /home/ben/workspace/massplay/server/src/gtk/soundconfig.h
 gtkmm/dialog.h
@@ -223,6 +405,22 @@ configfile.h
 /home/ben/workspace/massplay/server/src/gtk/configfile.h
 window.h
 /home/ben/workspace/massplay/server/src/gtk/window.h
+
+/home/ben/workspace/massplay/server/src/gtk/system.cpp
+../sdl/inputSDL.h
+/home/ben/workspace/massplay/server/src/sdl/inputSDL.h
+../gba/Sound.h
+/home/ben/workspace/massplay/server/src/gba/Sound.h
+../common/SoundSDL.h
+/home/ben/workspace/massplay/server/src/common/SoundSDL.h
+window.h
+/home/ben/workspace/massplay/server/src/gtk/window.h
+intl.h
+/home/ben/workspace/massplay/server/src/gtk/intl.h
+
+/home/ben/workspace/massplay/server/src/gtk/tools.cpp
+tools.h
+/home/ben/workspace/massplay/server/src/gtk/tools.h
 
 /home/ben/workspace/massplay/server/src/gtk/tools.h
 string
@@ -345,6 +543,10 @@ gameboyadvancecheatlist.h
 /home/ben/workspace/massplay/server/src/gtk/gameboyadvancecheatlist.h
 gameboycheatlist.h
 /home/ben/workspace/massplay/server/src/gtk/gameboycheatlist.h
+
+/home/ben/workspace/massplay/server/src/sdl/inputSDL.cpp
+inputSDL.h
+/home/ben/workspace/massplay/server/src/sdl/inputSDL.h
 
 /home/ben/workspace/massplay/server/src/sdl/inputSDL.h
 SDL/SDL.h
@@ -7273,6 +7475,8 @@ gdkmm/gl/config.h
 -
 gdkmm/gl/drawable.h
 -
+
+/usr/include/gtkglextmm-1.2/gtkmm/gl/init.h
 
 /usr/include/gtkglextmm-1.2/gtkmm/gl/widget.h
 gtkmm/widget.h

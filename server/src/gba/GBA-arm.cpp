@@ -757,7 +757,7 @@ static void count(u32 opcode, int cond_res)
 // OP Rd,Rb,Rm LSL Rs
 #ifndef VALUE_LSL_REG_C
  #define VALUE_LSL_REG_C \
-    u32 shift = reg[(opcode >> 8)&15].B.B0;                  \
+    u32 shift = reg[(opcode >> 8)&15].B.xB0;                  \
 	u32 rm = reg[opcode & 0x0F].I;                           \
 	if((opcode & 0x0F) == 15) {                              \
 		rm += 4;                                             \
@@ -794,7 +794,7 @@ static void count(u32 opcode, int cond_res)
 // OP Rd,Rb,Rm LSR Rs
 #ifndef VALUE_LSR_REG_C
  #define VALUE_LSR_REG_C \
-    unsigned int shift = reg[(opcode >> 8)&15].B.B0;    \
+    unsigned int shift = reg[(opcode >> 8)&15].B.xB0;    \
 	u32 rm = reg[opcode & 0x0F].I;                      \
 	if((opcode & 0x0F) == 15) {                         \
 	rm += 4;                                            \
@@ -837,7 +837,7 @@ static void count(u32 opcode, int cond_res)
 // OP Rd,Rb,Rm ASR Rs
 #ifndef VALUE_ASR_REG_C
  #define VALUE_ASR_REG_C \
-    unsigned int shift = reg[(opcode >> 8)&15].B.B0;    \
+    unsigned int shift = reg[(opcode >> 8)&15].B.xB0;    \
 	u32 rm = reg[opcode & 0x0F].I;                      \
 	if((opcode & 0x0F) == 15) {                         \
 	rm += 4;                                            \
@@ -879,7 +879,7 @@ static void count(u32 opcode, int cond_res)
 // OP Rd,Rb,Rm ROR Rs
 #ifndef VALUE_ROR_REG_C
  #define VALUE_ROR_REG_C \
-    unsigned int shift = reg[(opcode >> 8)&15].B.B0;    \
+    unsigned int shift = reg[(opcode >> 8)&15].B.xB0;    \
 	u32 rm = reg[opcode & 0x0F].I;                      \
 	if((opcode & 0x0F) == 15) {                         \
 	rm += 4;                                            \
@@ -1330,7 +1330,7 @@ static INSN_REGPARM void arm149(u32 opcode)
 {
     u32 address = reg[(opcode >> 16) & 15].I;
     u32 temp = CPUReadByte(address);
-    CPUWriteByte(address, reg[opcode&15].B.B0);
+    CPUWriteByte(address, reg[opcode&15].B.xB0);
     reg[(opcode>>12)&15].I = temp;
     clockTicks = 4 + dataTicksAccess32(address) + dataTicksAccess32(address)
                    + codeTicksAccess32(armNextPC);
@@ -1533,7 +1533,7 @@ static INSN_REGPARM void arm121(u32 opcode)
 
 #define OP_STR    CPUWriteMemory(address, reg[dest].I)
 #define OP_STRH   CPUWriteHalfWord(address, reg[dest].W.W0)
-#define OP_STRB   CPUWriteByte(address, reg[dest].B.B0)
+#define OP_STRB   CPUWriteByte(address, reg[dest].B.xB0)
 #define OP_LDR    reg[dest].I = CPUReadMemory(address)
 #define OP_LDRH   reg[dest].I = CPUReadHalfWord(address)
 #define OP_LDRB   reg[dest].I = CPUReadByte(address)
@@ -2830,7 +2830,7 @@ static insnfunc_t armInsnTable[4096] = {
     REP16(arm9C0),REP16(arm9D0),REP16(arm9E0),REP16(arm9F0),  // 9C0
 
     REP256(armA00),                                           // A00
-    REP256(armB00),                                           // B00
+    REP256(armB00),                                           // xB00
     REP256(arm_UI),                                           // C00
     REP256(arm_UI),                                           // D00
 

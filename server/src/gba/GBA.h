@@ -26,9 +26,9 @@ typedef union {
     u8 B3;
     u8 B2;
     u8 B1;
-    u8 B0;
+    u8 xB0;
 #else
-    u8 B0;
+    u8 xB0;
     u8 B1;
     u8 B2;
     u8 B3;

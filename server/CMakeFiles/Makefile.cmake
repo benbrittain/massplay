@@ -46,6 +46,7 @@ SET(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-2.8/Modules/Compiler/GNU-C.cmake"
   "/usr/share/cmake-2.8/Modules/Compiler/GNU-CXX.cmake"
   "/usr/share/cmake-2.8/Modules/Compiler/GNU.cmake"
+  "/usr/share/cmake-2.8/Modules/FindBoost.cmake"
   "/usr/share/cmake-2.8/Modules/FindGettext.cmake"
   "/usr/share/cmake-2.8/Modules/FindOpenGL.cmake"
   "/usr/share/cmake-2.8/Modules/FindPNG.cmake"
