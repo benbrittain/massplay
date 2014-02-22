@@ -1,0 +1,16 @@
+# Hashes of file build rules.
+5eb8349aba95804fabb3696089bdd47c po/gvbam/CMakeFiles/gvbam_translations
+ce0c38015b4a6c9de5cf934559523187 po/gvbam/ca_ES.gmo
+82508f5ebde98def214e657b47c79ec6 po/gvbam/cs.gmo
+e298fb854862e71ab791c40f6ec8ecba po/gvbam/de.gmo
+6267d7053670f81d47e4d250e7c15c79 po/gvbam/en.gmo
+02d7bdc555eab755f88bbc28040341c0 po/gvbam/es_ES.gmo
+7f84ce07894fc6e35dd1b94eca91b8d0 po/gvbam/fr.gmo
+2b67940a085ea265520168af040ec4a9 po/gvbam/it_IT.gmo
+c14a4d75077a745e23d87e2994fcbbdf po/gvbam/nb.gmo
+4ba93793c2690c5daf476769abb50ddd po/gvbam/nl.gmo
+1e0d8cbbf73c519fceeca59566d04068 po/gvbam/pl.gmo
+e85057ab246843f5cfc0968446089ccd po/gvbam/pt_BR.gmo
+06983c5134b52468255604319d0a6cc1 po/gvbam/sv.gmo
+97240771c47a94027f2c96449a367cde po/gvbam/zh_CN.gmo
+ff5802add16934e8c7a256d7ab1c4629 po/gvbam/zh_TW.gmo
