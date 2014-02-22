@@ -23,14 +23,15 @@
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
 
     <script type="text/javascript">
-
+      window.context = null; // woooo globals
+      window.canvas;
       /* Initialize canvas elements */
       function init() {
-        var gameCanvas = document.getElementById('game');
+        var gameCanvas = window.canvas = document.getElementById('game');
         if(gameCanvas.getContext){
 							var ctx = document.getElementById("game");
 							if (gameCanvas.getContext) {
-								var ctx = gameCanvas.getContext("2d");
+								var ctx = window.context = gameCanvas.getContext("2d");
 
 								ctx.fillStyle = "rgb(200,0,0)";
 								ctx.fillRect (10, 10, 55, 50);
