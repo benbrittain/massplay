@@ -1,7 +1,6 @@
 // VisualBoyAdvance - Nintendo Gameboy/GameboyAdvance (TM) emulator.
 // Copyright (C) 1999-2003 Forgotten
 // Copyright (C) 2005-2006 Forgotten and the VBA development team
-// Copyright (C) Ben Brittain, Lee Avital, Dan Kolbman
 
 // This program is free software; you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -17,9 +16,17 @@
 // along with this program; if not, write to the Free Software Foundation,
 // Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
-// Websocket libraries
-#include <websocketpp/config/asio_no_tls.hpp>
 #include <websocketpp/server.hpp>
+#include <websocketpp/config/asio_no_tls.hpp>
+
+#include <iostream>
+
+#include <boost/thread.hpp>
+#include <boost/thread/mutex.hpp>
+#include <boost/thread/condition_variable.hpp>
+#include <boost/bind.hpp>
+#include "boost/bind.hpp"
+#include <websocketpp/common/thread.hpp>
 
 typedef websocketpp::server<websocketpp::config::asio> server;
 
@@ -28,9 +35,11 @@ using websocketpp::lib::placeholders::_1;
 using websocketpp::lib::placeholders::_2;
 using websocketpp::lib::bind;
 
-//#include "emulator_server.cpp"
+using websocketpp::lib::thread;
+using websocketpp::lib::mutex;
+using websocketpp::lib::unique_lock;
+using websocketpp::lib::condition_variable;
 
-// Emulator & system
 #include <stdarg.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -38,13 +47,6 @@ using websocketpp::lib::bind;
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <cmath>
-#ifdef __APPLE__
-    #include <OpenGL/glu.h>
-    #include <OpenGL/glext.h>
-#else
-    #include <GL/glu.h>
-    #include <GL/glext.h>
-#endif
 
 #include <time.h>
 
@@ -118,10 +120,6 @@ struct EmulatedSystem emulator = {
   0
 };
 
-/*
- * Area for websocket connections
- */
-
 SDL_Surface *surface = NULL;
 
 int systemSpeed = 0;
@@ -152,9 +150,7 @@ int sdlPrintUsage = 0;
 int cartridgeType = 3;
 int captureFormat = 0;
 
-int openGL = 0;
 int textureSize = 256;
-GLuint screenTexture = 0;
 u8 *filterPix = 0;
 
 int pauseWhenInactive = 0;
@@ -283,13 +279,10 @@ struct option sdlOptions[] = {
   { "no-auto-frameskip", no_argument, &autoFrameSkip, 0 },
   { "no-debug", no_argument, 0, 'N' },
   { "no-patch", no_argument, &sdlAutoPatch, 0 },
-  { "no-opengl", no_argument, &openGL, 0 },
   { "no-pause-when-inactive", no_argument, &pauseWhenInactive, 0 },
   { "no-rtc", no_argument, &sdlRtcEnable, 0 },
   { "no-show-speed", no_argument, &showSpeed, 0 },
   { "opengl", required_argument, 0, 'O' },
-  { "opengl-nearest", no_argument, &openGL, 1 },
-  { "opengl-bilinear", no_argument, &openGL, 2 },
   { "pause-when-inactive", no_argument, &pauseWhenInactive, 1 },
   { "profile", optional_argument, 0, 'p' },
   { "rtc", no_argument, &sdlRtcEnable, 1 },
@@ -687,8 +680,6 @@ void sdlReadPreferences(FILE *f)
       inputSetKeymap(PAD_4, KEY_BUTTON_AUTO_A, sdlFromHex(value));
     } else if(!strcmp(key, "Joy3_AutoB")) {
       inputSetKeymap(PAD_4, KEY_BUTTON_AUTO_B, sdlFromHex(value));
-    } else if(!strcmp(key, "openGL")) {
-     openGL = sdlFromHex(value);
     } else if(!strcmp(key, "Motion_Left")) {
       inputSetMotionKeymap(KEY_LEFT, sdlFromHex(value));
     } else if(!strcmp(key, "Motion_Right")) {
@@ -814,8 +805,6 @@ void sdlReadPreferences(FILE *f)
       rewindTimer *= 6;  // convert value to 10 frames multiple
     } else if(!strcmp(key, "saveKeysSwitch")) {
       sdlSaveKeysSwitch = sdlFromHex(value);
-    } else if(!strcmp(key, "openGLscale")) {
-      sdlOpenglScale = sdlFromHex(value);
     } else if(!strcmp(key, "autoFireMaxCount")) {
       autoFireMaxCount = sdlFromDec(value);
       if(autoFireMaxCount < 1)
@@ -826,61 +815,6 @@ void sdlReadPreferences(FILE *f)
   }
 }
 
-//void sdlOpenGLInit(int w, int h)
-//{
-//  float screenAspect = (float) srcWidth / srcHeight,
-//        windowAspect = (float) w / h;
-//
-//  if(glIsTexture(screenTexture))
-//  glDeleteTextures(1, &screenTexture);
-//
-//  glDisable(GL_CULL_FACE);
-//  glEnable(GL_TEXTURE_2D);
-//
-//  if(windowAspect == screenAspect)
-//    glViewport(0, 0, w, h);
-//  else if (windowAspect < screenAspect) {
-//    int height = (int)(w / screenAspect);
-//    glViewport(0, (h - height) / 2, w, height);
-//  } else {
-//    int width = (int)(h * screenAspect);
-//    glViewport((w - width) / 2, 0, width, h);
-//  }
-//
-//  glMatrixMode(GL_PROJECTION);
-//  glLoadIdentity();
-//
-//  glOrtho(0.0, 1.0, 1.0, 0.0, 0.0, 1.0);
-//
-//  glMatrixMode(GL_MODELVIEW);
-//  glLoadIdentity();
-//
-//  glGenTextures(1, &screenTexture);
-//  glBindTexture(GL_TEXTURE_2D, screenTexture);
-//
-//  glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER,
-//                  openGL == 2 ? GL_LINEAR : GL_NEAREST);
-//  glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER,
-//                  openGL == 2 ? GL_LINEAR : GL_NEAREST);
-//
-//  // Calculate texture size as a the smallest working power of two
-//  float n1 = log10((float)destWidth ) / log10( 2.0f);
-//  float n2 = log10((float)destHeight ) / log10( 2.0f);
-//  float n = (n1 > n2)? n1 : n2;
-//
-//    // round up
-//  if (((float)((int)n)) != n)
-//    n = ((float)((int)n)) + 1.0f;
-//
-//  textureSize = (int)pow(2.0f, n);
-//
-//  glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, textureSize, textureSize, 0,
-//               GL_BGRA, GL_UNSIGNED_BYTE, NULL);
-//
-//  glClearColor(0.0,0.0,0.0,1.0);
-//  glClear( GL_COLOR_BUFFER_BIT );
-//}
-//
 void sdlReadPreferences()
 {
   FILE *f = sdlFindFile("vbam.cfg");
@@ -1159,19 +1093,10 @@ void sdlInitVideo() {
   destHeight = filter_enlarge * srcHeight;
 
   flags = SDL_ANYFORMAT | (fullscreen ? SDL_FULLSCREEN : 0);
-  if(openGL) {
-    SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
-    flags |= SDL_OPENGL | SDL_RESIZABLE;
-  } else
-    flags |= SDL_HWSURFACE | SDL_DOUBLEBUF;
+  flags |= SDL_HWSURFACE | SDL_DOUBLEBUF;
 
-  if (fullscreen && openGL) {
-    screenWidth = desktopWidth;
-    screenHeight = desktopHeight;
-  } else {
-    screenWidth = destWidth;
-    screenHeight = destHeight;
-  }
+  screenWidth = destWidth;
+  screenHeight = destHeight;
 
   surface = SDL_SetVideoMode(screenWidth, screenHeight, 0, flags);
 
@@ -1182,33 +1107,13 @@ void sdlInitVideo() {
   }
 
   u32 rmask, gmask, bmask;
-  
-  if(openGL) {
-    #if SDL_BYTEORDER == SDL_LIL_ENDIAN /* OpenGL RGBA masks */
-      rmask = 0x000000FF;
-      gmask = 0x0000FF00;
-      bmask = 0x00FF0000;
-    #else
-      rmask = 0xFF000000;
-      gmask = 0x00FF0000; 
-      bmask = 0x0000FF00; 
-    #endif
-  } else {
-      rmask = surface->format->Rmask;
-      gmask = surface->format->Gmask;
-      bmask = surface->format->Bmask;
-  }
-  
+  rmask = surface->format->Rmask;
+  gmask = surface->format->Gmask;
+  bmask = surface->format->Bmask;
+
   systemRedShift = sdlCalculateShift(rmask);
   systemGreenShift = sdlCalculateShift(gmask);
   systemBlueShift = sdlCalculateShift(bmask);
-  
-  if(openGL) {
-      // Align to BGRA instead of ABGR
-      systemRedShift += 8;
-      systemGreenShift += 8;
-      systemBlueShift += 8;
-  }
 
   systemColorDepth = surface->format->BitsPerPixel;
 
@@ -1220,31 +1125,6 @@ void sdlInitVideo() {
     else
       srcPitch = srcWidth*3;
   }
-
-//  if(openGL) {
-//    int scaledWidth = screenWidth * sdlOpenglScale;
-//    int scaledHeight = screenHeight * sdlOpenglScale;
-//
-//    free(filterPix);
-//    filterPix = (u8 *)calloc(1, (systemColorDepth >> 3) * destWidth * destHeight);
-//    sdlOpenGLInit(screenWidth, screenHeight);
-//
-//    if (	(!fullscreen)
-//	&&	sdlOpenglScale	> 1
-//	&&	scaledWidth	< desktopWidth
-//	&&	scaledHeight	< desktopHeight
-//    ) {
-//        SDL_SetVideoMode(scaledWidth, scaledHeight, 0,
-//                       SDL_OPENGL | SDL_RESIZABLE |
-//                       (fullscreen ? SDL_FULLSCREEN : 0));
-//        sdlOpenGLInit(scaledWidth, scaledHeight);
-//	/* xKiv: it would seem that SDL_RESIZABLE causes the *previous* dimensions to be immediately
-//	 * reported back via the SDL_VIDEORESIZE event
-//	 */
-//	ignore_first_resize_event	= 1;
-//    }
-//  }
-
 }
 
 #define MOD_KEYS    (KMOD_CTRL|KMOD_SHIFT|KMOD_ALT|KMOD_META)
@@ -1391,13 +1271,6 @@ void sdlPollEvents()
 	      ignore_first_resize_event	= 0;
 	      break;
       }
-//      if (openGL)
-//      {
-//        SDL_SetVideoMode(event.resize.w, event.resize.h, 0,
-//                       SDL_OPENGL | SDL_RESIZABLE |
-//                       (fullscreen ? SDL_FULLSCREEN : 0));
-//        sdlOpenGLInit(event.resize.w, event.resize.h);
-//      }
       break;
     case SDL_ACTIVEEVENT:
       if(pauseWhenInactive && (event.active.state & SDL_APPINPUTFOCUS)) {
@@ -1890,10 +1763,188 @@ void handleRewinds()
 		// for the rest of the code, rewindTopPos will be where the newest rewind got stored
 	}
 }
+SDL_Surface *LoadXBM(SDL_Surface *screen, int w, int h, Uint8 *bits) {
+  SDL_Surface *bitmap;
+  Uint8 *line;
+
+  /* Allocate the bitmap */
+  bitmap = SDL_CreateRGBSurface(SDL_SWSURFACE, w, h, 1, 0, 0, 0, 0);
+  if ( bitmap == NULL ) {
+    fprintf(stderr, "Couldn't allocate bitmap: %s\n",
+        SDL_GetError());
+    return(NULL);
+  }
+
+  /* Copy the pixels */
+  line = (Uint8 *)bitmap->pixels;
+  w = (w+7)/8;
+  while ( h-- ) {
+    memcpy(line, bits, w);
+    /* X11 Bitmap images have the bits reversed */
+    { int i, j; Uint8 *buf, byte;
+      for ( buf=line, i=0; i<w; ++i, ++buf ) {
+        byte = *buf;
+        *buf = 0;
+        for ( j=7; j>=0; --j ) {
+          *buf |= (byte&0x01)<<j;
+          byte >>= 1;
+        }
+      }
+    }
+    line += bitmap->pitch;
+    bits += w;
+  }
+  return(bitmap);
+}
+
+enum action_type {
+    SUBSCRIBE,
+    UNSUBSCRIBE,
+    MESSAGE
+};
+
+struct action {
+    action(action_type t, connection_hdl h) : type(t), hdl(h) {}
+    action(action_type t, server::message_ptr m) : type(t), msg(m) {}
+
+    action_type type;
+    websocketpp::connection_hdl hdl;
+    server::message_ptr msg;
+};
+
+class game_server {
+public:
+    game_server() {
+        // Initialize Asio Transport
+        m_server.init_asio();
+
+        // Register handler callbacks
+        m_server.set_open_handler(bind(&game_server::on_open,this,::_1));
+        m_server.set_close_handler(bind(&game_server::on_close,this,::_1));
+        m_server.set_message_handler(bind(&game_server::on_message,this,::_1,::_2));
+    }
+
+    void run(uint16_t port) {
+        // listen on specified port
+        m_server.listen(port);
+
+        // Start the server accept loop
+            m_server.start_accept();
+
+            // Start the ASIO io_service run loop
+        try {
+            m_server.run();
+        } catch (const std::exception & e) {
+            std::cout << e.what() << std::endl;
+        } catch (websocketpp::lib::error_code e) {
+            std::cout << e.message() << std::endl;
+        } catch (...) {
+            std::cout << "other exception" << std::endl;
+        }
+    }
+    void on_open(connection_hdl hdl) {
+        unique_lock<mutex> lock(m_action_lock);
+        //std::cout << "on_open" << std::endl;
+        m_actions.push(action(SUBSCRIBE,hdl));
+        lock.unlock();
+        m_action_cond.notify_one();
+    }
+
+    void on_close(connection_hdl hdl) {
+        unique_lock<mutex> lock(m_action_lock);
+        //std::cout << "on_close" << std::endl;
+        m_actions.push(action(UNSUBSCRIBE,hdl));
+        lock.unlock();
+        m_action_cond.notify_one();
+    }
+
+    void on_message(connection_hdl hdl, server::message_ptr msg) {
+        // queue message up for sending by processing thread
+        unique_lock<mutex> lock(m_action_lock);
+        //std::cout << "on_message" << std::endl;
+        m_actions.push(action(MESSAGE,msg));
+        lock.unlock();
+        m_action_cond.notify_one();
+    }
+
+    void send_frame(u8* a_frame) {
+      websocketpp::lib::error_code ec;
+      unique_lock<mutex> lock(m_action_lock);
+      con_list::iterator it;
+      for (it = m_connections.begin(); it != m_connections.end(); ++it) {
+        server::message_ptr msg;
+        msg->set_opcode(websocketpp::frame::opcode::BINARY);
+        msg->set_payload(a_frame, sizeof(a_frame));
+        m_server.send(*it, msg);
+        //m_server.send(*it, *a_frame);
+      }
+
+      lock.unlock();
+    }
+
+    void process_messages() {
+        while(1) {
+
+          std::cout << "out" << std::endl;
+            unique_lock<mutex> lock(m_action_lock);
+
+            while(m_actions.empty()) {
+                m_action_cond.wait(lock);
+            }
+
+            action a = m_actions.front();
+            m_actions.pop();
+
+            lock.unlock();
+
+            if (a.type == SUBSCRIBE) {
+                unique_lock<mutex> con_lock(m_connection_lock);
+                m_connections.push_back(a.hdl);
+            } else if (a.type == UNSUBSCRIBE) {
+                unique_lock<mutex> con_lock(m_connection_lock);
+
+                //TODO actually disconnect clients
+                //m_connections.erase(a.hdl);
+            } else if (a.type == MESSAGE) {
+                unique_lock<mutex> con_lock(m_connection_lock);
+
+                con_list::iterator it;
+                for (it = m_connections.begin(); it != m_connections.end(); ++it) {
+                    m_server.send(*it,a.msg);
+                }
+            } else {
+                // undefined.
+            }
+        }
+    }
+private:
+    typedef std::deque<connection_hdl> con_list;
+//    typedef std::set<connection_hdl, std::owner_less<connection_hdl>> con_list;
+    server m_server;
+    con_list m_connections;
+    std::queue<action> m_actions;
+
+    mutex m_action_lock;
+    mutex m_connection_lock;
+    condition_variable m_action_cond;
+};
+
+
+
+
+  game_server server_instance;
 
 int main(int argc, char **argv)
 {
-  fprintf(stdout, "Massplay VBAM fork -  %s [SDL]\n", VERSION);
+  fprintf(stdout, "Massplay VBA-M fork %s [SDL]\n", VERSION);
+
+
+  std::cout << "main: startup" << std::endl;
+
+  fprintf(stdout, "Initializing Websocket Server");
+  boost::thread t(&game_server::process_messages, &server_instance);
+  fprintf(stdout, "never past here?!");
+
 
   arg0 = argv[0];
 
@@ -1931,10 +1982,185 @@ int main(int argc, char **argv)
 
   sdlPrintUsage = 0;
 
-//  if(rewindTimer) {
-//    rewindMemory = (char *)malloc(REWIND_NUM*REWIND_SIZE);
-//    rewindSerials = (int *)calloc(REWIND_NUM, sizeof(int)); // init to zeroes
-//  }
+  while((op = getopt_long(argc,
+                          argv,
+                           "FNO:T:Y:G:I:D:b:c:df:hi:p::s:t:v:",
+                          sdlOptions,
+                          NULL)) != -1) {
+    switch(op) {
+    case 0:
+      // long option already processed by getopt_long
+      break;
+    case 1000:
+      // --cheat
+      if (sdlPreparedCheats >= MAX_CHEATS) {
+	      fprintf(stderr, "Warning: cannot add more than %d cheats.\n", MAX_CHEATS);
+	      break;
+      }
+      {
+	      char * cpy;
+	      cpy	= (char *)malloc(1 + strlen(optarg));
+	      strcpy(cpy, optarg);
+	      sdlPreparedCheatCodes[sdlPreparedCheats++]	= cpy;
+      }
+      break;
+    case 1001:
+      // --autofire
+      autoFireMaxCount = sdlFromDec(optarg);
+      if (autoFireMaxCount < 1)
+         autoFireMaxCount = 1;
+      break;
+    case 'b':
+      useBios = true;
+      if(optarg == NULL) {
+        fprintf(stderr, "Missing BIOS file name\n");
+        exit(-1);
+      }
+      strcpy(biosFileName, optarg);
+      break;
+    case 'c':
+      {
+        if(optarg == NULL) {
+          fprintf(stderr, "Missing config file name\n");
+          exit(-1);
+        }
+        FILE *f = fopen(optarg, "r");
+        if(f == NULL) {
+          fprintf(stderr, "File not found %s\n", optarg);
+          exit(-1);
+        }
+        sdlReadPreferences(f);
+        fclose(f);
+      }
+      break;
+    case 'd':
+      debugger = true;
+      break;
+    case 'h':
+      sdlPrintUsage = 1;
+      break;
+    case 'i':
+      if(optarg == NULL) {
+        fprintf(stderr, "Missing patch name\n");
+        exit(-1);
+      }
+      if (sdl_patch_num >= PATCH_MAX_NUM) {
+        fprintf(stderr, "Too many patches given at %s (max is %d). Ignoring.\n", optarg, PATCH_MAX_NUM);
+      } else {
+        sdl_patch_names[sdl_patch_num]	= (char *)malloc(1 + strlen(optarg));
+        strcpy(sdl_patch_names[sdl_patch_num], optarg);
+        sdl_patch_num++;
+      }
+      break;
+   case 'G':
+      dbgMain = remoteStubMain;
+      dbgSignal = remoteStubSignal;
+      dbgOutput = remoteOutput;
+      debugger = true;
+      debuggerStub = true;
+      if(optarg) {
+        char *s = optarg;
+        if(strncmp(s,"tcp:", 4) == 0) {
+          s+=4;
+          int port = atoi(s);
+          remoteSetProtocol(0);
+          remoteSetPort(port);
+        } else if(strcmp(s,"tcp") == 0) {
+          remoteSetProtocol(0);
+        } else if(strcmp(s, "pipe") == 0) {
+          remoteSetProtocol(1);
+        } else {
+          fprintf(stderr, "Unknown protocol %s\n", s);
+          exit(-1);
+        }
+      } else {
+        remoteSetProtocol(0);
+      }
+      break;
+    case 'N':
+      parseDebug = false;
+      break;
+    case 'D':
+      if(optarg) {
+        systemDebug = atoi(optarg);
+      } else {
+        systemDebug = 1;
+      }
+      break;
+    case 'F':
+      fullscreen = 1;
+      mouseCounter = 120;
+      break;
+    case 'f':
+      if(optarg) {
+        filter = (Filter)atoi(optarg);
+      } else {
+        filter = kStretch2x;
+      }
+      break;
+    case 'I':
+      if(optarg) {
+        ifbType = (IFBFilter)atoi(optarg);
+      } else {
+        ifbType = kIFBNone;
+      }
+      break;
+    case 'p':
+#ifdef PROFILING
+      if(optarg) {
+        cpuEnableProfiling(atoi(optarg));
+      } else
+        cpuEnableProfiling(100);
+#endif
+      break;
+    case 'S':
+      sdlFlashSize = atoi(optarg);
+      if(sdlFlashSize < 0 || sdlFlashSize > 1)
+        sdlFlashSize = 0;
+      break;
+    case 's':
+      if(optarg) {
+        int a = atoi(optarg);
+        if(a >= 0 && a <= 9) {
+          gbFrameSkip = a;
+          frameSkip = a;
+        }
+      } else {
+        frameSkip = 2;
+        gbFrameSkip = 0;
+      }
+      break;
+    case 't':
+      if(optarg) {
+        int a = atoi(optarg);
+        if(a < 0 || a > 5)
+          a = 0;
+        cpuSaveType = a;
+      }
+      break;
+    case 'v':
+      if(optarg) {
+        systemVerbose = atoi(optarg);
+      } else
+        systemVerbose = 0;
+      break;
+    case '?':
+      sdlPrintUsage = 1;
+      break;
+    break;
+
+    }
+  }
+
+  if(sdlPrintUsage) {
+    usage(argv[0]);
+    exit(-1);
+  }
+
+  if(rewindTimer) {
+    rewindMemory = (char *)malloc(REWIND_NUM*REWIND_SIZE);
+    rewindSerials = (int *)calloc(REWIND_NUM, sizeof(int)); // init to zeroes
+  }
 
   if(sdlFlashSize == 0)
     flashSetSize(0x10000);
@@ -2305,12 +2531,12 @@ void systemDrawScreen()
   renderedFrames++;
   printf("%d\n", renderedFrames);
 
-  if (openGL)
-    screen = filterPix;
-  else {
-    screen = (u8*)surface->pixels;
-    SDL_LockSurface(surface);
-  }
+  screen = (u8*)surface->pixels;
+
+  server_instance.send_frame(screen);
+
+
+  SDL_LockSurface(surface);
 
   if (ifbFunction)
     ifbFunction(pix + srcPitch, srcPitch, srcWidth, srcHeight);
@@ -2323,33 +2549,8 @@ void systemDrawScreen()
   if (showSpeed && fullscreen)
     drawSpeed(screen, destPitch, 10, 20);
 
-  if (openGL) {
-    glClear( GL_COLOR_BUFFER_BIT );
-    glPixelStorei(GL_UNPACK_ROW_LENGTH, destWidth);
-    if (systemColorDepth == 16)
-      glTexSubImage2D(GL_TEXTURE_2D, 0, 0, 0, destWidth, destHeight,
-                      GL_RGB, GL_UNSIGNED_SHORT_5_6_5, screen);
-    else
-      glTexSubImage2D(GL_TEXTURE_2D, 0, 0, 0, destWidth, destHeight,
-                      GL_BGRA, GL_UNSIGNED_INT_8_8_8_8, screen);
-
-    glBegin(GL_TRIANGLE_STRIP);
-      glTexCoord2f(0.0f, 0.0f);
-      glVertex3i(0, 0, 0);
-      glTexCoord2f(destWidth / (GLfloat) textureSize, 0.0f);
-      glVertex3i(1, 0, 0);
-      glTexCoord2f(0.0f, destHeight / (GLfloat) textureSize);
-      glVertex3i(0, 1, 0);
-      glTexCoord2f(destWidth / (GLfloat) textureSize,
-                  destHeight / (GLfloat) textureSize);
-      glVertex3i(1, 1, 0);
-    glEnd();
-
-    SDL_GL_SwapBuffers();
-  } else {
-    SDL_UnlockSurface(surface);
-    SDL_Flip(surface);
-  }
+  SDL_UnlockSurface(surface);
+  SDL_Flip(surface);
 
 }
 
@@ -2583,42 +2784,3 @@ void log(const char *defaultMsg, ...)
   vfprintf(out, defaultMsg, valist);
   va_end(valist);
 }
-
-
-
-class broadcast_server {
-  public:
-    broadcast_server() {
-      m_server.init_asio();
-
-      m_server.set_open_handler(bind(&broadcast_server::on_open,this,::_1));
-      m_server.set_close_handler(bind(&broadcast_server::on_close,this,::_1));
-      m_server.set_message_handler(bind(&broadcast_server::on_message,this,::_1,::_2));
-    }
-
-    void on_open(connection_hdl hdl) {
-     // m_connections.insert(hdl);
-    }
-
-    void on_close(connection_hdl hdl) {
-    //  m_connections.erase(hdl);
-
-//      std::cout << "Closing connection " << data.name << " with sessionid " << data.sessionid << std::endl;
-    }
-
-    void on_message(connection_hdl hdl, server::message_ptr msg) {
-      std::string data = msg->get_payload();
-      std::cout << "payload: " << data << std::endl;
-    }
-
-    void run(uint16_t port) {
-      m_server.listen(port);
-      m_server.start_accept();
-      m_server.run();
-    }
-  private:
- //   typedef std::set<connection_hdl,std::owner_less<connection_hdl>> con_list;
-
-    server m_server;
-//    con_list m_connections;
-};

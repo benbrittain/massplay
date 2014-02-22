@@ -14,6 +14,51 @@
 # EXTERNAL cache entries
 ########################
 
+//The directory containing a CMake configuration file for Boost.
+Boost_DIR:PATH=Boost_DIR-NOTFOUND
+
+//Boost filesystem library (debug)
+Boost_FILESYSTEM_LIBRARY_DEBUG:FILEPATH=/usr/lib64/libboost_filesystem.so
+
+//Boost filesystem library (release)
+Boost_FILESYSTEM_LIBRARY_RELEASE:FILEPATH=/usr/lib64/libboost_filesystem.so
+
+//Path to a file.
+Boost_INCLUDE_DIR:PATH=/usr/include
+
+//Boost library directory
+Boost_LIBRARY_DIR:PATH=/usr/lib64
+
+//Boost program_options library (debug)
+Boost_PROGRAM_OPTIONS_LIBRARY_DEBUG:FILEPATH=/usr/lib64/libboost_program_options.so
+
+//Boost program_options library (release)
+Boost_PROGRAM_OPTIONS_LIBRARY_RELEASE:FILEPATH=/usr/lib64/libboost_program_options.so
+
+//Boost regex library (debug)
+Boost_REGEX_LIBRARY_DEBUG:FILEPATH=/usr/lib64/libboost_regex.so
+
+//Boost regex library (release)
+Boost_REGEX_LIBRARY_RELEASE:FILEPATH=/usr/lib64/libboost_regex.so
+
+//Boost serialization library (debug)
+Boost_SERIALIZATION_LIBRARY_DEBUG:FILEPATH=/usr/lib64/libboost_serialization.so
+
+//Boost serialization library (release)
+Boost_SERIALIZATION_LIBRARY_RELEASE:FILEPATH=/usr/lib64/libboost_serialization.so
+
+//Boost system library (debug)
+Boost_SYSTEM_LIBRARY_DEBUG:FILEPATH=/usr/lib64/libboost_system.so
+
+//Boost system library (release)
+Boost_SYSTEM_LIBRARY_RELEASE:FILEPATH=/usr/lib64/libboost_system.so
+
+//Boost thread library (debug)
+Boost_THREAD_LIBRARY_DEBUG:FILEPATH=/usr/lib64/libboost_thread.so
+
+//Boost thread library (release)
+Boost_THREAD_LIBRARY_RELEASE:FILEPATH=/usr/lib64/libboost_thread.so
+
 //Path to a program.
 CMAKE_AR:FILEPATH=/usr/bin/ar
 
@@ -448,6 +493,36 @@ vbamcore_LIB_DEPENDS:STATIC=
 # INTERNAL cache entries
 ########################
 
+//ADVANCED property for variable: Boost_DIR
+Boost_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_FILESYSTEM_LIBRARY_DEBUG
+Boost_FILESYSTEM_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_FILESYSTEM_LIBRARY_RELEASE
+Boost_FILESYSTEM_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_INCLUDE_DIR
+Boost_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_LIBRARY_DIR
+Boost_LIBRARY_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_PROGRAM_OPTIONS_LIBRARY_DEBUG
+Boost_PROGRAM_OPTIONS_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_PROGRAM_OPTIONS_LIBRARY_RELEASE
+Boost_PROGRAM_OPTIONS_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_REGEX_LIBRARY_DEBUG
+Boost_REGEX_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_REGEX_LIBRARY_RELEASE
+Boost_REGEX_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_SERIALIZATION_LIBRARY_DEBUG
+Boost_SERIALIZATION_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_SERIALIZATION_LIBRARY_RELEASE
+Boost_SERIALIZATION_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_SYSTEM_LIBRARY_DEBUG
+Boost_SYSTEM_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_SYSTEM_LIBRARY_RELEASE
+Boost_SYSTEM_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_THREAD_LIBRARY_DEBUG
+Boost_THREAD_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_THREAD_LIBRARY_RELEASE
+Boost_THREAD_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_AR
 CMAKE_AR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_BUILD_TOOL
@@ -926,6 +1001,14 @@ X11_xf86vmode_INCLUDE_PATH-ADVANCED:INTERNAL=1
 ZLIB_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: ZLIB_LIBRARY
 ZLIB_LIBRARY-ADVANCED:INTERNAL=1
+//Components requested for this build tree.
+_Boost_COMPONENTS_SEARCHED:INTERNAL=filesystem;program_options;regex;serialization;system;thread
+//Last used Boost_INCLUDE_DIR value.
+_Boost_INCLUDE_DIR_LAST:INTERNAL=/usr/include
+//Last used Boost_LIBRARY_DIR value.
+_Boost_LIBRARY_DIR_LAST:INTERNAL=/usr/lib64
+//Last used Boost_USE_MULTITHREADED value.
+_Boost_USE_MULTITHREADED_LAST:INTERNAL=ON
 __pkg_config_checked_GDKMM:INTERNAL=1
 __pkg_config_checked_GIOMM:INTERNAL=1
 __pkg_config_checked_GLIBMM:INTERNAL=1

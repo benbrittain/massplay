@@ -1,0 +1,254 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#include "libretro.h"
+#include "SoundRetro.h"
+
+#include "../Util.h"
+#include "../System.h"
+#include "../common/Port.h"
+#include "../common/Types.h"
+#include "../gba/RTC.h"
+#include "../gba/GBAGfx.h"
+#include "../gba/bios.h"
+#include "../gba/Flash.h"
+#include "../gba/EEprom.h"
+#include "../gba/Sound.h"
+#include "../apu/Blip_Buffer.h"
+#include "../apu/Gb_Oscs.h"
+#include "../apu/Gb_Apu.h"
+#include "../gba/Globals.h"
+
+static retro_video_refresh_t video_cb;
+static retro_input_poll_t poll_cb;
+static retro_input_state_t input_cb;
+retro_audio_sample_batch_t audio_batch_cb;
+static retro_environment_t environ_cb;
+
+bool enableRtc;
+extern uint64_t joy;
+static bool can_dupe;
+unsigned device_type = 0;
+int emulating = 0;
+
+uint8_t libretro_save_buf[0x20000 + 0x2000];	/* Workaround for broken-by-design GBA save semantics. */
+
+static unsigned libretro_save_size = sizeof(libretro_save_buf);
+
+int RGB_LOW_BITS_MASK = 0;
+
+u16 systemColorMap16[0x10000];
+u32 systemColorMap32[0x10000];
+u16 systemGbPalette[24];
+int systemRedShift = 0;
+int systemBlueShift = 0;
+int systemGreenShift = 0;
+int systemColorDepth = 32;
+int systemDebug = 0;
+int systemVerbose = 0;
+int systemFrameSkip = 0;
+int systemSaveUpdateCounter = SYSTEM_SAVE_NOT_UPDATED;
+int systemSpeed = 0;
+
+u64 startTime = 0;
+u32 renderedFrames = 0;
+
+void (*dbgOutput)(const char *s, u32 addr);
+void (*dbgSignal)(int sig, int number);
+
+void *retro_get_memory_data(unsigned id)
+{
+   if (id != RETRO_MEMORY_SAVE_RAM)
+      return 0;
+
+   return libretro_save_buf;
+}
+
+size_t retro_get_memory_size(unsigned id)
+{
+   if (id != RETRO_MEMORY_SAVE_RAM)
+      return 0;
+
+   return libretro_save_size;
+}
+
+static bool scan_area(const uint8_t *data, unsigned size)
+{
+   for (unsigned i = 0; i < size; i++)
+      if (data[i] != 0xff)
+         return true;
+
+   return false;
+}
+
+static void adjust_save_ram()
+{
+   if (scan_area(libretro_save_buf, 512) &&
+         !scan_area(libretro_save_buf + 512, sizeof(libretro_save_buf) - 512))
+   {
+      libretro_save_size = 512;
+      fprintf(stderr, "Detecting EEprom 8kbit\n");
+   }
+   else if (scan_area(libretro_save_buf, 0x2000) && 
+         !scan_area(libretro_save_buf + 0x2000, sizeof(libretro_save_buf) - 0x2000))
+   {
+      libretro_save_size = 0x2000;
+      fprintf(stderr, "Detecting EEprom 64kbit\n");
+   }
+
+   else if (scan_area(libretro_save_buf, 0x10000) && 
+         !scan_area(libretro_save_buf + 0x10000, sizeof(libretro_save_buf) - 0x10000))
+   {
+      libretro_save_size = 0x10000;
+      fprintf(stderr, "Detecting Flash 512kbit\n");
+   }
+   else if (scan_area(libretro_save_buf, 0x20000) && 
+         !scan_area(libretro_save_buf + 0x20000, sizeof(libretro_save_buf) - 0x20000))
+   {
+      libretro_save_size = 0x20000;
+      fprintf(stderr, "Detecting Flash 1Mbit\n");
+   }
+   else
+      fprintf(stderr, "Did not detect any particular SRAM type.\n");
+
+   if (libretro_save_size == 512 || libretro_save_size == 0x2000)
+      eepromData = libretro_save_buf;
+   else if (libretro_save_size == 0x10000 || libretro_save_size == 0x20000)
+      flashSaveMemory = libretro_save_buf;
+}
+
+
+unsigned retro_api_version(void)
+{
+   return RETRO_API_VERSION;
+}
+
+void retro_set_video_refresh(retro_video_refresh_t cb)
+{
+   video_cb = cb;
+}
+
+void retro_set_audio_sample(retro_audio_sample_t cb)
+{ }
+
+void retro_set_audio_sample_batch(retro_audio_sample_batch_t cb)
+{
+   audio_batch_cb = cb;
+}
+
+void retro_set_input_poll(retro_input_poll_t cb)
+{
+   poll_cb = cb;
+}
+
+void retro_set_input_state(retro_input_state_t cb)
+{
+   input_cb = cb;
+}
+
+void retro_set_controller_port_device(unsigned port, unsigned device)
+{ }
+
+void retro_set_environment(retro_environment_t cb)
+{
+   environ_cb = cb;
+
+   struct retro_variable variables[] = {
+      { "vbam-next-gamepad",
+         "Button layout; original|reversed" },
+      { NULL, NULL },
+   };
+
+   cb(RETRO_ENVIRONMENT_SET_VARIABLES, variables);
+}
+
+void retro_get_system_info(struct retro_system_info *info)
+{
+   info->need_fullpath = true;
+   info->valid_extensions = "gba";
+   info->library_version = "v1.0.2";
+   info->library_name = "VBA-M";
+   info->block_extract = false;
+}
+
+void retro_get_system_av_info(struct retro_system_av_info *info)
+{
+   info->geometry.base_width = 240;
+   info->geometry.base_height = 160;
+   info->geometry.max_width = 240;
+   info->geometry.max_height = 160;
+   info->timing.fps =  16777216.0 / 280896.0;
+   info->timing.sample_rate = 32000.0;
+}
+
+void retro_init(void)
+{
+   memset(libretro_save_buf, 0xff, sizeof(libretro_save_buf));
+   adjust_save_ram();
+   environ_cb(RETRO_ENVIRONMENT_GET_CAN_DUPE, &can_dupe);
+
+#ifdef FRONTEND_SUPPORTS_RGB565
+   enum retro_pixel_format rgb565 = RETRO_PIXEL_FORMAT_RGB565;
+   if(environ_cb(RETRO_ENVIRONMENT_SET_PIXEL_FORMAT, &rgb565))
+      fprintf(stderr, "Frontend supports RGB565 - will use that instead of XRGB1555.\n");
+#else
+   enum retro_pixel_format rgb8888 = RETRO_PIXEL_FORMAT_XRGB8888;
+   if(environ_cb(RETRO_ENVIRONMENT_SET_PIXEL_FORMAT, &rgb8888))
+      fprintf(stderr, "Frontend supports XRGB8888 - will use that instead of XRGB1555.\n");
+#endif
+}
+
+static unsigned serialize_size = 0;
+
+typedef struct  {
+	char romtitle[256];
+	char romid[5];
+	int flashSize;
+	int saveType;
+	int rtcEnabled;
+	int mirroringEnabled;
+	int useBios;
+} ini_t;
+
+static const ini_t gbaover[256] = {
+			//romtitle,							    	romid	flash	save	rtc	mirror	bios
+			{"2 Games in 1 - Dragon Ball Z - The Legacy of Goku I & II (USA)",	"BLFE",	0,	1,	0,	0,	0},
+			{"2 Games in 1 - Dragon Ball Z - Buu's Fury + Dragon Ball GT - Transformation (USA)", "BUFE", 0, 1, 0, 0, 0},
+			{"Boktai - The Sun Is in Your Hand (Europe)(En,Fr,De,Es,It)",		"U3IP",	0,	0,	1,	0,	0},
+			{"Boktai - The Sun Is in Your Hand (USA)",				"U3IE",	0,	0,	1,	0,	0},
+			{"Boktai 2 - Solar Boy Django (USA)",					"U32E",	0,	0,	1,	0,	0},
+			{"Boktai 2 - Solar Boy Django (Europe)(En,Fr,De,Es,It)",		"U32P",	0,	0,	1,	0,	0},
+			{"Bokura no Taiyou - Taiyou Action RPG (Japan)",			"U3IJ",	0,	0,	1,	0,	0},
+			{"Card e-Reader+ (Japan)",						"PSAJ",	131072,	0,	0,	0,	0},
+			{"Classic NES Series - Bomberman (USA, Europe)",			"FBME",	0,	1,	0,	1,	0},
+			{"Classic NES Series - Castlevania (USA, Europe)",			"FADE",	0,	1,	0,	1,	0},
+			{"Classic NES Series - Donkey Kong (USA, Europe)",			"FDKE",	0,	1,	0,	1,	0},
+			{"Classic NES Series - Dr. Mario (USA, Europe)",			"FDME",	0,	1,	0,	1,	0},
+			{"Classic NES Series - Excitebike (USA, Europe)",			"FEBE",	0,	1,	0,	1,	0},
+			{"Classic NES Series - Legend of Zelda (USA, Europe)",			"FZLE",	0,	1,	0,	1,	0},
+			{"Classic NES Series - Ice Climber (USA, Europe)",			"FICE",	0,	1,	0,	1,	0},
+			{"Classic NES Series - Metroid (USA, Europe)",				"FMRE",	0,	1,	0,	1,	0},
+			{"Classic NES Series - Pac-Man (USA, Europe)",				"FP7E",	0,	1,	0,	1,	0},
+			{"Classic NES Series - Super Mario Bros. (USA, Europe)",		"FSME",	0,	1,	0,	1,	0},
+			{"Classic NES Series - Xevious (USA, Europe)",				"FXVE",	0,	1,	0,	1,	0},
+			{"Classic NES Series - Zelda II - The Adventure of Link (USA, Europe)",	"FLBE",	0,	1,	0,	1,	0},
+			{"Digi Communication 2 - Datou! Black Gemagema Dan (Japan)",		"BDKJ",	0,	1,	0,	0,	0},
+			{"e-Reader (USA)",							"PSAE",	131072,	0,	0,	0,	0},
+			{"Dragon Ball GT - Transformation (USA)",				"BT4E",	0,	1,	0,	0,	0},
+			{"Dragon Ball Z - Buu's Fury (USA)",					"BG3E",	0,	1,	0,	0,	0},
+			{"Dragon Ball Z - Taiketsu (Europe)(En,Fr,De,Es,It)",			"BDBP",	0,	1,	0,	0,	0},
+			{"Dragon Ball Z - Taiketsu (USA)",					"BDBE",	0,	1,	0,	0,	0},
+			{"Dragon Ball Z - The Legacy of Goku II International (Japan)",		"ALFJ",	0,	1,	0,	0,	0},
+			{"Dragon Ball Z - The Legacy of Goku II (Europe)(En,Fr,De,Es,It)",	"ALFP", 0,	1,	0,	0,	0},
+			{"Dragon Ball Z - The Legacy of Goku II (USA)",				"ALFE",	0,	1,	0,	0,	0},
+			{"Dragon Ball Z - The Legacy Of Goku (Europe)(En,Fr,De,Es,It)",		"ALGP",	0,	1,	0,	0,	0},
+			{"Dragon Ball Z - The Legacy of Goku (USA)",				"ALGE",	131072,	1,	0,	0,	0},
+			{"F-Zero - Climax (Japan)",						"BFTJ",	131072,	0,	0,	0,	0},
+			{"Famicom Mini Vol. 01 - Super Mario Bros. (Japan)",			"FMBJ",	0,	1,	0,	1,	0},
+			{"Famicom Mini Vol. 12 - Clu Clu Land (Japan)",				"FCLJ",	0,	1,	0,	1,	0},
+			{"Famicom Mini Vol. 13 - Balloon Fight (Japan)",			"FBFJ",	0,	1,	0,	1,	0},
+			{"Famicom Mini Vol. 14 - Wrecking Crew (Japan)",			"FWCJ",	0,	1,	0,	1,	0},
+			{"Famicom Mini Vol. 15 - Dr. Mario (Japan)",				"FDMJ",	0,	1,	0,	1,	0},
+			{"Famicom Mini Vol. 16 - Dig Dug (Japan)",				"FTBJ",	0,	1,	0,	1,	0},
+			{"Famicom Mini Vol. 17 - Takahashi Meijin no Boukenjima (Japan)",	"FTBJ",	0,	1,	0,	1,	0},

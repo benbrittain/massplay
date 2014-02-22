@@ -2012,7 +2012,7 @@ void gbVblank_interrupt()
   gbCheatWrite(false); // Emulates GS codes.
   gbMemory[0xff0f] = register_IF &= 0xfe;
   gbWriteMemory(--SP.W, PC.B.B1);
-  gbWriteMemory(--SP.W, PC.B.B0);
+  gbWriteMemory(--SP.W, PC.B.xB0);
   PC.W = 0x40;
 }
 
@@ -2021,7 +2021,7 @@ void gbLcd_interrupt()
   gbCheatWrite(false); // Emulates GS codes.
   gbMemory[0xff0f] = register_IF &= 0xfd;
   gbWriteMemory(--SP.W, PC.B.B1);
-  gbWriteMemory(--SP.W, PC.B.B0);
+  gbWriteMemory(--SP.W, PC.B.xB0);
   PC.W = 0x48;
 }
 
@@ -2029,7 +2029,7 @@ void gbTimer_interrupt()
 {
   gbMemory[0xff0f] = register_IF &= 0xfb;
   gbWriteMemory(--SP.W, PC.B.B1);
-  gbWriteMemory(--SP.W, PC.B.B0);
+  gbWriteMemory(--SP.W, PC.B.xB0);
   PC.W = 0x50;
 }
 
@@ -2037,7 +2037,7 @@ void gbSerial_interrupt()
 {
   gbMemory[0xff0f] = register_IF &= 0xf7;
   gbWriteMemory(--SP.W, PC.B.B1);
-  gbWriteMemory(--SP.W, PC.B.B0);
+  gbWriteMemory(--SP.W, PC.B.xB0);
   PC.W = 0x58;
 }
 
@@ -2045,7 +2045,7 @@ void gbJoypad_interrupt()
 {
   gbMemory[0xff0f] = register_IF &= 0xef;
   gbWriteMemory(--SP.W, PC.B.B1);
-  gbWriteMemory(--SP.W, PC.B.B0);
+  gbWriteMemory(--SP.W, PC.B.xB0);
   PC.W = 0x60;
 }
 

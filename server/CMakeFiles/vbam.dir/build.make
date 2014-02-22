@@ -270,6 +270,10 @@ vbam: /usr/lib64/libX11.so
 vbam: /usr/lib64/libXext.so
 vbam: /usr/lib64/libz.so
 vbam: /usr/lib64/libpng.so
+vbam: /usr/lib64/libboost_filesystem.so
+vbam: /usr/lib64/libboost_system.so
+vbam: /usr/lib64/libboost_regex.so
+vbam: /usr/lib64/libboost_thread.so
 vbam: CMakeFiles/vbam.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable vbam"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/vbam.dir/link.txt --verbose=$(VERBOSE)

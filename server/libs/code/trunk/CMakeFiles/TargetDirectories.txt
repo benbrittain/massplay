@@ -1,5 +1,0 @@
-/home/ben/workspace/vbam/code/trunk/CMakeFiles/fex.dir
-/home/ben/workspace/vbam/code/trunk/CMakeFiles/gvbam.dir
-/home/ben/workspace/vbam/code/trunk/po/gvbam/CMakeFiles/gvbam_translations.dir
-/home/ben/workspace/vbam/code/trunk/CMakeFiles/vbam.dir
-/home/ben/workspace/vbam/code/trunk/CMakeFiles/vbamcore.dir

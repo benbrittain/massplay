@@ -6,3 +6,21 @@
 
 #IncludeRegexTransform: 
 
+/home/ben/workspace/massplay/server/src/common/memgzio.c
+stdio.h
+-
+stdarg.h
+-
+stdlib.h
+-
+string.h
+-
+errno.h
+-
+memgzio.h
+/home/ben/workspace/massplay/server/src/common/memgzio.h
+
+/home/ben/workspace/massplay/server/src/common/memgzio.h
+zlib.h
+-
+
