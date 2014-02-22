@@ -19,27 +19,16 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <title>Mass Play </title>
-    <script src="/node_modules/jquery/dist/jquery.min.js">
-    </script>
-
-    <script src="node_modules/socket.io-client/dist/socket.io.js">
-    </script>
+    <script src="app.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
 
     <script type="text/javascript">
-      var sock = io.connect( 'http://localhost:9002' );
-      sock.on( 'default', function( msg ){
-        console.log( msg );
-      });
-
-      $(function(){
-        console.log( 'hello' );
-      });
 
       /* Initialize canvas elements */
       function init() {
         var gameCanvas = document.getElementById('game');
         if(gameCanvas.getContext){
-							var ctx = document.getElementById("game");set
+							var ctx = document.getElementById("game");
 							if (gameCanvas.getContext) {
 								var ctx = gameCanvas.getContext("2d");
 
