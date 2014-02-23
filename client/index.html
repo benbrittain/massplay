@@ -141,10 +141,10 @@
           <img src="assets/controller/up.png"/></button>
           <button data-ctl-seq="CTRL_DOWN" type="button" class="ctl-button btn btn-primary">
           <img src="assets/controller/down.png"/></button>
-          <button data-ctl-seq="CTRL_LSHOULDER" type="button" class="ctl-button btn btn-primary">Left Shoulder
-          </button>
-          <button data-ctl-seq="CTRL_RSHOULDER" type="button" class="ctl-button btn btn-primary">Right Shoulder
-          </button>
+          <button data-ctl-seq="CTRL_LSHOULDER" type="button" class="ctl-button btn btn-primary">
+          <img src="assets/controller/lb.png"/></button>
+          <button data-ctl-seq="CTRL_RSHOULDER" type="button" class="ctl-button btn btn-primary">
+          <img src="assets/controller/rb.png"/></button>
           <button data-ctl-seq="CTRL_START" type="button" class="ctl-button btn btn-primary">
           <img src="assets/controller/start.png"/></button>
           <button data-ctl-seq="CTRL_SELECT" type="button" class="ctl-button btn btn-primary">
@@ -154,7 +154,13 @@
 				<!-- Begin chat -->
 				<div class="col-md-3 chat">
           <h3>Chat here</h3>
-        </div>
+            <div class="messages-wrapper">
+              <ul class="messages"></ul>
+            </div>
+            <div class="input">
+              <input type="text" class="name" placeholder="Your Name"/>
+              <input type="text" class="text" placeholder="Type a message!" />
+            </div>
         <!-- End chat -->
       </div><!-- row -->
     </div><!-- container -->
@@ -185,6 +191,10 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdn.goinstant.net/v1/platform.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/chat.js"></script>
 
 
   </body>
