@@ -2,6 +2,7 @@ var fs = require( 'fs' );
 var defer = require("node-promise").defer;
 var express = require( 'express' );
 var MongoClient = require('mongodb').MongoClient
+var Handlebars = require( 'handlebars' );
 
 
 var app = express();
@@ -57,14 +58,14 @@ app.get( '*', function(req, res) {
     var path = req.params.join('/').replace( /^\//, '' );
 
     console.log( path );
-    res.sendfile(path );
+    if( path == '' ){
+      res.sendfile( 'index.html' );
+    }else{
+      res.sendfile(path );
+    }
 });
 
 
-app.get( '/', function( req, res ){
-  console.log( 'index' );
-  res.sendfile( 'index.html' );
-});
 
 
 app.listen( 8000 );
@@ -77,7 +78,7 @@ app.listen( 8000 );
 function openTemplate( path ){
   var deferred;
   fs.readFile( path, function(err, data){
-      deferred.resolve( data );
+      deferred.resolve( Handlebars.compile( data ) );
   });
   return deffered.promise;
 }
