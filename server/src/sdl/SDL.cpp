@@ -2446,7 +2446,7 @@ void systemDrawScreen()
   }
   //TODO: fix this. we are stupid
   iframeCount++;
-  iframeCount = iframeCount%8;
+  iframeCount = iframeCount%15;
 
 
   SDL_LockSurface(surface);
