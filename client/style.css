@@ -9,6 +9,8 @@ body,html {
 
 .nav h1, .nav h2, .nav h3 {
 	color: #EEE;
+  border: none;
+  border-bottom: 3px solid #050;
 }
 .container-fluid {
 	height: 100%;
@@ -26,11 +28,18 @@ canvas#game {
 
 /* The navigation bar */
 .navbar, .navbar-inverse {
-	background: #A1004F;
+	background: #111;
+  /*
+
+  RED
+  D11717
+  */
 	color: #EEE;
 	border:none;
 	border-color: none;
 	border-width: none;
+
+  border-bottom: 3px solid #090;
 }
 
 
@@ -41,6 +50,12 @@ canvas#game {
 	font-size: 28px;
 }
 
+.navbar img {
+  margin-top: -5px;
+  padding: 0px 10px;
+  height: 24px;
+}
+
 /* Badges and stats */
 .navbar .badges {
   display: inline;
@@ -49,7 +64,8 @@ canvas#game {
 }
 
 .navbar .badge {
-  margin: 16px 5px;
+  margin: 18px 5px 0px 5px;
+  background: #333;
 }
 
 /* Search button */
@@ -75,9 +91,14 @@ li.account-btn:hover {
   color: #EEE;
 }
 
+.navbar-right {
+  background: #222;
+}
+
 /* Drop down button */
-.navbar.btn, .navbar button.dropdown-toggle {
-	padding: 9px 10px;
+.navbar.btn, .navbar button.dropdown-toggle, .navbar btn-info:active,
+.btn-info:active, .btn-info.active, .open .dropdown-toggle.btn-info  {
+	padding: 14px 10px;
   border: none;
 	border-radius: 0;
   background: #111;
@@ -104,7 +125,9 @@ li.account-btn:hover {
   background: #090;
 }
 
-.navbar .dropdown-menu a.start-game:hover {
+.navbar .dropdown-menu a.start-game:hover,
+.navbar .dropdown-menu a.start-game:focus,
+.navbar .dropdown-menu a.start-game:active {
   background: #080;
 }
 
@@ -117,12 +140,17 @@ li.account-btn:hover {
 	height: 100%;
 } 
 
+h1.page-header {
+  padding-bottom: 1px;
+  border-bottom: 3px solid #BBB;
+}
 .game-page {
   padding: 40px;
 }
+
 /* Game browser sidebar */
 .sidebar {
-	background: #111;
+	background: #222;
 	height: 100%;
 }
 
@@ -132,7 +160,7 @@ li.account-btn:hover {
 /* Chat bar */
 .chat {
 	height: 100%;
-	border-left: 3px solid  #333;
+	border-left: 3px solid  #060;
 	background: #BBB;
 }
 
@@ -141,4 +169,16 @@ li.account-btn:hover {
 
 #chat-box{
 
+}
+
+#footer {
+  background: #222;
+  color: #EEE;
+  border: none;
+  border-top: 3px solid #090;
+  width: 100%;
+}
+
+.row {
+  margin-right: 0px;
 }

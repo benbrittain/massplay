@@ -21,12 +21,12 @@
     <![endif]-->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script type="text/javascript" src="app.js"></script>
+    <!-- <script type="text/javascript" src="app.js"></script> -->
     <script type="text/javascript">
       window.context = null; // woooo globals
       window.canvas;
       /* Initialize canvas elements */
-
+      /*
       $( function() {
         console.log( 'INIT' );
         var gameCanvas = window.canvas = document.getElementById('game');
@@ -53,7 +53,7 @@
         context.putImageData( id, 10, 10 );
       });
 
-
+    */
     </script>
   </head>
 
@@ -68,15 +68,15 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Mass Play</a>
+          <a class="navbar-brand" href="#"/><img src="logo.png"/>Mass Play</a>
         </div>
         <!-- Stats -->
         <div class="navbar-collapse collapse">
-        <div class="badges">
+        <div class="badges ">
         <span class="badge">Games Being Played: 435</span>
         <span class="badge">Users Online: 9,992</span>
         </div>
-          <ul class="nav navbar-nav navbar-right">
+          <ul class="nav navbar-nav navbar-right col-xs">
             <li class="search-btn"><a href="#">
                 <span class="glyphicon glyphicon-search"></span>
                    Browse Games</a></li>
@@ -138,6 +138,23 @@
       </div><!-- row -->
     </div><!-- container -->
 
+    <!-- Footer -->
+    <div id="footer">
+      <div class="row">
+        <div class="container">
+          <div class="col-md-2 sidebar foot-left">
+            <p>Donate BTC:</p>
+            <p>Donate DOGE: </p>
+          </div>
+          <div class="col-md-8 foot-mid">
+            <p>Made with in Montreal by: Ben Brittain, Lee Avital, and Dan Kolbman</p>
+          </div>
+          <div class="col-md-2 sidbar foot-right">
+            <p class="text-muted">Awesome Sauce!</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
