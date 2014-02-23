@@ -19,7 +19,8 @@ ws.onmessage = function( message ){
 
 
 
-
+      console.log( 'got a frame' );
+      console.log( b );
       // var id = window.context.createImageData( 240, 160);
       // for( var i = 0, j = 0; i < id.data.length; i+=4, j+= 3   ){
       //   id.data[i] = arr[j];
@@ -35,7 +36,11 @@ ws.onmessage = function( message ){
       img.width = 240;
       img.height = 160;
 
-      context.drawImage( img, 0, 0 );
+
+      img.onload = function(){
+        console.log( 'loaded' );
+        context.drawImage( img, 0, 0 );
+      }
   // try{
   //   console.log( message.data );
   //   var bytes = new Uint8Array( message.data );
