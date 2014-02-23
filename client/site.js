@@ -68,3 +68,16 @@ app.get( '/', function( req, res ){
 
 
 app.listen( 8000 );
+
+
+
+
+// HELPER FUNCTIONS
+
+function openTemplate( path ){
+  var deferred;
+  fs.readFile( path, function(err, data){
+      deferred.resolve( data );
+  });
+  return deffered.promise;
+}
