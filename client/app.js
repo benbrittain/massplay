@@ -25,7 +25,7 @@ ws.onmessage = function( message ){
 
       img.onload = function(){
         console.log( 'loaded' );
-        context.drawImage( img, 0, 0 );
+        context.drawImage( img, 0, 0, 240, 160 );
       }
   }
 };
