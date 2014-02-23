@@ -31,17 +31,11 @@ CMAKE_COMMAND = /usr/bin/cmake
 # The command to remove a file.
 RM = /usr/bin/cmake -E remove -f
 
-# Escaping for special characters.
-EQUALS = =
-
-# The program to use to edit the cache.
-CMAKE_EDIT_COMMAND = /usr/bin/ccmake
-
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ben/workspace/massplay/server
+CMAKE_SOURCE_DIR = /root/massplay/server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ben/workspace/massplay/server
+CMAKE_BINARY_DIR = /root/massplay/server
 
 # Include any dependencies generated for this target.
 include CMakeFiles/gvbam.dir/depend.make
@@ -54,17 +48,17 @@ include CMakeFiles/gvbam.dir/flags.make
 
 CMakeFiles/gvbam.dir/src/gtk/configfile.cpp.o: CMakeFiles/gvbam.dir/flags.make
 CMakeFiles/gvbam.dir/src/gtk/configfile.cpp.o: src/gtk/configfile.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gvbam.dir/src/gtk/configfile.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gvbam.dir/src/gtk/configfile.cpp.o -c /home/ben/workspace/massplay/server/src/gtk/configfile.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gvbam.dir/src/gtk/configfile.cpp.o -c /root/massplay/server/src/gtk/configfile.cpp
 
 CMakeFiles/gvbam.dir/src/gtk/configfile.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gvbam.dir/src/gtk/configfile.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/gtk/configfile.cpp > CMakeFiles/gvbam.dir/src/gtk/configfile.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/gtk/configfile.cpp > CMakeFiles/gvbam.dir/src/gtk/configfile.cpp.i
 
 CMakeFiles/gvbam.dir/src/gtk/configfile.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gvbam.dir/src/gtk/configfile.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/gtk/configfile.cpp -o CMakeFiles/gvbam.dir/src/gtk/configfile.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/gtk/configfile.cpp -o CMakeFiles/gvbam.dir/src/gtk/configfile.cpp.s
 
 CMakeFiles/gvbam.dir/src/gtk/configfile.cpp.o.requires:
 .PHONY : CMakeFiles/gvbam.dir/src/gtk/configfile.cpp.o.requires
@@ -77,17 +71,17 @@ CMakeFiles/gvbam.dir/src/gtk/configfile.cpp.o.provides.build: CMakeFiles/gvbam.d
 
 CMakeFiles/gvbam.dir/src/gtk/main.cpp.o: CMakeFiles/gvbam.dir/flags.make
 CMakeFiles/gvbam.dir/src/gtk/main.cpp.o: src/gtk/main.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gvbam.dir/src/gtk/main.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gvbam.dir/src/gtk/main.cpp.o -c /home/ben/workspace/massplay/server/src/gtk/main.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gvbam.dir/src/gtk/main.cpp.o -c /root/massplay/server/src/gtk/main.cpp
 
 CMakeFiles/gvbam.dir/src/gtk/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gvbam.dir/src/gtk/main.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/gtk/main.cpp > CMakeFiles/gvbam.dir/src/gtk/main.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/gtk/main.cpp > CMakeFiles/gvbam.dir/src/gtk/main.cpp.i
 
 CMakeFiles/gvbam.dir/src/gtk/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gvbam.dir/src/gtk/main.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/gtk/main.cpp -o CMakeFiles/gvbam.dir/src/gtk/main.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/gtk/main.cpp -o CMakeFiles/gvbam.dir/src/gtk/main.cpp.s
 
 CMakeFiles/gvbam.dir/src/gtk/main.cpp.o.requires:
 .PHONY : CMakeFiles/gvbam.dir/src/gtk/main.cpp.o.requires
@@ -100,17 +94,17 @@ CMakeFiles/gvbam.dir/src/gtk/main.cpp.o.provides.build: CMakeFiles/gvbam.dir/src
 
 CMakeFiles/gvbam.dir/src/gtk/system.cpp.o: CMakeFiles/gvbam.dir/flags.make
 CMakeFiles/gvbam.dir/src/gtk/system.cpp.o: src/gtk/system.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gvbam.dir/src/gtk/system.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gvbam.dir/src/gtk/system.cpp.o -c /home/ben/workspace/massplay/server/src/gtk/system.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gvbam.dir/src/gtk/system.cpp.o -c /root/massplay/server/src/gtk/system.cpp
 
 CMakeFiles/gvbam.dir/src/gtk/system.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gvbam.dir/src/gtk/system.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/gtk/system.cpp > CMakeFiles/gvbam.dir/src/gtk/system.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/gtk/system.cpp > CMakeFiles/gvbam.dir/src/gtk/system.cpp.i
 
 CMakeFiles/gvbam.dir/src/gtk/system.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gvbam.dir/src/gtk/system.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/gtk/system.cpp -o CMakeFiles/gvbam.dir/src/gtk/system.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/gtk/system.cpp -o CMakeFiles/gvbam.dir/src/gtk/system.cpp.s
 
 CMakeFiles/gvbam.dir/src/gtk/system.cpp.o.requires:
 .PHONY : CMakeFiles/gvbam.dir/src/gtk/system.cpp.o.requires
@@ -123,17 +117,17 @@ CMakeFiles/gvbam.dir/src/gtk/system.cpp.o.provides.build: CMakeFiles/gvbam.dir/s
 
 CMakeFiles/gvbam.dir/src/gtk/windowcallbacks.cpp.o: CMakeFiles/gvbam.dir/flags.make
 CMakeFiles/gvbam.dir/src/gtk/windowcallbacks.cpp.o: src/gtk/windowcallbacks.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gvbam.dir/src/gtk/windowcallbacks.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gvbam.dir/src/gtk/windowcallbacks.cpp.o -c /home/ben/workspace/massplay/server/src/gtk/windowcallbacks.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gvbam.dir/src/gtk/windowcallbacks.cpp.o -c /root/massplay/server/src/gtk/windowcallbacks.cpp
 
 CMakeFiles/gvbam.dir/src/gtk/windowcallbacks.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gvbam.dir/src/gtk/windowcallbacks.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/gtk/windowcallbacks.cpp > CMakeFiles/gvbam.dir/src/gtk/windowcallbacks.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/gtk/windowcallbacks.cpp > CMakeFiles/gvbam.dir/src/gtk/windowcallbacks.cpp.i
 
 CMakeFiles/gvbam.dir/src/gtk/windowcallbacks.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gvbam.dir/src/gtk/windowcallbacks.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/gtk/windowcallbacks.cpp -o CMakeFiles/gvbam.dir/src/gtk/windowcallbacks.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/gtk/windowcallbacks.cpp -o CMakeFiles/gvbam.dir/src/gtk/windowcallbacks.cpp.s
 
 CMakeFiles/gvbam.dir/src/gtk/windowcallbacks.cpp.o.requires:
 .PHONY : CMakeFiles/gvbam.dir/src/gtk/windowcallbacks.cpp.o.requires
@@ -146,17 +140,17 @@ CMakeFiles/gvbam.dir/src/gtk/windowcallbacks.cpp.o.provides.build: CMakeFiles/gv
 
 CMakeFiles/gvbam.dir/src/gtk/filters.cpp.o: CMakeFiles/gvbam.dir/flags.make
 CMakeFiles/gvbam.dir/src/gtk/filters.cpp.o: src/gtk/filters.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gvbam.dir/src/gtk/filters.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gvbam.dir/src/gtk/filters.cpp.o -c /home/ben/workspace/massplay/server/src/gtk/filters.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gvbam.dir/src/gtk/filters.cpp.o -c /root/massplay/server/src/gtk/filters.cpp
 
 CMakeFiles/gvbam.dir/src/gtk/filters.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gvbam.dir/src/gtk/filters.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/gtk/filters.cpp > CMakeFiles/gvbam.dir/src/gtk/filters.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/gtk/filters.cpp > CMakeFiles/gvbam.dir/src/gtk/filters.cpp.i
 
 CMakeFiles/gvbam.dir/src/gtk/filters.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gvbam.dir/src/gtk/filters.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/gtk/filters.cpp -o CMakeFiles/gvbam.dir/src/gtk/filters.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/gtk/filters.cpp -o CMakeFiles/gvbam.dir/src/gtk/filters.cpp.s
 
 CMakeFiles/gvbam.dir/src/gtk/filters.cpp.o.requires:
 .PHONY : CMakeFiles/gvbam.dir/src/gtk/filters.cpp.o.requires
@@ -169,17 +163,17 @@ CMakeFiles/gvbam.dir/src/gtk/filters.cpp.o.provides.build: CMakeFiles/gvbam.dir/
 
 CMakeFiles/gvbam.dir/src/gtk/generalconfig.cpp.o: CMakeFiles/gvbam.dir/flags.make
 CMakeFiles/gvbam.dir/src/gtk/generalconfig.cpp.o: src/gtk/generalconfig.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_6)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gvbam.dir/src/gtk/generalconfig.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gvbam.dir/src/gtk/generalconfig.cpp.o -c /home/ben/workspace/massplay/server/src/gtk/generalconfig.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gvbam.dir/src/gtk/generalconfig.cpp.o -c /root/massplay/server/src/gtk/generalconfig.cpp
 
 CMakeFiles/gvbam.dir/src/gtk/generalconfig.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gvbam.dir/src/gtk/generalconfig.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/gtk/generalconfig.cpp > CMakeFiles/gvbam.dir/src/gtk/generalconfig.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/gtk/generalconfig.cpp > CMakeFiles/gvbam.dir/src/gtk/generalconfig.cpp.i
 
 CMakeFiles/gvbam.dir/src/gtk/generalconfig.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gvbam.dir/src/gtk/generalconfig.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/gtk/generalconfig.cpp -o CMakeFiles/gvbam.dir/src/gtk/generalconfig.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/gtk/generalconfig.cpp -o CMakeFiles/gvbam.dir/src/gtk/generalconfig.cpp.s
 
 CMakeFiles/gvbam.dir/src/gtk/generalconfig.cpp.o.requires:
 .PHONY : CMakeFiles/gvbam.dir/src/gtk/generalconfig.cpp.o.requires
@@ -192,17 +186,17 @@ CMakeFiles/gvbam.dir/src/gtk/generalconfig.cpp.o.provides.build: CMakeFiles/gvba
 
 CMakeFiles/gvbam.dir/src/gtk/gameboyconfig.cpp.o: CMakeFiles/gvbam.dir/flags.make
 CMakeFiles/gvbam.dir/src/gtk/gameboyconfig.cpp.o: src/gtk/gameboyconfig.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_7)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_7)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gvbam.dir/src/gtk/gameboyconfig.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gvbam.dir/src/gtk/gameboyconfig.cpp.o -c /home/ben/workspace/massplay/server/src/gtk/gameboyconfig.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gvbam.dir/src/gtk/gameboyconfig.cpp.o -c /root/massplay/server/src/gtk/gameboyconfig.cpp
 
 CMakeFiles/gvbam.dir/src/gtk/gameboyconfig.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gvbam.dir/src/gtk/gameboyconfig.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/gtk/gameboyconfig.cpp > CMakeFiles/gvbam.dir/src/gtk/gameboyconfig.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/gtk/gameboyconfig.cpp > CMakeFiles/gvbam.dir/src/gtk/gameboyconfig.cpp.i
 
 CMakeFiles/gvbam.dir/src/gtk/gameboyconfig.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gvbam.dir/src/gtk/gameboyconfig.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/gtk/gameboyconfig.cpp -o CMakeFiles/gvbam.dir/src/gtk/gameboyconfig.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/gtk/gameboyconfig.cpp -o CMakeFiles/gvbam.dir/src/gtk/gameboyconfig.cpp.s
 
 CMakeFiles/gvbam.dir/src/gtk/gameboyconfig.cpp.o.requires:
 .PHONY : CMakeFiles/gvbam.dir/src/gtk/gameboyconfig.cpp.o.requires
@@ -215,17 +209,17 @@ CMakeFiles/gvbam.dir/src/gtk/gameboyconfig.cpp.o.provides.build: CMakeFiles/gvba
 
 CMakeFiles/gvbam.dir/src/gtk/gameboyadvanceconfig.cpp.o: CMakeFiles/gvbam.dir/flags.make
 CMakeFiles/gvbam.dir/src/gtk/gameboyadvanceconfig.cpp.o: src/gtk/gameboyadvanceconfig.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_8)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_8)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gvbam.dir/src/gtk/gameboyadvanceconfig.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gvbam.dir/src/gtk/gameboyadvanceconfig.cpp.o -c /home/ben/workspace/massplay/server/src/gtk/gameboyadvanceconfig.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gvbam.dir/src/gtk/gameboyadvanceconfig.cpp.o -c /root/massplay/server/src/gtk/gameboyadvanceconfig.cpp
 
 CMakeFiles/gvbam.dir/src/gtk/gameboyadvanceconfig.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gvbam.dir/src/gtk/gameboyadvanceconfig.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/gtk/gameboyadvanceconfig.cpp > CMakeFiles/gvbam.dir/src/gtk/gameboyadvanceconfig.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/gtk/gameboyadvanceconfig.cpp > CMakeFiles/gvbam.dir/src/gtk/gameboyadvanceconfig.cpp.i
 
 CMakeFiles/gvbam.dir/src/gtk/gameboyadvanceconfig.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gvbam.dir/src/gtk/gameboyadvanceconfig.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/gtk/gameboyadvanceconfig.cpp -o CMakeFiles/gvbam.dir/src/gtk/gameboyadvanceconfig.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/gtk/gameboyadvanceconfig.cpp -o CMakeFiles/gvbam.dir/src/gtk/gameboyadvanceconfig.cpp.s
 
 CMakeFiles/gvbam.dir/src/gtk/gameboyadvanceconfig.cpp.o.requires:
 .PHONY : CMakeFiles/gvbam.dir/src/gtk/gameboyadvanceconfig.cpp.o.requires
@@ -238,17 +232,17 @@ CMakeFiles/gvbam.dir/src/gtk/gameboyadvanceconfig.cpp.o.provides.build: CMakeFil
 
 CMakeFiles/gvbam.dir/src/gtk/cheatlist.cpp.o: CMakeFiles/gvbam.dir/flags.make
 CMakeFiles/gvbam.dir/src/gtk/cheatlist.cpp.o: src/gtk/cheatlist.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_9)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_9)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gvbam.dir/src/gtk/cheatlist.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gvbam.dir/src/gtk/cheatlist.cpp.o -c /home/ben/workspace/massplay/server/src/gtk/cheatlist.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gvbam.dir/src/gtk/cheatlist.cpp.o -c /root/massplay/server/src/gtk/cheatlist.cpp
 
 CMakeFiles/gvbam.dir/src/gtk/cheatlist.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gvbam.dir/src/gtk/cheatlist.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/gtk/cheatlist.cpp > CMakeFiles/gvbam.dir/src/gtk/cheatlist.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/gtk/cheatlist.cpp > CMakeFiles/gvbam.dir/src/gtk/cheatlist.cpp.i
 
 CMakeFiles/gvbam.dir/src/gtk/cheatlist.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gvbam.dir/src/gtk/cheatlist.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/gtk/cheatlist.cpp -o CMakeFiles/gvbam.dir/src/gtk/cheatlist.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/gtk/cheatlist.cpp -o CMakeFiles/gvbam.dir/src/gtk/cheatlist.cpp.s
 
 CMakeFiles/gvbam.dir/src/gtk/cheatlist.cpp.o.requires:
 .PHONY : CMakeFiles/gvbam.dir/src/gtk/cheatlist.cpp.o.requires
@@ -261,17 +255,17 @@ CMakeFiles/gvbam.dir/src/gtk/cheatlist.cpp.o.provides.build: CMakeFiles/gvbam.di
 
 CMakeFiles/gvbam.dir/src/gtk/cheatedit.cpp.o: CMakeFiles/gvbam.dir/flags.make
 CMakeFiles/gvbam.dir/src/gtk/cheatedit.cpp.o: src/gtk/cheatedit.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_10)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_10)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gvbam.dir/src/gtk/cheatedit.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gvbam.dir/src/gtk/cheatedit.cpp.o -c /home/ben/workspace/massplay/server/src/gtk/cheatedit.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gvbam.dir/src/gtk/cheatedit.cpp.o -c /root/massplay/server/src/gtk/cheatedit.cpp
 
 CMakeFiles/gvbam.dir/src/gtk/cheatedit.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gvbam.dir/src/gtk/cheatedit.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/gtk/cheatedit.cpp > CMakeFiles/gvbam.dir/src/gtk/cheatedit.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/gtk/cheatedit.cpp > CMakeFiles/gvbam.dir/src/gtk/cheatedit.cpp.i
 
 CMakeFiles/gvbam.dir/src/gtk/cheatedit.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gvbam.dir/src/gtk/cheatedit.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/gtk/cheatedit.cpp -o CMakeFiles/gvbam.dir/src/gtk/cheatedit.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/gtk/cheatedit.cpp -o CMakeFiles/gvbam.dir/src/gtk/cheatedit.cpp.s
 
 CMakeFiles/gvbam.dir/src/gtk/cheatedit.cpp.o.requires:
 .PHONY : CMakeFiles/gvbam.dir/src/gtk/cheatedit.cpp.o.requires
@@ -284,17 +278,17 @@ CMakeFiles/gvbam.dir/src/gtk/cheatedit.cpp.o.provides.build: CMakeFiles/gvbam.di
 
 CMakeFiles/gvbam.dir/src/gtk/gameboyadvancecheatlist.cpp.o: CMakeFiles/gvbam.dir/flags.make
 CMakeFiles/gvbam.dir/src/gtk/gameboyadvancecheatlist.cpp.o: src/gtk/gameboyadvancecheatlist.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_11)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_11)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gvbam.dir/src/gtk/gameboyadvancecheatlist.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gvbam.dir/src/gtk/gameboyadvancecheatlist.cpp.o -c /home/ben/workspace/massplay/server/src/gtk/gameboyadvancecheatlist.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gvbam.dir/src/gtk/gameboyadvancecheatlist.cpp.o -c /root/massplay/server/src/gtk/gameboyadvancecheatlist.cpp
 
 CMakeFiles/gvbam.dir/src/gtk/gameboyadvancecheatlist.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gvbam.dir/src/gtk/gameboyadvancecheatlist.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/gtk/gameboyadvancecheatlist.cpp > CMakeFiles/gvbam.dir/src/gtk/gameboyadvancecheatlist.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/gtk/gameboyadvancecheatlist.cpp > CMakeFiles/gvbam.dir/src/gtk/gameboyadvancecheatlist.cpp.i
 
 CMakeFiles/gvbam.dir/src/gtk/gameboyadvancecheatlist.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gvbam.dir/src/gtk/gameboyadvancecheatlist.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/gtk/gameboyadvancecheatlist.cpp -o CMakeFiles/gvbam.dir/src/gtk/gameboyadvancecheatlist.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/gtk/gameboyadvancecheatlist.cpp -o CMakeFiles/gvbam.dir/src/gtk/gameboyadvancecheatlist.cpp.s
 
 CMakeFiles/gvbam.dir/src/gtk/gameboyadvancecheatlist.cpp.o.requires:
 .PHONY : CMakeFiles/gvbam.dir/src/gtk/gameboyadvancecheatlist.cpp.o.requires
@@ -307,17 +301,17 @@ CMakeFiles/gvbam.dir/src/gtk/gameboyadvancecheatlist.cpp.o.provides.build: CMake
 
 CMakeFiles/gvbam.dir/src/gtk/gameboycheatlist.cpp.o: CMakeFiles/gvbam.dir/flags.make
 CMakeFiles/gvbam.dir/src/gtk/gameboycheatlist.cpp.o: src/gtk/gameboycheatlist.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_12)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_12)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gvbam.dir/src/gtk/gameboycheatlist.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gvbam.dir/src/gtk/gameboycheatlist.cpp.o -c /home/ben/workspace/massplay/server/src/gtk/gameboycheatlist.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gvbam.dir/src/gtk/gameboycheatlist.cpp.o -c /root/massplay/server/src/gtk/gameboycheatlist.cpp
 
 CMakeFiles/gvbam.dir/src/gtk/gameboycheatlist.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gvbam.dir/src/gtk/gameboycheatlist.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/gtk/gameboycheatlist.cpp > CMakeFiles/gvbam.dir/src/gtk/gameboycheatlist.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/gtk/gameboycheatlist.cpp > CMakeFiles/gvbam.dir/src/gtk/gameboycheatlist.cpp.i
 
 CMakeFiles/gvbam.dir/src/gtk/gameboycheatlist.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gvbam.dir/src/gtk/gameboycheatlist.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/gtk/gameboycheatlist.cpp -o CMakeFiles/gvbam.dir/src/gtk/gameboycheatlist.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/gtk/gameboycheatlist.cpp -o CMakeFiles/gvbam.dir/src/gtk/gameboycheatlist.cpp.s
 
 CMakeFiles/gvbam.dir/src/gtk/gameboycheatlist.cpp.o.requires:
 .PHONY : CMakeFiles/gvbam.dir/src/gtk/gameboycheatlist.cpp.o.requires
@@ -330,17 +324,17 @@ CMakeFiles/gvbam.dir/src/gtk/gameboycheatlist.cpp.o.provides.build: CMakeFiles/g
 
 CMakeFiles/gvbam.dir/src/gtk/joypadconfig.cpp.o: CMakeFiles/gvbam.dir/flags.make
 CMakeFiles/gvbam.dir/src/gtk/joypadconfig.cpp.o: src/gtk/joypadconfig.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_13)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_13)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gvbam.dir/src/gtk/joypadconfig.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gvbam.dir/src/gtk/joypadconfig.cpp.o -c /home/ben/workspace/massplay/server/src/gtk/joypadconfig.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gvbam.dir/src/gtk/joypadconfig.cpp.o -c /root/massplay/server/src/gtk/joypadconfig.cpp
 
 CMakeFiles/gvbam.dir/src/gtk/joypadconfig.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gvbam.dir/src/gtk/joypadconfig.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/gtk/joypadconfig.cpp > CMakeFiles/gvbam.dir/src/gtk/joypadconfig.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/gtk/joypadconfig.cpp > CMakeFiles/gvbam.dir/src/gtk/joypadconfig.cpp.i
 
 CMakeFiles/gvbam.dir/src/gtk/joypadconfig.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gvbam.dir/src/gtk/joypadconfig.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/gtk/joypadconfig.cpp -o CMakeFiles/gvbam.dir/src/gtk/joypadconfig.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/gtk/joypadconfig.cpp -o CMakeFiles/gvbam.dir/src/gtk/joypadconfig.cpp.s
 
 CMakeFiles/gvbam.dir/src/gtk/joypadconfig.cpp.o.requires:
 .PHONY : CMakeFiles/gvbam.dir/src/gtk/joypadconfig.cpp.o.requires
@@ -353,17 +347,17 @@ CMakeFiles/gvbam.dir/src/gtk/joypadconfig.cpp.o.provides.build: CMakeFiles/gvbam
 
 CMakeFiles/gvbam.dir/src/gtk/directoriesconfig.cpp.o: CMakeFiles/gvbam.dir/flags.make
 CMakeFiles/gvbam.dir/src/gtk/directoriesconfig.cpp.o: src/gtk/directoriesconfig.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_14)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_14)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gvbam.dir/src/gtk/directoriesconfig.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gvbam.dir/src/gtk/directoriesconfig.cpp.o -c /home/ben/workspace/massplay/server/src/gtk/directoriesconfig.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gvbam.dir/src/gtk/directoriesconfig.cpp.o -c /root/massplay/server/src/gtk/directoriesconfig.cpp
 
 CMakeFiles/gvbam.dir/src/gtk/directoriesconfig.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gvbam.dir/src/gtk/directoriesconfig.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/gtk/directoriesconfig.cpp > CMakeFiles/gvbam.dir/src/gtk/directoriesconfig.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/gtk/directoriesconfig.cpp > CMakeFiles/gvbam.dir/src/gtk/directoriesconfig.cpp.i
 
 CMakeFiles/gvbam.dir/src/gtk/directoriesconfig.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gvbam.dir/src/gtk/directoriesconfig.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/gtk/directoriesconfig.cpp -o CMakeFiles/gvbam.dir/src/gtk/directoriesconfig.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/gtk/directoriesconfig.cpp -o CMakeFiles/gvbam.dir/src/gtk/directoriesconfig.cpp.s
 
 CMakeFiles/gvbam.dir/src/gtk/directoriesconfig.cpp.o.requires:
 .PHONY : CMakeFiles/gvbam.dir/src/gtk/directoriesconfig.cpp.o.requires
@@ -376,17 +370,17 @@ CMakeFiles/gvbam.dir/src/gtk/directoriesconfig.cpp.o.provides.build: CMakeFiles/
 
 CMakeFiles/gvbam.dir/src/gtk/displayconfig.cpp.o: CMakeFiles/gvbam.dir/flags.make
 CMakeFiles/gvbam.dir/src/gtk/displayconfig.cpp.o: src/gtk/displayconfig.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_15)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_15)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gvbam.dir/src/gtk/displayconfig.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gvbam.dir/src/gtk/displayconfig.cpp.o -c /home/ben/workspace/massplay/server/src/gtk/displayconfig.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gvbam.dir/src/gtk/displayconfig.cpp.o -c /root/massplay/server/src/gtk/displayconfig.cpp
 
 CMakeFiles/gvbam.dir/src/gtk/displayconfig.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gvbam.dir/src/gtk/displayconfig.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/gtk/displayconfig.cpp > CMakeFiles/gvbam.dir/src/gtk/displayconfig.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/gtk/displayconfig.cpp > CMakeFiles/gvbam.dir/src/gtk/displayconfig.cpp.i
 
 CMakeFiles/gvbam.dir/src/gtk/displayconfig.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gvbam.dir/src/gtk/displayconfig.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/gtk/displayconfig.cpp -o CMakeFiles/gvbam.dir/src/gtk/displayconfig.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/gtk/displayconfig.cpp -o CMakeFiles/gvbam.dir/src/gtk/displayconfig.cpp.s
 
 CMakeFiles/gvbam.dir/src/gtk/displayconfig.cpp.o.requires:
 .PHONY : CMakeFiles/gvbam.dir/src/gtk/displayconfig.cpp.o.requires
@@ -399,17 +393,17 @@ CMakeFiles/gvbam.dir/src/gtk/displayconfig.cpp.o.provides.build: CMakeFiles/gvba
 
 CMakeFiles/gvbam.dir/src/gtk/soundconfig.cpp.o: CMakeFiles/gvbam.dir/flags.make
 CMakeFiles/gvbam.dir/src/gtk/soundconfig.cpp.o: src/gtk/soundconfig.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_16)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_16)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gvbam.dir/src/gtk/soundconfig.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gvbam.dir/src/gtk/soundconfig.cpp.o -c /home/ben/workspace/massplay/server/src/gtk/soundconfig.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gvbam.dir/src/gtk/soundconfig.cpp.o -c /root/massplay/server/src/gtk/soundconfig.cpp
 
 CMakeFiles/gvbam.dir/src/gtk/soundconfig.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gvbam.dir/src/gtk/soundconfig.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/gtk/soundconfig.cpp > CMakeFiles/gvbam.dir/src/gtk/soundconfig.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/gtk/soundconfig.cpp > CMakeFiles/gvbam.dir/src/gtk/soundconfig.cpp.i
 
 CMakeFiles/gvbam.dir/src/gtk/soundconfig.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gvbam.dir/src/gtk/soundconfig.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/gtk/soundconfig.cpp -o CMakeFiles/gvbam.dir/src/gtk/soundconfig.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/gtk/soundconfig.cpp -o CMakeFiles/gvbam.dir/src/gtk/soundconfig.cpp.s
 
 CMakeFiles/gvbam.dir/src/gtk/soundconfig.cpp.o.requires:
 .PHONY : CMakeFiles/gvbam.dir/src/gtk/soundconfig.cpp.o.requires
@@ -422,17 +416,17 @@ CMakeFiles/gvbam.dir/src/gtk/soundconfig.cpp.o.provides.build: CMakeFiles/gvbam.
 
 CMakeFiles/gvbam.dir/src/gtk/screenarea.cpp.o: CMakeFiles/gvbam.dir/flags.make
 CMakeFiles/gvbam.dir/src/gtk/screenarea.cpp.o: src/gtk/screenarea.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_17)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_17)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gvbam.dir/src/gtk/screenarea.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gvbam.dir/src/gtk/screenarea.cpp.o -c /home/ben/workspace/massplay/server/src/gtk/screenarea.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gvbam.dir/src/gtk/screenarea.cpp.o -c /root/massplay/server/src/gtk/screenarea.cpp
 
 CMakeFiles/gvbam.dir/src/gtk/screenarea.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gvbam.dir/src/gtk/screenarea.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/gtk/screenarea.cpp > CMakeFiles/gvbam.dir/src/gtk/screenarea.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/gtk/screenarea.cpp > CMakeFiles/gvbam.dir/src/gtk/screenarea.cpp.i
 
 CMakeFiles/gvbam.dir/src/gtk/screenarea.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gvbam.dir/src/gtk/screenarea.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/gtk/screenarea.cpp -o CMakeFiles/gvbam.dir/src/gtk/screenarea.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/gtk/screenarea.cpp -o CMakeFiles/gvbam.dir/src/gtk/screenarea.cpp.s
 
 CMakeFiles/gvbam.dir/src/gtk/screenarea.cpp.o.requires:
 .PHONY : CMakeFiles/gvbam.dir/src/gtk/screenarea.cpp.o.requires
@@ -445,17 +439,17 @@ CMakeFiles/gvbam.dir/src/gtk/screenarea.cpp.o.provides.build: CMakeFiles/gvbam.d
 
 CMakeFiles/gvbam.dir/src/gtk/screenarea-cairo.cpp.o: CMakeFiles/gvbam.dir/flags.make
 CMakeFiles/gvbam.dir/src/gtk/screenarea-cairo.cpp.o: src/gtk/screenarea-cairo.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_18)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_18)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gvbam.dir/src/gtk/screenarea-cairo.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gvbam.dir/src/gtk/screenarea-cairo.cpp.o -c /home/ben/workspace/massplay/server/src/gtk/screenarea-cairo.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gvbam.dir/src/gtk/screenarea-cairo.cpp.o -c /root/massplay/server/src/gtk/screenarea-cairo.cpp
 
 CMakeFiles/gvbam.dir/src/gtk/screenarea-cairo.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gvbam.dir/src/gtk/screenarea-cairo.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/gtk/screenarea-cairo.cpp > CMakeFiles/gvbam.dir/src/gtk/screenarea-cairo.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/gtk/screenarea-cairo.cpp > CMakeFiles/gvbam.dir/src/gtk/screenarea-cairo.cpp.i
 
 CMakeFiles/gvbam.dir/src/gtk/screenarea-cairo.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gvbam.dir/src/gtk/screenarea-cairo.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/gtk/screenarea-cairo.cpp -o CMakeFiles/gvbam.dir/src/gtk/screenarea-cairo.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/gtk/screenarea-cairo.cpp -o CMakeFiles/gvbam.dir/src/gtk/screenarea-cairo.cpp.s
 
 CMakeFiles/gvbam.dir/src/gtk/screenarea-cairo.cpp.o.requires:
 .PHONY : CMakeFiles/gvbam.dir/src/gtk/screenarea-cairo.cpp.o.requires
@@ -468,17 +462,17 @@ CMakeFiles/gvbam.dir/src/gtk/screenarea-cairo.cpp.o.provides.build: CMakeFiles/g
 
 CMakeFiles/gvbam.dir/src/gtk/screenarea-opengl.cpp.o: CMakeFiles/gvbam.dir/flags.make
 CMakeFiles/gvbam.dir/src/gtk/screenarea-opengl.cpp.o: src/gtk/screenarea-opengl.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_19)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_19)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gvbam.dir/src/gtk/screenarea-opengl.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gvbam.dir/src/gtk/screenarea-opengl.cpp.o -c /home/ben/workspace/massplay/server/src/gtk/screenarea-opengl.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gvbam.dir/src/gtk/screenarea-opengl.cpp.o -c /root/massplay/server/src/gtk/screenarea-opengl.cpp
 
 CMakeFiles/gvbam.dir/src/gtk/screenarea-opengl.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gvbam.dir/src/gtk/screenarea-opengl.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/gtk/screenarea-opengl.cpp > CMakeFiles/gvbam.dir/src/gtk/screenarea-opengl.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/gtk/screenarea-opengl.cpp > CMakeFiles/gvbam.dir/src/gtk/screenarea-opengl.cpp.i
 
 CMakeFiles/gvbam.dir/src/gtk/screenarea-opengl.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gvbam.dir/src/gtk/screenarea-opengl.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/gtk/screenarea-opengl.cpp -o CMakeFiles/gvbam.dir/src/gtk/screenarea-opengl.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/gtk/screenarea-opengl.cpp -o CMakeFiles/gvbam.dir/src/gtk/screenarea-opengl.cpp.s
 
 CMakeFiles/gvbam.dir/src/gtk/screenarea-opengl.cpp.o.requires:
 .PHONY : CMakeFiles/gvbam.dir/src/gtk/screenarea-opengl.cpp.o.requires
@@ -491,17 +485,17 @@ CMakeFiles/gvbam.dir/src/gtk/screenarea-opengl.cpp.o.provides.build: CMakeFiles/
 
 CMakeFiles/gvbam.dir/src/gtk/tools.cpp.o: CMakeFiles/gvbam.dir/flags.make
 CMakeFiles/gvbam.dir/src/gtk/tools.cpp.o: src/gtk/tools.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_20)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_20)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gvbam.dir/src/gtk/tools.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gvbam.dir/src/gtk/tools.cpp.o -c /home/ben/workspace/massplay/server/src/gtk/tools.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gvbam.dir/src/gtk/tools.cpp.o -c /root/massplay/server/src/gtk/tools.cpp
 
 CMakeFiles/gvbam.dir/src/gtk/tools.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gvbam.dir/src/gtk/tools.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/gtk/tools.cpp > CMakeFiles/gvbam.dir/src/gtk/tools.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/gtk/tools.cpp > CMakeFiles/gvbam.dir/src/gtk/tools.cpp.i
 
 CMakeFiles/gvbam.dir/src/gtk/tools.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gvbam.dir/src/gtk/tools.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/gtk/tools.cpp -o CMakeFiles/gvbam.dir/src/gtk/tools.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/gtk/tools.cpp -o CMakeFiles/gvbam.dir/src/gtk/tools.cpp.s
 
 CMakeFiles/gvbam.dir/src/gtk/tools.cpp.o.requires:
 .PHONY : CMakeFiles/gvbam.dir/src/gtk/tools.cpp.o.requires
@@ -514,17 +508,17 @@ CMakeFiles/gvbam.dir/src/gtk/tools.cpp.o.provides.build: CMakeFiles/gvbam.dir/sr
 
 CMakeFiles/gvbam.dir/src/gtk/window.cpp.o: CMakeFiles/gvbam.dir/flags.make
 CMakeFiles/gvbam.dir/src/gtk/window.cpp.o: src/gtk/window.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_21)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_21)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gvbam.dir/src/gtk/window.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gvbam.dir/src/gtk/window.cpp.o -c /home/ben/workspace/massplay/server/src/gtk/window.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gvbam.dir/src/gtk/window.cpp.o -c /root/massplay/server/src/gtk/window.cpp
 
 CMakeFiles/gvbam.dir/src/gtk/window.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gvbam.dir/src/gtk/window.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/gtk/window.cpp > CMakeFiles/gvbam.dir/src/gtk/window.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/gtk/window.cpp > CMakeFiles/gvbam.dir/src/gtk/window.cpp.i
 
 CMakeFiles/gvbam.dir/src/gtk/window.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gvbam.dir/src/gtk/window.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/gtk/window.cpp -o CMakeFiles/gvbam.dir/src/gtk/window.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/gtk/window.cpp -o CMakeFiles/gvbam.dir/src/gtk/window.cpp.s
 
 CMakeFiles/gvbam.dir/src/gtk/window.cpp.o.requires:
 .PHONY : CMakeFiles/gvbam.dir/src/gtk/window.cpp.o.requires
@@ -537,17 +531,17 @@ CMakeFiles/gvbam.dir/src/gtk/window.cpp.o.provides.build: CMakeFiles/gvbam.dir/s
 
 CMakeFiles/gvbam.dir/src/sdl/inputSDL.cpp.o: CMakeFiles/gvbam.dir/flags.make
 CMakeFiles/gvbam.dir/src/sdl/inputSDL.cpp.o: src/sdl/inputSDL.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_22)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_22)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gvbam.dir/src/sdl/inputSDL.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gvbam.dir/src/sdl/inputSDL.cpp.o -c /home/ben/workspace/massplay/server/src/sdl/inputSDL.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gvbam.dir/src/sdl/inputSDL.cpp.o -c /root/massplay/server/src/sdl/inputSDL.cpp
 
 CMakeFiles/gvbam.dir/src/sdl/inputSDL.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gvbam.dir/src/sdl/inputSDL.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/sdl/inputSDL.cpp > CMakeFiles/gvbam.dir/src/sdl/inputSDL.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/sdl/inputSDL.cpp > CMakeFiles/gvbam.dir/src/sdl/inputSDL.cpp.i
 
 CMakeFiles/gvbam.dir/src/sdl/inputSDL.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gvbam.dir/src/sdl/inputSDL.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/sdl/inputSDL.cpp -o CMakeFiles/gvbam.dir/src/sdl/inputSDL.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/sdl/inputSDL.cpp -o CMakeFiles/gvbam.dir/src/sdl/inputSDL.cpp.s
 
 CMakeFiles/gvbam.dir/src/sdl/inputSDL.cpp.o.requires:
 .PHONY : CMakeFiles/gvbam.dir/src/sdl/inputSDL.cpp.o.requires
@@ -608,18 +602,19 @@ gvbam: CMakeFiles/gvbam.dir/src/gtk/screenarea-opengl.cpp.o
 gvbam: CMakeFiles/gvbam.dir/src/gtk/tools.cpp.o
 gvbam: CMakeFiles/gvbam.dir/src/gtk/window.cpp.o
 gvbam: CMakeFiles/gvbam.dir/src/sdl/inputSDL.cpp.o
-gvbam: CMakeFiles/gvbam.dir/build.make
 gvbam: libvbamcore.a
 gvbam: libfex.a
-gvbam: /usr/lib64/libSDL.so
-gvbam: /usr/lib64/libGLU.so
-gvbam: /usr/lib64/libGL.so
-gvbam: /usr/lib64/libSM.so
-gvbam: /usr/lib64/libICE.so
-gvbam: /usr/lib64/libX11.so
-gvbam: /usr/lib64/libXext.so
-gvbam: /usr/lib64/libz.so
-gvbam: /usr/lib64/libpng.so
+gvbam: /usr/lib/x86_64-linux-gnu/libSDLmain.a
+gvbam: /usr/lib/x86_64-linux-gnu/libSDL.so
+gvbam: /usr/lib/x86_64-linux-gnu/libGLU.so
+gvbam: /usr/lib/x86_64-linux-gnu/libGL.so
+gvbam: /usr/lib/x86_64-linux-gnu/libSM.so
+gvbam: /usr/lib/x86_64-linux-gnu/libICE.so
+gvbam: /usr/lib/x86_64-linux-gnu/libX11.so
+gvbam: /usr/lib/x86_64-linux-gnu/libXext.so
+gvbam: /usr/lib/x86_64-linux-gnu/libz.so
+gvbam: /usr/lib/x86_64-linux-gnu/libpng.so
+gvbam: CMakeFiles/gvbam.dir/build.make
 gvbam: CMakeFiles/gvbam.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable gvbam"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gvbam.dir/link.txt --verbose=$(VERBOSE)
@@ -657,6 +652,6 @@ CMakeFiles/gvbam.dir/clean:
 .PHONY : CMakeFiles/gvbam.dir/clean
 
 CMakeFiles/gvbam.dir/depend:
-	cd /home/ben/workspace/massplay/server && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ben/workspace/massplay/server /home/ben/workspace/massplay/server /home/ben/workspace/massplay/server /home/ben/workspace/massplay/server /home/ben/workspace/massplay/server/CMakeFiles/gvbam.dir/DependInfo.cmake --color=$(COLOR)
+	cd /root/massplay/server && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/massplay/server /root/massplay/server /root/massplay/server /root/massplay/server /root/massplay/server/CMakeFiles/gvbam.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/gvbam.dir/depend
 

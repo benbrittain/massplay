@@ -24,11 +24,11 @@ function _arrayBufferToBase64( buffer ) {
 count = -1;
 ws.onmessage = function( message ){
 
-      var nextCount = parseInt( message.substring( 0, 8 ) );
-      var payload = message.substring( 8 );
+      var nextCount = parseInt( message.data.substring( 0, 8 ) );
 
       if( nextCount >= count ){
 
+      	var payload = message.data.substring( 8 );
         count = nextCount;
         var img = document.createElement( 'img' );
         img.src = 'data:image/bmp;base64,' + payload;
@@ -41,15 +41,15 @@ ws.onmessage = function( message ){
           context.drawImage( img, 0, 0, 240, 160 );
         }
 
-<<<<<<< Updated upstream
-=======
       img.onload = function(){
         console.log( 'loaded' );
         context.drawImage( img, 0, 0, 240, 160);
->>>>>>> Stashed changes
       }
   }
 };
+
+
+
 
 ws.onopen = function( ){
   ws.send( 'HI DER WEBSOCKET!' );

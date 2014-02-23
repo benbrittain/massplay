@@ -31,17 +31,11 @@ CMAKE_COMMAND = /usr/bin/cmake
 # The command to remove a file.
 RM = /usr/bin/cmake -E remove -f
 
-# Escaping for special characters.
-EQUALS = =
-
-# The program to use to edit the cache.
-CMAKE_EDIT_COMMAND = /usr/bin/ccmake
-
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ben/workspace/massplay/server
+CMAKE_SOURCE_DIR = /root/massplay/server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ben/workspace/massplay/server
+CMAKE_BINARY_DIR = /root/massplay/server
 
 # Include any dependencies generated for this target.
 include CMakeFiles/vbamcore.dir/depend.make
@@ -54,17 +48,17 @@ include CMakeFiles/vbamcore.dir/flags.make
 
 CMakeFiles/vbamcore.dir/src/Util.cpp.o: CMakeFiles/vbamcore.dir/flags.make
 CMakeFiles/vbamcore.dir/src/Util.cpp.o: src/Util.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/vbamcore.dir/src/Util.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/Util.cpp.o -c /home/ben/workspace/massplay/server/src/Util.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/Util.cpp.o -c /root/massplay/server/src/Util.cpp
 
 CMakeFiles/vbamcore.dir/src/Util.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vbamcore.dir/src/Util.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/Util.cpp > CMakeFiles/vbamcore.dir/src/Util.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/Util.cpp > CMakeFiles/vbamcore.dir/src/Util.cpp.i
 
 CMakeFiles/vbamcore.dir/src/Util.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vbamcore.dir/src/Util.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/Util.cpp -o CMakeFiles/vbamcore.dir/src/Util.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/Util.cpp -o CMakeFiles/vbamcore.dir/src/Util.cpp.s
 
 CMakeFiles/vbamcore.dir/src/Util.cpp.o.requires:
 .PHONY : CMakeFiles/vbamcore.dir/src/Util.cpp.o.requires
@@ -77,17 +71,17 @@ CMakeFiles/vbamcore.dir/src/Util.cpp.o.provides.build: CMakeFiles/vbamcore.dir/s
 
 CMakeFiles/vbamcore.dir/src/common/Patch.cpp.o: CMakeFiles/vbamcore.dir/flags.make
 CMakeFiles/vbamcore.dir/src/common/Patch.cpp.o: src/common/Patch.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/vbamcore.dir/src/common/Patch.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/common/Patch.cpp.o -c /home/ben/workspace/massplay/server/src/common/Patch.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/common/Patch.cpp.o -c /root/massplay/server/src/common/Patch.cpp
 
 CMakeFiles/vbamcore.dir/src/common/Patch.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vbamcore.dir/src/common/Patch.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/common/Patch.cpp > CMakeFiles/vbamcore.dir/src/common/Patch.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/common/Patch.cpp > CMakeFiles/vbamcore.dir/src/common/Patch.cpp.i
 
 CMakeFiles/vbamcore.dir/src/common/Patch.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vbamcore.dir/src/common/Patch.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/common/Patch.cpp -o CMakeFiles/vbamcore.dir/src/common/Patch.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/common/Patch.cpp -o CMakeFiles/vbamcore.dir/src/common/Patch.cpp.s
 
 CMakeFiles/vbamcore.dir/src/common/Patch.cpp.o.requires:
 .PHONY : CMakeFiles/vbamcore.dir/src/common/Patch.cpp.o.requires
@@ -100,17 +94,17 @@ CMakeFiles/vbamcore.dir/src/common/Patch.cpp.o.provides.build: CMakeFiles/vbamco
 
 CMakeFiles/vbamcore.dir/src/common/memgzio.c.o: CMakeFiles/vbamcore.dir/flags.make
 CMakeFiles/vbamcore.dir/src/common/memgzio.c.o: src/common/memgzio.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/vbamcore.dir/src/common/memgzio.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/vbamcore.dir/src/common/memgzio.c.o   -c /home/ben/workspace/massplay/server/src/common/memgzio.c
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/vbamcore.dir/src/common/memgzio.c.o   -c /root/massplay/server/src/common/memgzio.c
 
 CMakeFiles/vbamcore.dir/src/common/memgzio.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/vbamcore.dir/src/common/memgzio.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/ben/workspace/massplay/server/src/common/memgzio.c > CMakeFiles/vbamcore.dir/src/common/memgzio.c.i
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /root/massplay/server/src/common/memgzio.c > CMakeFiles/vbamcore.dir/src/common/memgzio.c.i
 
 CMakeFiles/vbamcore.dir/src/common/memgzio.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vbamcore.dir/src/common/memgzio.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/ben/workspace/massplay/server/src/common/memgzio.c -o CMakeFiles/vbamcore.dir/src/common/memgzio.c.s
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /root/massplay/server/src/common/memgzio.c -o CMakeFiles/vbamcore.dir/src/common/memgzio.c.s
 
 CMakeFiles/vbamcore.dir/src/common/memgzio.c.o.requires:
 .PHONY : CMakeFiles/vbamcore.dir/src/common/memgzio.c.o.requires
@@ -123,17 +117,17 @@ CMakeFiles/vbamcore.dir/src/common/memgzio.c.o.provides.build: CMakeFiles/vbamco
 
 CMakeFiles/vbamcore.dir/src/common/SoundSDL.cpp.o: CMakeFiles/vbamcore.dir/flags.make
 CMakeFiles/vbamcore.dir/src/common/SoundSDL.cpp.o: src/common/SoundSDL.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/vbamcore.dir/src/common/SoundSDL.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/common/SoundSDL.cpp.o -c /home/ben/workspace/massplay/server/src/common/SoundSDL.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/common/SoundSDL.cpp.o -c /root/massplay/server/src/common/SoundSDL.cpp
 
 CMakeFiles/vbamcore.dir/src/common/SoundSDL.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vbamcore.dir/src/common/SoundSDL.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/common/SoundSDL.cpp > CMakeFiles/vbamcore.dir/src/common/SoundSDL.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/common/SoundSDL.cpp > CMakeFiles/vbamcore.dir/src/common/SoundSDL.cpp.i
 
 CMakeFiles/vbamcore.dir/src/common/SoundSDL.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vbamcore.dir/src/common/SoundSDL.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/common/SoundSDL.cpp -o CMakeFiles/vbamcore.dir/src/common/SoundSDL.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/common/SoundSDL.cpp -o CMakeFiles/vbamcore.dir/src/common/SoundSDL.cpp.s
 
 CMakeFiles/vbamcore.dir/src/common/SoundSDL.cpp.o.requires:
 .PHONY : CMakeFiles/vbamcore.dir/src/common/SoundSDL.cpp.o.requires
@@ -146,17 +140,17 @@ CMakeFiles/vbamcore.dir/src/common/SoundSDL.cpp.o.provides.build: CMakeFiles/vba
 
 CMakeFiles/vbamcore.dir/src/gba/agbprint.cpp.o: CMakeFiles/vbamcore.dir/flags.make
 CMakeFiles/vbamcore.dir/src/gba/agbprint.cpp.o: src/gba/agbprint.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/vbamcore.dir/src/gba/agbprint.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gba/agbprint.cpp.o -c /home/ben/workspace/massplay/server/src/gba/agbprint.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gba/agbprint.cpp.o -c /root/massplay/server/src/gba/agbprint.cpp
 
 CMakeFiles/vbamcore.dir/src/gba/agbprint.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vbamcore.dir/src/gba/agbprint.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/gba/agbprint.cpp > CMakeFiles/vbamcore.dir/src/gba/agbprint.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/gba/agbprint.cpp > CMakeFiles/vbamcore.dir/src/gba/agbprint.cpp.i
 
 CMakeFiles/vbamcore.dir/src/gba/agbprint.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vbamcore.dir/src/gba/agbprint.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/gba/agbprint.cpp -o CMakeFiles/vbamcore.dir/src/gba/agbprint.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/gba/agbprint.cpp -o CMakeFiles/vbamcore.dir/src/gba/agbprint.cpp.s
 
 CMakeFiles/vbamcore.dir/src/gba/agbprint.cpp.o.requires:
 .PHONY : CMakeFiles/vbamcore.dir/src/gba/agbprint.cpp.o.requires
@@ -169,17 +163,17 @@ CMakeFiles/vbamcore.dir/src/gba/agbprint.cpp.o.provides.build: CMakeFiles/vbamco
 
 CMakeFiles/vbamcore.dir/src/gba/bios.cpp.o: CMakeFiles/vbamcore.dir/flags.make
 CMakeFiles/vbamcore.dir/src/gba/bios.cpp.o: src/gba/bios.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_6)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/vbamcore.dir/src/gba/bios.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gba/bios.cpp.o -c /home/ben/workspace/massplay/server/src/gba/bios.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gba/bios.cpp.o -c /root/massplay/server/src/gba/bios.cpp
 
 CMakeFiles/vbamcore.dir/src/gba/bios.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vbamcore.dir/src/gba/bios.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/gba/bios.cpp > CMakeFiles/vbamcore.dir/src/gba/bios.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/gba/bios.cpp > CMakeFiles/vbamcore.dir/src/gba/bios.cpp.i
 
 CMakeFiles/vbamcore.dir/src/gba/bios.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vbamcore.dir/src/gba/bios.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/gba/bios.cpp -o CMakeFiles/vbamcore.dir/src/gba/bios.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/gba/bios.cpp -o CMakeFiles/vbamcore.dir/src/gba/bios.cpp.s
 
 CMakeFiles/vbamcore.dir/src/gba/bios.cpp.o.requires:
 .PHONY : CMakeFiles/vbamcore.dir/src/gba/bios.cpp.o.requires
@@ -192,17 +186,17 @@ CMakeFiles/vbamcore.dir/src/gba/bios.cpp.o.provides.build: CMakeFiles/vbamcore.d
 
 CMakeFiles/vbamcore.dir/src/gba/Cheats.cpp.o: CMakeFiles/vbamcore.dir/flags.make
 CMakeFiles/vbamcore.dir/src/gba/Cheats.cpp.o: src/gba/Cheats.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_7)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_7)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/vbamcore.dir/src/gba/Cheats.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gba/Cheats.cpp.o -c /home/ben/workspace/massplay/server/src/gba/Cheats.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gba/Cheats.cpp.o -c /root/massplay/server/src/gba/Cheats.cpp
 
 CMakeFiles/vbamcore.dir/src/gba/Cheats.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vbamcore.dir/src/gba/Cheats.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/gba/Cheats.cpp > CMakeFiles/vbamcore.dir/src/gba/Cheats.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/gba/Cheats.cpp > CMakeFiles/vbamcore.dir/src/gba/Cheats.cpp.i
 
 CMakeFiles/vbamcore.dir/src/gba/Cheats.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vbamcore.dir/src/gba/Cheats.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/gba/Cheats.cpp -o CMakeFiles/vbamcore.dir/src/gba/Cheats.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/gba/Cheats.cpp -o CMakeFiles/vbamcore.dir/src/gba/Cheats.cpp.s
 
 CMakeFiles/vbamcore.dir/src/gba/Cheats.cpp.o.requires:
 .PHONY : CMakeFiles/vbamcore.dir/src/gba/Cheats.cpp.o.requires
@@ -215,17 +209,17 @@ CMakeFiles/vbamcore.dir/src/gba/Cheats.cpp.o.provides.build: CMakeFiles/vbamcore
 
 CMakeFiles/vbamcore.dir/src/gba/CheatSearch.cpp.o: CMakeFiles/vbamcore.dir/flags.make
 CMakeFiles/vbamcore.dir/src/gba/CheatSearch.cpp.o: src/gba/CheatSearch.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_8)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_8)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/vbamcore.dir/src/gba/CheatSearch.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gba/CheatSearch.cpp.o -c /home/ben/workspace/massplay/server/src/gba/CheatSearch.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gba/CheatSearch.cpp.o -c /root/massplay/server/src/gba/CheatSearch.cpp
 
 CMakeFiles/vbamcore.dir/src/gba/CheatSearch.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vbamcore.dir/src/gba/CheatSearch.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/gba/CheatSearch.cpp > CMakeFiles/vbamcore.dir/src/gba/CheatSearch.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/gba/CheatSearch.cpp > CMakeFiles/vbamcore.dir/src/gba/CheatSearch.cpp.i
 
 CMakeFiles/vbamcore.dir/src/gba/CheatSearch.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vbamcore.dir/src/gba/CheatSearch.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/gba/CheatSearch.cpp -o CMakeFiles/vbamcore.dir/src/gba/CheatSearch.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/gba/CheatSearch.cpp -o CMakeFiles/vbamcore.dir/src/gba/CheatSearch.cpp.s
 
 CMakeFiles/vbamcore.dir/src/gba/CheatSearch.cpp.o.requires:
 .PHONY : CMakeFiles/vbamcore.dir/src/gba/CheatSearch.cpp.o.requires
@@ -238,17 +232,17 @@ CMakeFiles/vbamcore.dir/src/gba/CheatSearch.cpp.o.provides.build: CMakeFiles/vba
 
 CMakeFiles/vbamcore.dir/src/gba/EEprom.cpp.o: CMakeFiles/vbamcore.dir/flags.make
 CMakeFiles/vbamcore.dir/src/gba/EEprom.cpp.o: src/gba/EEprom.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_9)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_9)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/vbamcore.dir/src/gba/EEprom.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gba/EEprom.cpp.o -c /home/ben/workspace/massplay/server/src/gba/EEprom.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gba/EEprom.cpp.o -c /root/massplay/server/src/gba/EEprom.cpp
 
 CMakeFiles/vbamcore.dir/src/gba/EEprom.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vbamcore.dir/src/gba/EEprom.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/gba/EEprom.cpp > CMakeFiles/vbamcore.dir/src/gba/EEprom.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/gba/EEprom.cpp > CMakeFiles/vbamcore.dir/src/gba/EEprom.cpp.i
 
 CMakeFiles/vbamcore.dir/src/gba/EEprom.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vbamcore.dir/src/gba/EEprom.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/gba/EEprom.cpp -o CMakeFiles/vbamcore.dir/src/gba/EEprom.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/gba/EEprom.cpp -o CMakeFiles/vbamcore.dir/src/gba/EEprom.cpp.s
 
 CMakeFiles/vbamcore.dir/src/gba/EEprom.cpp.o.requires:
 .PHONY : CMakeFiles/vbamcore.dir/src/gba/EEprom.cpp.o.requires
@@ -261,17 +255,17 @@ CMakeFiles/vbamcore.dir/src/gba/EEprom.cpp.o.provides.build: CMakeFiles/vbamcore
 
 CMakeFiles/vbamcore.dir/src/gba/Flash.cpp.o: CMakeFiles/vbamcore.dir/flags.make
 CMakeFiles/vbamcore.dir/src/gba/Flash.cpp.o: src/gba/Flash.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_10)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_10)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/vbamcore.dir/src/gba/Flash.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gba/Flash.cpp.o -c /home/ben/workspace/massplay/server/src/gba/Flash.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gba/Flash.cpp.o -c /root/massplay/server/src/gba/Flash.cpp
 
 CMakeFiles/vbamcore.dir/src/gba/Flash.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vbamcore.dir/src/gba/Flash.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/gba/Flash.cpp > CMakeFiles/vbamcore.dir/src/gba/Flash.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/gba/Flash.cpp > CMakeFiles/vbamcore.dir/src/gba/Flash.cpp.i
 
 CMakeFiles/vbamcore.dir/src/gba/Flash.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vbamcore.dir/src/gba/Flash.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/gba/Flash.cpp -o CMakeFiles/vbamcore.dir/src/gba/Flash.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/gba/Flash.cpp -o CMakeFiles/vbamcore.dir/src/gba/Flash.cpp.s
 
 CMakeFiles/vbamcore.dir/src/gba/Flash.cpp.o.requires:
 .PHONY : CMakeFiles/vbamcore.dir/src/gba/Flash.cpp.o.requires
@@ -284,17 +278,17 @@ CMakeFiles/vbamcore.dir/src/gba/Flash.cpp.o.provides.build: CMakeFiles/vbamcore.
 
 CMakeFiles/vbamcore.dir/src/gba/GBA.cpp.o: CMakeFiles/vbamcore.dir/flags.make
 CMakeFiles/vbamcore.dir/src/gba/GBA.cpp.o: src/gba/GBA.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_11)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_11)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/vbamcore.dir/src/gba/GBA.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gba/GBA.cpp.o -c /home/ben/workspace/massplay/server/src/gba/GBA.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gba/GBA.cpp.o -c /root/massplay/server/src/gba/GBA.cpp
 
 CMakeFiles/vbamcore.dir/src/gba/GBA.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vbamcore.dir/src/gba/GBA.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/gba/GBA.cpp > CMakeFiles/vbamcore.dir/src/gba/GBA.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/gba/GBA.cpp > CMakeFiles/vbamcore.dir/src/gba/GBA.cpp.i
 
 CMakeFiles/vbamcore.dir/src/gba/GBA.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vbamcore.dir/src/gba/GBA.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/gba/GBA.cpp -o CMakeFiles/vbamcore.dir/src/gba/GBA.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/gba/GBA.cpp -o CMakeFiles/vbamcore.dir/src/gba/GBA.cpp.s
 
 CMakeFiles/vbamcore.dir/src/gba/GBA.cpp.o.requires:
 .PHONY : CMakeFiles/vbamcore.dir/src/gba/GBA.cpp.o.requires
@@ -307,17 +301,17 @@ CMakeFiles/vbamcore.dir/src/gba/GBA.cpp.o.provides.build: CMakeFiles/vbamcore.di
 
 CMakeFiles/vbamcore.dir/src/gba/GBAGfx.cpp.o: CMakeFiles/vbamcore.dir/flags.make
 CMakeFiles/vbamcore.dir/src/gba/GBAGfx.cpp.o: src/gba/GBAGfx.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_12)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_12)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/vbamcore.dir/src/gba/GBAGfx.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gba/GBAGfx.cpp.o -c /home/ben/workspace/massplay/server/src/gba/GBAGfx.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gba/GBAGfx.cpp.o -c /root/massplay/server/src/gba/GBAGfx.cpp
 
 CMakeFiles/vbamcore.dir/src/gba/GBAGfx.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vbamcore.dir/src/gba/GBAGfx.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/gba/GBAGfx.cpp > CMakeFiles/vbamcore.dir/src/gba/GBAGfx.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/gba/GBAGfx.cpp > CMakeFiles/vbamcore.dir/src/gba/GBAGfx.cpp.i
 
 CMakeFiles/vbamcore.dir/src/gba/GBAGfx.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vbamcore.dir/src/gba/GBAGfx.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/gba/GBAGfx.cpp -o CMakeFiles/vbamcore.dir/src/gba/GBAGfx.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/gba/GBAGfx.cpp -o CMakeFiles/vbamcore.dir/src/gba/GBAGfx.cpp.s
 
 CMakeFiles/vbamcore.dir/src/gba/GBAGfx.cpp.o.requires:
 .PHONY : CMakeFiles/vbamcore.dir/src/gba/GBAGfx.cpp.o.requires
@@ -330,17 +324,17 @@ CMakeFiles/vbamcore.dir/src/gba/GBAGfx.cpp.o.provides.build: CMakeFiles/vbamcore
 
 CMakeFiles/vbamcore.dir/src/gba/GBALink.cpp.o: CMakeFiles/vbamcore.dir/flags.make
 CMakeFiles/vbamcore.dir/src/gba/GBALink.cpp.o: src/gba/GBALink.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_13)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_13)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/vbamcore.dir/src/gba/GBALink.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gba/GBALink.cpp.o -c /home/ben/workspace/massplay/server/src/gba/GBALink.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gba/GBALink.cpp.o -c /root/massplay/server/src/gba/GBALink.cpp
 
 CMakeFiles/vbamcore.dir/src/gba/GBALink.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vbamcore.dir/src/gba/GBALink.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/gba/GBALink.cpp > CMakeFiles/vbamcore.dir/src/gba/GBALink.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/gba/GBALink.cpp > CMakeFiles/vbamcore.dir/src/gba/GBALink.cpp.i
 
 CMakeFiles/vbamcore.dir/src/gba/GBALink.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vbamcore.dir/src/gba/GBALink.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/gba/GBALink.cpp -o CMakeFiles/vbamcore.dir/src/gba/GBALink.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/gba/GBALink.cpp -o CMakeFiles/vbamcore.dir/src/gba/GBALink.cpp.s
 
 CMakeFiles/vbamcore.dir/src/gba/GBALink.cpp.o.requires:
 .PHONY : CMakeFiles/vbamcore.dir/src/gba/GBALink.cpp.o.requires
@@ -353,17 +347,17 @@ CMakeFiles/vbamcore.dir/src/gba/GBALink.cpp.o.provides.build: CMakeFiles/vbamcor
 
 CMakeFiles/vbamcore.dir/src/gba/GBASockClient.cpp.o: CMakeFiles/vbamcore.dir/flags.make
 CMakeFiles/vbamcore.dir/src/gba/GBASockClient.cpp.o: src/gba/GBASockClient.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_14)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_14)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/vbamcore.dir/src/gba/GBASockClient.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gba/GBASockClient.cpp.o -c /home/ben/workspace/massplay/server/src/gba/GBASockClient.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gba/GBASockClient.cpp.o -c /root/massplay/server/src/gba/GBASockClient.cpp
 
 CMakeFiles/vbamcore.dir/src/gba/GBASockClient.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vbamcore.dir/src/gba/GBASockClient.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/gba/GBASockClient.cpp > CMakeFiles/vbamcore.dir/src/gba/GBASockClient.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/gba/GBASockClient.cpp > CMakeFiles/vbamcore.dir/src/gba/GBASockClient.cpp.i
 
 CMakeFiles/vbamcore.dir/src/gba/GBASockClient.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vbamcore.dir/src/gba/GBASockClient.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/gba/GBASockClient.cpp -o CMakeFiles/vbamcore.dir/src/gba/GBASockClient.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/gba/GBASockClient.cpp -o CMakeFiles/vbamcore.dir/src/gba/GBASockClient.cpp.s
 
 CMakeFiles/vbamcore.dir/src/gba/GBASockClient.cpp.o.requires:
 .PHONY : CMakeFiles/vbamcore.dir/src/gba/GBASockClient.cpp.o.requires
@@ -376,17 +370,17 @@ CMakeFiles/vbamcore.dir/src/gba/GBASockClient.cpp.o.provides.build: CMakeFiles/v
 
 CMakeFiles/vbamcore.dir/src/gba/GBA-thumb.cpp.o: CMakeFiles/vbamcore.dir/flags.make
 CMakeFiles/vbamcore.dir/src/gba/GBA-thumb.cpp.o: src/gba/GBA-thumb.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_15)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_15)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/vbamcore.dir/src/gba/GBA-thumb.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gba/GBA-thumb.cpp.o -c /home/ben/workspace/massplay/server/src/gba/GBA-thumb.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gba/GBA-thumb.cpp.o -c /root/massplay/server/src/gba/GBA-thumb.cpp
 
 CMakeFiles/vbamcore.dir/src/gba/GBA-thumb.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vbamcore.dir/src/gba/GBA-thumb.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/gba/GBA-thumb.cpp > CMakeFiles/vbamcore.dir/src/gba/GBA-thumb.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/gba/GBA-thumb.cpp > CMakeFiles/vbamcore.dir/src/gba/GBA-thumb.cpp.i
 
 CMakeFiles/vbamcore.dir/src/gba/GBA-thumb.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vbamcore.dir/src/gba/GBA-thumb.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/gba/GBA-thumb.cpp -o CMakeFiles/vbamcore.dir/src/gba/GBA-thumb.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/gba/GBA-thumb.cpp -o CMakeFiles/vbamcore.dir/src/gba/GBA-thumb.cpp.s
 
 CMakeFiles/vbamcore.dir/src/gba/GBA-thumb.cpp.o.requires:
 .PHONY : CMakeFiles/vbamcore.dir/src/gba/GBA-thumb.cpp.o.requires
@@ -399,17 +393,17 @@ CMakeFiles/vbamcore.dir/src/gba/GBA-thumb.cpp.o.provides.build: CMakeFiles/vbamc
 
 CMakeFiles/vbamcore.dir/src/gba/GBA-arm.cpp.o: CMakeFiles/vbamcore.dir/flags.make
 CMakeFiles/vbamcore.dir/src/gba/GBA-arm.cpp.o: src/gba/GBA-arm.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_16)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_16)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/vbamcore.dir/src/gba/GBA-arm.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gba/GBA-arm.cpp.o -c /home/ben/workspace/massplay/server/src/gba/GBA-arm.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gba/GBA-arm.cpp.o -c /root/massplay/server/src/gba/GBA-arm.cpp
 
 CMakeFiles/vbamcore.dir/src/gba/GBA-arm.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vbamcore.dir/src/gba/GBA-arm.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/gba/GBA-arm.cpp > CMakeFiles/vbamcore.dir/src/gba/GBA-arm.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/gba/GBA-arm.cpp > CMakeFiles/vbamcore.dir/src/gba/GBA-arm.cpp.i
 
 CMakeFiles/vbamcore.dir/src/gba/GBA-arm.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vbamcore.dir/src/gba/GBA-arm.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/gba/GBA-arm.cpp -o CMakeFiles/vbamcore.dir/src/gba/GBA-arm.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/gba/GBA-arm.cpp -o CMakeFiles/vbamcore.dir/src/gba/GBA-arm.cpp.s
 
 CMakeFiles/vbamcore.dir/src/gba/GBA-arm.cpp.o.requires:
 .PHONY : CMakeFiles/vbamcore.dir/src/gba/GBA-arm.cpp.o.requires
@@ -422,17 +416,17 @@ CMakeFiles/vbamcore.dir/src/gba/GBA-arm.cpp.o.provides.build: CMakeFiles/vbamcor
 
 CMakeFiles/vbamcore.dir/src/gba/gbafilter.cpp.o: CMakeFiles/vbamcore.dir/flags.make
 CMakeFiles/vbamcore.dir/src/gba/gbafilter.cpp.o: src/gba/gbafilter.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_17)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_17)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/vbamcore.dir/src/gba/gbafilter.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gba/gbafilter.cpp.o -c /home/ben/workspace/massplay/server/src/gba/gbafilter.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gba/gbafilter.cpp.o -c /root/massplay/server/src/gba/gbafilter.cpp
 
 CMakeFiles/vbamcore.dir/src/gba/gbafilter.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vbamcore.dir/src/gba/gbafilter.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/gba/gbafilter.cpp > CMakeFiles/vbamcore.dir/src/gba/gbafilter.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/gba/gbafilter.cpp > CMakeFiles/vbamcore.dir/src/gba/gbafilter.cpp.i
 
 CMakeFiles/vbamcore.dir/src/gba/gbafilter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vbamcore.dir/src/gba/gbafilter.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/gba/gbafilter.cpp -o CMakeFiles/vbamcore.dir/src/gba/gbafilter.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/gba/gbafilter.cpp -o CMakeFiles/vbamcore.dir/src/gba/gbafilter.cpp.s
 
 CMakeFiles/vbamcore.dir/src/gba/gbafilter.cpp.o.requires:
 .PHONY : CMakeFiles/vbamcore.dir/src/gba/gbafilter.cpp.o.requires
@@ -445,17 +439,17 @@ CMakeFiles/vbamcore.dir/src/gba/gbafilter.cpp.o.provides.build: CMakeFiles/vbamc
 
 CMakeFiles/vbamcore.dir/src/gba/Globals.cpp.o: CMakeFiles/vbamcore.dir/flags.make
 CMakeFiles/vbamcore.dir/src/gba/Globals.cpp.o: src/gba/Globals.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_18)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_18)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/vbamcore.dir/src/gba/Globals.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gba/Globals.cpp.o -c /home/ben/workspace/massplay/server/src/gba/Globals.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gba/Globals.cpp.o -c /root/massplay/server/src/gba/Globals.cpp
 
 CMakeFiles/vbamcore.dir/src/gba/Globals.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vbamcore.dir/src/gba/Globals.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/gba/Globals.cpp > CMakeFiles/vbamcore.dir/src/gba/Globals.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/gba/Globals.cpp > CMakeFiles/vbamcore.dir/src/gba/Globals.cpp.i
 
 CMakeFiles/vbamcore.dir/src/gba/Globals.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vbamcore.dir/src/gba/Globals.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/gba/Globals.cpp -o CMakeFiles/vbamcore.dir/src/gba/Globals.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/gba/Globals.cpp -o CMakeFiles/vbamcore.dir/src/gba/Globals.cpp.s
 
 CMakeFiles/vbamcore.dir/src/gba/Globals.cpp.o.requires:
 .PHONY : CMakeFiles/vbamcore.dir/src/gba/Globals.cpp.o.requires
@@ -468,17 +462,17 @@ CMakeFiles/vbamcore.dir/src/gba/Globals.cpp.o.provides.build: CMakeFiles/vbamcor
 
 CMakeFiles/vbamcore.dir/src/gba/Mode0.cpp.o: CMakeFiles/vbamcore.dir/flags.make
 CMakeFiles/vbamcore.dir/src/gba/Mode0.cpp.o: src/gba/Mode0.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_19)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_19)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/vbamcore.dir/src/gba/Mode0.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gba/Mode0.cpp.o -c /home/ben/workspace/massplay/server/src/gba/Mode0.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gba/Mode0.cpp.o -c /root/massplay/server/src/gba/Mode0.cpp
 
 CMakeFiles/vbamcore.dir/src/gba/Mode0.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vbamcore.dir/src/gba/Mode0.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/gba/Mode0.cpp > CMakeFiles/vbamcore.dir/src/gba/Mode0.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/gba/Mode0.cpp > CMakeFiles/vbamcore.dir/src/gba/Mode0.cpp.i
 
 CMakeFiles/vbamcore.dir/src/gba/Mode0.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vbamcore.dir/src/gba/Mode0.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/gba/Mode0.cpp -o CMakeFiles/vbamcore.dir/src/gba/Mode0.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/gba/Mode0.cpp -o CMakeFiles/vbamcore.dir/src/gba/Mode0.cpp.s
 
 CMakeFiles/vbamcore.dir/src/gba/Mode0.cpp.o.requires:
 .PHONY : CMakeFiles/vbamcore.dir/src/gba/Mode0.cpp.o.requires
@@ -491,17 +485,17 @@ CMakeFiles/vbamcore.dir/src/gba/Mode0.cpp.o.provides.build: CMakeFiles/vbamcore.
 
 CMakeFiles/vbamcore.dir/src/gba/Mode1.cpp.o: CMakeFiles/vbamcore.dir/flags.make
 CMakeFiles/vbamcore.dir/src/gba/Mode1.cpp.o: src/gba/Mode1.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_20)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_20)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/vbamcore.dir/src/gba/Mode1.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gba/Mode1.cpp.o -c /home/ben/workspace/massplay/server/src/gba/Mode1.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gba/Mode1.cpp.o -c /root/massplay/server/src/gba/Mode1.cpp
 
 CMakeFiles/vbamcore.dir/src/gba/Mode1.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vbamcore.dir/src/gba/Mode1.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/gba/Mode1.cpp > CMakeFiles/vbamcore.dir/src/gba/Mode1.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/gba/Mode1.cpp > CMakeFiles/vbamcore.dir/src/gba/Mode1.cpp.i
 
 CMakeFiles/vbamcore.dir/src/gba/Mode1.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vbamcore.dir/src/gba/Mode1.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/gba/Mode1.cpp -o CMakeFiles/vbamcore.dir/src/gba/Mode1.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/gba/Mode1.cpp -o CMakeFiles/vbamcore.dir/src/gba/Mode1.cpp.s
 
 CMakeFiles/vbamcore.dir/src/gba/Mode1.cpp.o.requires:
 .PHONY : CMakeFiles/vbamcore.dir/src/gba/Mode1.cpp.o.requires
@@ -514,17 +508,17 @@ CMakeFiles/vbamcore.dir/src/gba/Mode1.cpp.o.provides.build: CMakeFiles/vbamcore.
 
 CMakeFiles/vbamcore.dir/src/gba/Mode2.cpp.o: CMakeFiles/vbamcore.dir/flags.make
 CMakeFiles/vbamcore.dir/src/gba/Mode2.cpp.o: src/gba/Mode2.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_21)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_21)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/vbamcore.dir/src/gba/Mode2.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gba/Mode2.cpp.o -c /home/ben/workspace/massplay/server/src/gba/Mode2.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gba/Mode2.cpp.o -c /root/massplay/server/src/gba/Mode2.cpp
 
 CMakeFiles/vbamcore.dir/src/gba/Mode2.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vbamcore.dir/src/gba/Mode2.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/gba/Mode2.cpp > CMakeFiles/vbamcore.dir/src/gba/Mode2.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/gba/Mode2.cpp > CMakeFiles/vbamcore.dir/src/gba/Mode2.cpp.i
 
 CMakeFiles/vbamcore.dir/src/gba/Mode2.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vbamcore.dir/src/gba/Mode2.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/gba/Mode2.cpp -o CMakeFiles/vbamcore.dir/src/gba/Mode2.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/gba/Mode2.cpp -o CMakeFiles/vbamcore.dir/src/gba/Mode2.cpp.s
 
 CMakeFiles/vbamcore.dir/src/gba/Mode2.cpp.o.requires:
 .PHONY : CMakeFiles/vbamcore.dir/src/gba/Mode2.cpp.o.requires
@@ -537,17 +531,17 @@ CMakeFiles/vbamcore.dir/src/gba/Mode2.cpp.o.provides.build: CMakeFiles/vbamcore.
 
 CMakeFiles/vbamcore.dir/src/gba/Mode3.cpp.o: CMakeFiles/vbamcore.dir/flags.make
 CMakeFiles/vbamcore.dir/src/gba/Mode3.cpp.o: src/gba/Mode3.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_22)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_22)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/vbamcore.dir/src/gba/Mode3.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gba/Mode3.cpp.o -c /home/ben/workspace/massplay/server/src/gba/Mode3.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gba/Mode3.cpp.o -c /root/massplay/server/src/gba/Mode3.cpp
 
 CMakeFiles/vbamcore.dir/src/gba/Mode3.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vbamcore.dir/src/gba/Mode3.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/gba/Mode3.cpp > CMakeFiles/vbamcore.dir/src/gba/Mode3.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/gba/Mode3.cpp > CMakeFiles/vbamcore.dir/src/gba/Mode3.cpp.i
 
 CMakeFiles/vbamcore.dir/src/gba/Mode3.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vbamcore.dir/src/gba/Mode3.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/gba/Mode3.cpp -o CMakeFiles/vbamcore.dir/src/gba/Mode3.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/gba/Mode3.cpp -o CMakeFiles/vbamcore.dir/src/gba/Mode3.cpp.s
 
 CMakeFiles/vbamcore.dir/src/gba/Mode3.cpp.o.requires:
 .PHONY : CMakeFiles/vbamcore.dir/src/gba/Mode3.cpp.o.requires
@@ -560,17 +554,17 @@ CMakeFiles/vbamcore.dir/src/gba/Mode3.cpp.o.provides.build: CMakeFiles/vbamcore.
 
 CMakeFiles/vbamcore.dir/src/gba/Mode4.cpp.o: CMakeFiles/vbamcore.dir/flags.make
 CMakeFiles/vbamcore.dir/src/gba/Mode4.cpp.o: src/gba/Mode4.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_23)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_23)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/vbamcore.dir/src/gba/Mode4.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gba/Mode4.cpp.o -c /home/ben/workspace/massplay/server/src/gba/Mode4.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gba/Mode4.cpp.o -c /root/massplay/server/src/gba/Mode4.cpp
 
 CMakeFiles/vbamcore.dir/src/gba/Mode4.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vbamcore.dir/src/gba/Mode4.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/gba/Mode4.cpp > CMakeFiles/vbamcore.dir/src/gba/Mode4.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/gba/Mode4.cpp > CMakeFiles/vbamcore.dir/src/gba/Mode4.cpp.i
 
 CMakeFiles/vbamcore.dir/src/gba/Mode4.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vbamcore.dir/src/gba/Mode4.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/gba/Mode4.cpp -o CMakeFiles/vbamcore.dir/src/gba/Mode4.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/gba/Mode4.cpp -o CMakeFiles/vbamcore.dir/src/gba/Mode4.cpp.s
 
 CMakeFiles/vbamcore.dir/src/gba/Mode4.cpp.o.requires:
 .PHONY : CMakeFiles/vbamcore.dir/src/gba/Mode4.cpp.o.requires
@@ -583,17 +577,17 @@ CMakeFiles/vbamcore.dir/src/gba/Mode4.cpp.o.provides.build: CMakeFiles/vbamcore.
 
 CMakeFiles/vbamcore.dir/src/gba/Mode5.cpp.o: CMakeFiles/vbamcore.dir/flags.make
 CMakeFiles/vbamcore.dir/src/gba/Mode5.cpp.o: src/gba/Mode5.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_24)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_24)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/vbamcore.dir/src/gba/Mode5.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gba/Mode5.cpp.o -c /home/ben/workspace/massplay/server/src/gba/Mode5.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gba/Mode5.cpp.o -c /root/massplay/server/src/gba/Mode5.cpp
 
 CMakeFiles/vbamcore.dir/src/gba/Mode5.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vbamcore.dir/src/gba/Mode5.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/gba/Mode5.cpp > CMakeFiles/vbamcore.dir/src/gba/Mode5.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/gba/Mode5.cpp > CMakeFiles/vbamcore.dir/src/gba/Mode5.cpp.i
 
 CMakeFiles/vbamcore.dir/src/gba/Mode5.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vbamcore.dir/src/gba/Mode5.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/gba/Mode5.cpp -o CMakeFiles/vbamcore.dir/src/gba/Mode5.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/gba/Mode5.cpp -o CMakeFiles/vbamcore.dir/src/gba/Mode5.cpp.s
 
 CMakeFiles/vbamcore.dir/src/gba/Mode5.cpp.o.requires:
 .PHONY : CMakeFiles/vbamcore.dir/src/gba/Mode5.cpp.o.requires
@@ -606,17 +600,17 @@ CMakeFiles/vbamcore.dir/src/gba/Mode5.cpp.o.provides.build: CMakeFiles/vbamcore.
 
 CMakeFiles/vbamcore.dir/src/gba/RTC.cpp.o: CMakeFiles/vbamcore.dir/flags.make
 CMakeFiles/vbamcore.dir/src/gba/RTC.cpp.o: src/gba/RTC.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_25)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_25)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/vbamcore.dir/src/gba/RTC.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gba/RTC.cpp.o -c /home/ben/workspace/massplay/server/src/gba/RTC.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gba/RTC.cpp.o -c /root/massplay/server/src/gba/RTC.cpp
 
 CMakeFiles/vbamcore.dir/src/gba/RTC.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vbamcore.dir/src/gba/RTC.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/gba/RTC.cpp > CMakeFiles/vbamcore.dir/src/gba/RTC.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/gba/RTC.cpp > CMakeFiles/vbamcore.dir/src/gba/RTC.cpp.i
 
 CMakeFiles/vbamcore.dir/src/gba/RTC.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vbamcore.dir/src/gba/RTC.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/gba/RTC.cpp -o CMakeFiles/vbamcore.dir/src/gba/RTC.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/gba/RTC.cpp -o CMakeFiles/vbamcore.dir/src/gba/RTC.cpp.s
 
 CMakeFiles/vbamcore.dir/src/gba/RTC.cpp.o.requires:
 .PHONY : CMakeFiles/vbamcore.dir/src/gba/RTC.cpp.o.requires
@@ -629,17 +623,17 @@ CMakeFiles/vbamcore.dir/src/gba/RTC.cpp.o.provides.build: CMakeFiles/vbamcore.di
 
 CMakeFiles/vbamcore.dir/src/gba/Sound.cpp.o: CMakeFiles/vbamcore.dir/flags.make
 CMakeFiles/vbamcore.dir/src/gba/Sound.cpp.o: src/gba/Sound.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_26)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_26)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/vbamcore.dir/src/gba/Sound.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gba/Sound.cpp.o -c /home/ben/workspace/massplay/server/src/gba/Sound.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gba/Sound.cpp.o -c /root/massplay/server/src/gba/Sound.cpp
 
 CMakeFiles/vbamcore.dir/src/gba/Sound.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vbamcore.dir/src/gba/Sound.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/gba/Sound.cpp > CMakeFiles/vbamcore.dir/src/gba/Sound.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/gba/Sound.cpp > CMakeFiles/vbamcore.dir/src/gba/Sound.cpp.i
 
 CMakeFiles/vbamcore.dir/src/gba/Sound.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vbamcore.dir/src/gba/Sound.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/gba/Sound.cpp -o CMakeFiles/vbamcore.dir/src/gba/Sound.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/gba/Sound.cpp -o CMakeFiles/vbamcore.dir/src/gba/Sound.cpp.s
 
 CMakeFiles/vbamcore.dir/src/gba/Sound.cpp.o.requires:
 .PHONY : CMakeFiles/vbamcore.dir/src/gba/Sound.cpp.o.requires
@@ -652,17 +646,17 @@ CMakeFiles/vbamcore.dir/src/gba/Sound.cpp.o.provides.build: CMakeFiles/vbamcore.
 
 CMakeFiles/vbamcore.dir/src/gba/Sram.cpp.o: CMakeFiles/vbamcore.dir/flags.make
 CMakeFiles/vbamcore.dir/src/gba/Sram.cpp.o: src/gba/Sram.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_27)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_27)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/vbamcore.dir/src/gba/Sram.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gba/Sram.cpp.o -c /home/ben/workspace/massplay/server/src/gba/Sram.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gba/Sram.cpp.o -c /root/massplay/server/src/gba/Sram.cpp
 
 CMakeFiles/vbamcore.dir/src/gba/Sram.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vbamcore.dir/src/gba/Sram.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/gba/Sram.cpp > CMakeFiles/vbamcore.dir/src/gba/Sram.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/gba/Sram.cpp > CMakeFiles/vbamcore.dir/src/gba/Sram.cpp.i
 
 CMakeFiles/vbamcore.dir/src/gba/Sram.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vbamcore.dir/src/gba/Sram.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/gba/Sram.cpp -o CMakeFiles/vbamcore.dir/src/gba/Sram.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/gba/Sram.cpp -o CMakeFiles/vbamcore.dir/src/gba/Sram.cpp.s
 
 CMakeFiles/vbamcore.dir/src/gba/Sram.cpp.o.requires:
 .PHONY : CMakeFiles/vbamcore.dir/src/gba/Sram.cpp.o.requires
@@ -675,17 +669,17 @@ CMakeFiles/vbamcore.dir/src/gba/Sram.cpp.o.provides.build: CMakeFiles/vbamcore.d
 
 CMakeFiles/vbamcore.dir/src/gb/GB.cpp.o: CMakeFiles/vbamcore.dir/flags.make
 CMakeFiles/vbamcore.dir/src/gb/GB.cpp.o: src/gb/GB.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_28)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_28)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/vbamcore.dir/src/gb/GB.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gb/GB.cpp.o -c /home/ben/workspace/massplay/server/src/gb/GB.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gb/GB.cpp.o -c /root/massplay/server/src/gb/GB.cpp
 
 CMakeFiles/vbamcore.dir/src/gb/GB.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vbamcore.dir/src/gb/GB.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/gb/GB.cpp > CMakeFiles/vbamcore.dir/src/gb/GB.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/gb/GB.cpp > CMakeFiles/vbamcore.dir/src/gb/GB.cpp.i
 
 CMakeFiles/vbamcore.dir/src/gb/GB.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vbamcore.dir/src/gb/GB.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/gb/GB.cpp -o CMakeFiles/vbamcore.dir/src/gb/GB.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/gb/GB.cpp -o CMakeFiles/vbamcore.dir/src/gb/GB.cpp.s
 
 CMakeFiles/vbamcore.dir/src/gb/GB.cpp.o.requires:
 .PHONY : CMakeFiles/vbamcore.dir/src/gb/GB.cpp.o.requires
@@ -698,17 +692,17 @@ CMakeFiles/vbamcore.dir/src/gb/GB.cpp.o.provides.build: CMakeFiles/vbamcore.dir/
 
 CMakeFiles/vbamcore.dir/src/gb/gbCheats.cpp.o: CMakeFiles/vbamcore.dir/flags.make
 CMakeFiles/vbamcore.dir/src/gb/gbCheats.cpp.o: src/gb/gbCheats.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_29)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_29)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/vbamcore.dir/src/gb/gbCheats.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gb/gbCheats.cpp.o -c /home/ben/workspace/massplay/server/src/gb/gbCheats.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gb/gbCheats.cpp.o -c /root/massplay/server/src/gb/gbCheats.cpp
 
 CMakeFiles/vbamcore.dir/src/gb/gbCheats.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vbamcore.dir/src/gb/gbCheats.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/gb/gbCheats.cpp > CMakeFiles/vbamcore.dir/src/gb/gbCheats.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/gb/gbCheats.cpp > CMakeFiles/vbamcore.dir/src/gb/gbCheats.cpp.i
 
 CMakeFiles/vbamcore.dir/src/gb/gbCheats.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vbamcore.dir/src/gb/gbCheats.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/gb/gbCheats.cpp -o CMakeFiles/vbamcore.dir/src/gb/gbCheats.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/gb/gbCheats.cpp -o CMakeFiles/vbamcore.dir/src/gb/gbCheats.cpp.s
 
 CMakeFiles/vbamcore.dir/src/gb/gbCheats.cpp.o.requires:
 .PHONY : CMakeFiles/vbamcore.dir/src/gb/gbCheats.cpp.o.requires
@@ -721,17 +715,17 @@ CMakeFiles/vbamcore.dir/src/gb/gbCheats.cpp.o.provides.build: CMakeFiles/vbamcor
 
 CMakeFiles/vbamcore.dir/src/gb/gbDis.cpp.o: CMakeFiles/vbamcore.dir/flags.make
 CMakeFiles/vbamcore.dir/src/gb/gbDis.cpp.o: src/gb/gbDis.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_30)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_30)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/vbamcore.dir/src/gb/gbDis.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gb/gbDis.cpp.o -c /home/ben/workspace/massplay/server/src/gb/gbDis.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gb/gbDis.cpp.o -c /root/massplay/server/src/gb/gbDis.cpp
 
 CMakeFiles/vbamcore.dir/src/gb/gbDis.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vbamcore.dir/src/gb/gbDis.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/gb/gbDis.cpp > CMakeFiles/vbamcore.dir/src/gb/gbDis.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/gb/gbDis.cpp > CMakeFiles/vbamcore.dir/src/gb/gbDis.cpp.i
 
 CMakeFiles/vbamcore.dir/src/gb/gbDis.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vbamcore.dir/src/gb/gbDis.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/gb/gbDis.cpp -o CMakeFiles/vbamcore.dir/src/gb/gbDis.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/gb/gbDis.cpp -o CMakeFiles/vbamcore.dir/src/gb/gbDis.cpp.s
 
 CMakeFiles/vbamcore.dir/src/gb/gbDis.cpp.o.requires:
 .PHONY : CMakeFiles/vbamcore.dir/src/gb/gbDis.cpp.o.requires
@@ -744,17 +738,17 @@ CMakeFiles/vbamcore.dir/src/gb/gbDis.cpp.o.provides.build: CMakeFiles/vbamcore.d
 
 CMakeFiles/vbamcore.dir/src/gb/gbGfx.cpp.o: CMakeFiles/vbamcore.dir/flags.make
 CMakeFiles/vbamcore.dir/src/gb/gbGfx.cpp.o: src/gb/gbGfx.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_31)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_31)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/vbamcore.dir/src/gb/gbGfx.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gb/gbGfx.cpp.o -c /home/ben/workspace/massplay/server/src/gb/gbGfx.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gb/gbGfx.cpp.o -c /root/massplay/server/src/gb/gbGfx.cpp
 
 CMakeFiles/vbamcore.dir/src/gb/gbGfx.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vbamcore.dir/src/gb/gbGfx.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/gb/gbGfx.cpp > CMakeFiles/vbamcore.dir/src/gb/gbGfx.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/gb/gbGfx.cpp > CMakeFiles/vbamcore.dir/src/gb/gbGfx.cpp.i
 
 CMakeFiles/vbamcore.dir/src/gb/gbGfx.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vbamcore.dir/src/gb/gbGfx.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/gb/gbGfx.cpp -o CMakeFiles/vbamcore.dir/src/gb/gbGfx.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/gb/gbGfx.cpp -o CMakeFiles/vbamcore.dir/src/gb/gbGfx.cpp.s
 
 CMakeFiles/vbamcore.dir/src/gb/gbGfx.cpp.o.requires:
 .PHONY : CMakeFiles/vbamcore.dir/src/gb/gbGfx.cpp.o.requires
@@ -767,17 +761,17 @@ CMakeFiles/vbamcore.dir/src/gb/gbGfx.cpp.o.provides.build: CMakeFiles/vbamcore.d
 
 CMakeFiles/vbamcore.dir/src/gb/gbGlobals.cpp.o: CMakeFiles/vbamcore.dir/flags.make
 CMakeFiles/vbamcore.dir/src/gb/gbGlobals.cpp.o: src/gb/gbGlobals.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_32)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_32)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/vbamcore.dir/src/gb/gbGlobals.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gb/gbGlobals.cpp.o -c /home/ben/workspace/massplay/server/src/gb/gbGlobals.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gb/gbGlobals.cpp.o -c /root/massplay/server/src/gb/gbGlobals.cpp
 
 CMakeFiles/vbamcore.dir/src/gb/gbGlobals.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vbamcore.dir/src/gb/gbGlobals.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/gb/gbGlobals.cpp > CMakeFiles/vbamcore.dir/src/gb/gbGlobals.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/gb/gbGlobals.cpp > CMakeFiles/vbamcore.dir/src/gb/gbGlobals.cpp.i
 
 CMakeFiles/vbamcore.dir/src/gb/gbGlobals.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vbamcore.dir/src/gb/gbGlobals.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/gb/gbGlobals.cpp -o CMakeFiles/vbamcore.dir/src/gb/gbGlobals.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/gb/gbGlobals.cpp -o CMakeFiles/vbamcore.dir/src/gb/gbGlobals.cpp.s
 
 CMakeFiles/vbamcore.dir/src/gb/gbGlobals.cpp.o.requires:
 .PHONY : CMakeFiles/vbamcore.dir/src/gb/gbGlobals.cpp.o.requires
@@ -790,17 +784,17 @@ CMakeFiles/vbamcore.dir/src/gb/gbGlobals.cpp.o.provides.build: CMakeFiles/vbamco
 
 CMakeFiles/vbamcore.dir/src/gb/gbMemory.cpp.o: CMakeFiles/vbamcore.dir/flags.make
 CMakeFiles/vbamcore.dir/src/gb/gbMemory.cpp.o: src/gb/gbMemory.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_33)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_33)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/vbamcore.dir/src/gb/gbMemory.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gb/gbMemory.cpp.o -c /home/ben/workspace/massplay/server/src/gb/gbMemory.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gb/gbMemory.cpp.o -c /root/massplay/server/src/gb/gbMemory.cpp
 
 CMakeFiles/vbamcore.dir/src/gb/gbMemory.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vbamcore.dir/src/gb/gbMemory.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/gb/gbMemory.cpp > CMakeFiles/vbamcore.dir/src/gb/gbMemory.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/gb/gbMemory.cpp > CMakeFiles/vbamcore.dir/src/gb/gbMemory.cpp.i
 
 CMakeFiles/vbamcore.dir/src/gb/gbMemory.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vbamcore.dir/src/gb/gbMemory.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/gb/gbMemory.cpp -o CMakeFiles/vbamcore.dir/src/gb/gbMemory.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/gb/gbMemory.cpp -o CMakeFiles/vbamcore.dir/src/gb/gbMemory.cpp.s
 
 CMakeFiles/vbamcore.dir/src/gb/gbMemory.cpp.o.requires:
 .PHONY : CMakeFiles/vbamcore.dir/src/gb/gbMemory.cpp.o.requires
@@ -813,17 +807,17 @@ CMakeFiles/vbamcore.dir/src/gb/gbMemory.cpp.o.provides.build: CMakeFiles/vbamcor
 
 CMakeFiles/vbamcore.dir/src/gb/gbPrinter.cpp.o: CMakeFiles/vbamcore.dir/flags.make
 CMakeFiles/vbamcore.dir/src/gb/gbPrinter.cpp.o: src/gb/gbPrinter.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_34)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_34)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/vbamcore.dir/src/gb/gbPrinter.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gb/gbPrinter.cpp.o -c /home/ben/workspace/massplay/server/src/gb/gbPrinter.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gb/gbPrinter.cpp.o -c /root/massplay/server/src/gb/gbPrinter.cpp
 
 CMakeFiles/vbamcore.dir/src/gb/gbPrinter.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vbamcore.dir/src/gb/gbPrinter.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/gb/gbPrinter.cpp > CMakeFiles/vbamcore.dir/src/gb/gbPrinter.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/gb/gbPrinter.cpp > CMakeFiles/vbamcore.dir/src/gb/gbPrinter.cpp.i
 
 CMakeFiles/vbamcore.dir/src/gb/gbPrinter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vbamcore.dir/src/gb/gbPrinter.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/gb/gbPrinter.cpp -o CMakeFiles/vbamcore.dir/src/gb/gbPrinter.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/gb/gbPrinter.cpp -o CMakeFiles/vbamcore.dir/src/gb/gbPrinter.cpp.s
 
 CMakeFiles/vbamcore.dir/src/gb/gbPrinter.cpp.o.requires:
 .PHONY : CMakeFiles/vbamcore.dir/src/gb/gbPrinter.cpp.o.requires
@@ -836,17 +830,17 @@ CMakeFiles/vbamcore.dir/src/gb/gbPrinter.cpp.o.provides.build: CMakeFiles/vbamco
 
 CMakeFiles/vbamcore.dir/src/gb/gbSGB.cpp.o: CMakeFiles/vbamcore.dir/flags.make
 CMakeFiles/vbamcore.dir/src/gb/gbSGB.cpp.o: src/gb/gbSGB.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_35)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_35)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/vbamcore.dir/src/gb/gbSGB.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gb/gbSGB.cpp.o -c /home/ben/workspace/massplay/server/src/gb/gbSGB.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gb/gbSGB.cpp.o -c /root/massplay/server/src/gb/gbSGB.cpp
 
 CMakeFiles/vbamcore.dir/src/gb/gbSGB.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vbamcore.dir/src/gb/gbSGB.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/gb/gbSGB.cpp > CMakeFiles/vbamcore.dir/src/gb/gbSGB.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/gb/gbSGB.cpp > CMakeFiles/vbamcore.dir/src/gb/gbSGB.cpp.i
 
 CMakeFiles/vbamcore.dir/src/gb/gbSGB.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vbamcore.dir/src/gb/gbSGB.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/gb/gbSGB.cpp -o CMakeFiles/vbamcore.dir/src/gb/gbSGB.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/gb/gbSGB.cpp -o CMakeFiles/vbamcore.dir/src/gb/gbSGB.cpp.s
 
 CMakeFiles/vbamcore.dir/src/gb/gbSGB.cpp.o.requires:
 .PHONY : CMakeFiles/vbamcore.dir/src/gb/gbSGB.cpp.o.requires
@@ -859,17 +853,17 @@ CMakeFiles/vbamcore.dir/src/gb/gbSGB.cpp.o.provides.build: CMakeFiles/vbamcore.d
 
 CMakeFiles/vbamcore.dir/src/gb/gbSound.cpp.o: CMakeFiles/vbamcore.dir/flags.make
 CMakeFiles/vbamcore.dir/src/gb/gbSound.cpp.o: src/gb/gbSound.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_36)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_36)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/vbamcore.dir/src/gb/gbSound.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gb/gbSound.cpp.o -c /home/ben/workspace/massplay/server/src/gb/gbSound.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gb/gbSound.cpp.o -c /root/massplay/server/src/gb/gbSound.cpp
 
 CMakeFiles/vbamcore.dir/src/gb/gbSound.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vbamcore.dir/src/gb/gbSound.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/gb/gbSound.cpp > CMakeFiles/vbamcore.dir/src/gb/gbSound.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/gb/gbSound.cpp > CMakeFiles/vbamcore.dir/src/gb/gbSound.cpp.i
 
 CMakeFiles/vbamcore.dir/src/gb/gbSound.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vbamcore.dir/src/gb/gbSound.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/gb/gbSound.cpp -o CMakeFiles/vbamcore.dir/src/gb/gbSound.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/gb/gbSound.cpp -o CMakeFiles/vbamcore.dir/src/gb/gbSound.cpp.s
 
 CMakeFiles/vbamcore.dir/src/gb/gbSound.cpp.o.requires:
 .PHONY : CMakeFiles/vbamcore.dir/src/gb/gbSound.cpp.o.requires
@@ -882,17 +876,17 @@ CMakeFiles/vbamcore.dir/src/gb/gbSound.cpp.o.provides.build: CMakeFiles/vbamcore
 
 CMakeFiles/vbamcore.dir/src/apu/Blip_Buffer.cpp.o: CMakeFiles/vbamcore.dir/flags.make
 CMakeFiles/vbamcore.dir/src/apu/Blip_Buffer.cpp.o: src/apu/Blip_Buffer.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_37)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_37)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/vbamcore.dir/src/apu/Blip_Buffer.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/apu/Blip_Buffer.cpp.o -c /home/ben/workspace/massplay/server/src/apu/Blip_Buffer.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/apu/Blip_Buffer.cpp.o -c /root/massplay/server/src/apu/Blip_Buffer.cpp
 
 CMakeFiles/vbamcore.dir/src/apu/Blip_Buffer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vbamcore.dir/src/apu/Blip_Buffer.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/apu/Blip_Buffer.cpp > CMakeFiles/vbamcore.dir/src/apu/Blip_Buffer.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/apu/Blip_Buffer.cpp > CMakeFiles/vbamcore.dir/src/apu/Blip_Buffer.cpp.i
 
 CMakeFiles/vbamcore.dir/src/apu/Blip_Buffer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vbamcore.dir/src/apu/Blip_Buffer.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/apu/Blip_Buffer.cpp -o CMakeFiles/vbamcore.dir/src/apu/Blip_Buffer.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/apu/Blip_Buffer.cpp -o CMakeFiles/vbamcore.dir/src/apu/Blip_Buffer.cpp.s
 
 CMakeFiles/vbamcore.dir/src/apu/Blip_Buffer.cpp.o.requires:
 .PHONY : CMakeFiles/vbamcore.dir/src/apu/Blip_Buffer.cpp.o.requires
@@ -905,17 +899,17 @@ CMakeFiles/vbamcore.dir/src/apu/Blip_Buffer.cpp.o.provides.build: CMakeFiles/vba
 
 CMakeFiles/vbamcore.dir/src/apu/Effects_Buffer.cpp.o: CMakeFiles/vbamcore.dir/flags.make
 CMakeFiles/vbamcore.dir/src/apu/Effects_Buffer.cpp.o: src/apu/Effects_Buffer.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_38)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_38)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/vbamcore.dir/src/apu/Effects_Buffer.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/apu/Effects_Buffer.cpp.o -c /home/ben/workspace/massplay/server/src/apu/Effects_Buffer.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/apu/Effects_Buffer.cpp.o -c /root/massplay/server/src/apu/Effects_Buffer.cpp
 
 CMakeFiles/vbamcore.dir/src/apu/Effects_Buffer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vbamcore.dir/src/apu/Effects_Buffer.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/apu/Effects_Buffer.cpp > CMakeFiles/vbamcore.dir/src/apu/Effects_Buffer.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/apu/Effects_Buffer.cpp > CMakeFiles/vbamcore.dir/src/apu/Effects_Buffer.cpp.i
 
 CMakeFiles/vbamcore.dir/src/apu/Effects_Buffer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vbamcore.dir/src/apu/Effects_Buffer.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/apu/Effects_Buffer.cpp -o CMakeFiles/vbamcore.dir/src/apu/Effects_Buffer.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/apu/Effects_Buffer.cpp -o CMakeFiles/vbamcore.dir/src/apu/Effects_Buffer.cpp.s
 
 CMakeFiles/vbamcore.dir/src/apu/Effects_Buffer.cpp.o.requires:
 .PHONY : CMakeFiles/vbamcore.dir/src/apu/Effects_Buffer.cpp.o.requires
@@ -928,17 +922,17 @@ CMakeFiles/vbamcore.dir/src/apu/Effects_Buffer.cpp.o.provides.build: CMakeFiles/
 
 CMakeFiles/vbamcore.dir/src/apu/Gb_Apu.cpp.o: CMakeFiles/vbamcore.dir/flags.make
 CMakeFiles/vbamcore.dir/src/apu/Gb_Apu.cpp.o: src/apu/Gb_Apu.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_39)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_39)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/vbamcore.dir/src/apu/Gb_Apu.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/apu/Gb_Apu.cpp.o -c /home/ben/workspace/massplay/server/src/apu/Gb_Apu.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/apu/Gb_Apu.cpp.o -c /root/massplay/server/src/apu/Gb_Apu.cpp
 
 CMakeFiles/vbamcore.dir/src/apu/Gb_Apu.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vbamcore.dir/src/apu/Gb_Apu.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/apu/Gb_Apu.cpp > CMakeFiles/vbamcore.dir/src/apu/Gb_Apu.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/apu/Gb_Apu.cpp > CMakeFiles/vbamcore.dir/src/apu/Gb_Apu.cpp.i
 
 CMakeFiles/vbamcore.dir/src/apu/Gb_Apu.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vbamcore.dir/src/apu/Gb_Apu.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/apu/Gb_Apu.cpp -o CMakeFiles/vbamcore.dir/src/apu/Gb_Apu.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/apu/Gb_Apu.cpp -o CMakeFiles/vbamcore.dir/src/apu/Gb_Apu.cpp.s
 
 CMakeFiles/vbamcore.dir/src/apu/Gb_Apu.cpp.o.requires:
 .PHONY : CMakeFiles/vbamcore.dir/src/apu/Gb_Apu.cpp.o.requires
@@ -951,17 +945,17 @@ CMakeFiles/vbamcore.dir/src/apu/Gb_Apu.cpp.o.provides.build: CMakeFiles/vbamcore
 
 CMakeFiles/vbamcore.dir/src/apu/Gb_Apu_State.cpp.o: CMakeFiles/vbamcore.dir/flags.make
 CMakeFiles/vbamcore.dir/src/apu/Gb_Apu_State.cpp.o: src/apu/Gb_Apu_State.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_40)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_40)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/vbamcore.dir/src/apu/Gb_Apu_State.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/apu/Gb_Apu_State.cpp.o -c /home/ben/workspace/massplay/server/src/apu/Gb_Apu_State.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/apu/Gb_Apu_State.cpp.o -c /root/massplay/server/src/apu/Gb_Apu_State.cpp
 
 CMakeFiles/vbamcore.dir/src/apu/Gb_Apu_State.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vbamcore.dir/src/apu/Gb_Apu_State.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/apu/Gb_Apu_State.cpp > CMakeFiles/vbamcore.dir/src/apu/Gb_Apu_State.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/apu/Gb_Apu_State.cpp > CMakeFiles/vbamcore.dir/src/apu/Gb_Apu_State.cpp.i
 
 CMakeFiles/vbamcore.dir/src/apu/Gb_Apu_State.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vbamcore.dir/src/apu/Gb_Apu_State.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/apu/Gb_Apu_State.cpp -o CMakeFiles/vbamcore.dir/src/apu/Gb_Apu_State.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/apu/Gb_Apu_State.cpp -o CMakeFiles/vbamcore.dir/src/apu/Gb_Apu_State.cpp.s
 
 CMakeFiles/vbamcore.dir/src/apu/Gb_Apu_State.cpp.o.requires:
 .PHONY : CMakeFiles/vbamcore.dir/src/apu/Gb_Apu_State.cpp.o.requires
@@ -974,17 +968,17 @@ CMakeFiles/vbamcore.dir/src/apu/Gb_Apu_State.cpp.o.provides.build: CMakeFiles/vb
 
 CMakeFiles/vbamcore.dir/src/apu/Gb_Oscs.cpp.o: CMakeFiles/vbamcore.dir/flags.make
 CMakeFiles/vbamcore.dir/src/apu/Gb_Oscs.cpp.o: src/apu/Gb_Oscs.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_41)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_41)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/vbamcore.dir/src/apu/Gb_Oscs.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/apu/Gb_Oscs.cpp.o -c /home/ben/workspace/massplay/server/src/apu/Gb_Oscs.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/apu/Gb_Oscs.cpp.o -c /root/massplay/server/src/apu/Gb_Oscs.cpp
 
 CMakeFiles/vbamcore.dir/src/apu/Gb_Oscs.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vbamcore.dir/src/apu/Gb_Oscs.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/apu/Gb_Oscs.cpp > CMakeFiles/vbamcore.dir/src/apu/Gb_Oscs.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/apu/Gb_Oscs.cpp > CMakeFiles/vbamcore.dir/src/apu/Gb_Oscs.cpp.i
 
 CMakeFiles/vbamcore.dir/src/apu/Gb_Oscs.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vbamcore.dir/src/apu/Gb_Oscs.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/apu/Gb_Oscs.cpp -o CMakeFiles/vbamcore.dir/src/apu/Gb_Oscs.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/apu/Gb_Oscs.cpp -o CMakeFiles/vbamcore.dir/src/apu/Gb_Oscs.cpp.s
 
 CMakeFiles/vbamcore.dir/src/apu/Gb_Oscs.cpp.o.requires:
 .PHONY : CMakeFiles/vbamcore.dir/src/apu/Gb_Oscs.cpp.o.requires
@@ -997,17 +991,17 @@ CMakeFiles/vbamcore.dir/src/apu/Gb_Oscs.cpp.o.provides.build: CMakeFiles/vbamcor
 
 CMakeFiles/vbamcore.dir/src/apu/Multi_Buffer.cpp.o: CMakeFiles/vbamcore.dir/flags.make
 CMakeFiles/vbamcore.dir/src/apu/Multi_Buffer.cpp.o: src/apu/Multi_Buffer.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_42)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_42)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/vbamcore.dir/src/apu/Multi_Buffer.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/apu/Multi_Buffer.cpp.o -c /home/ben/workspace/massplay/server/src/apu/Multi_Buffer.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/apu/Multi_Buffer.cpp.o -c /root/massplay/server/src/apu/Multi_Buffer.cpp
 
 CMakeFiles/vbamcore.dir/src/apu/Multi_Buffer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vbamcore.dir/src/apu/Multi_Buffer.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/apu/Multi_Buffer.cpp > CMakeFiles/vbamcore.dir/src/apu/Multi_Buffer.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/apu/Multi_Buffer.cpp > CMakeFiles/vbamcore.dir/src/apu/Multi_Buffer.cpp.i
 
 CMakeFiles/vbamcore.dir/src/apu/Multi_Buffer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vbamcore.dir/src/apu/Multi_Buffer.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/apu/Multi_Buffer.cpp -o CMakeFiles/vbamcore.dir/src/apu/Multi_Buffer.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/apu/Multi_Buffer.cpp -o CMakeFiles/vbamcore.dir/src/apu/Multi_Buffer.cpp.s
 
 CMakeFiles/vbamcore.dir/src/apu/Multi_Buffer.cpp.o.requires:
 .PHONY : CMakeFiles/vbamcore.dir/src/apu/Multi_Buffer.cpp.o.requires
@@ -1020,17 +1014,17 @@ CMakeFiles/vbamcore.dir/src/apu/Multi_Buffer.cpp.o.provides.build: CMakeFiles/vb
 
 CMakeFiles/vbamcore.dir/src/filters/2xSaI.cpp.o: CMakeFiles/vbamcore.dir/flags.make
 CMakeFiles/vbamcore.dir/src/filters/2xSaI.cpp.o: src/filters/2xSaI.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_43)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_43)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/vbamcore.dir/src/filters/2xSaI.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/filters/2xSaI.cpp.o -c /home/ben/workspace/massplay/server/src/filters/2xSaI.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/filters/2xSaI.cpp.o -c /root/massplay/server/src/filters/2xSaI.cpp
 
 CMakeFiles/vbamcore.dir/src/filters/2xSaI.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vbamcore.dir/src/filters/2xSaI.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/filters/2xSaI.cpp > CMakeFiles/vbamcore.dir/src/filters/2xSaI.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/filters/2xSaI.cpp > CMakeFiles/vbamcore.dir/src/filters/2xSaI.cpp.i
 
 CMakeFiles/vbamcore.dir/src/filters/2xSaI.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vbamcore.dir/src/filters/2xSaI.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/filters/2xSaI.cpp -o CMakeFiles/vbamcore.dir/src/filters/2xSaI.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/filters/2xSaI.cpp -o CMakeFiles/vbamcore.dir/src/filters/2xSaI.cpp.s
 
 CMakeFiles/vbamcore.dir/src/filters/2xSaI.cpp.o.requires:
 .PHONY : CMakeFiles/vbamcore.dir/src/filters/2xSaI.cpp.o.requires
@@ -1043,17 +1037,17 @@ CMakeFiles/vbamcore.dir/src/filters/2xSaI.cpp.o.provides.build: CMakeFiles/vbamc
 
 CMakeFiles/vbamcore.dir/src/filters/admame.cpp.o: CMakeFiles/vbamcore.dir/flags.make
 CMakeFiles/vbamcore.dir/src/filters/admame.cpp.o: src/filters/admame.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_44)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_44)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/vbamcore.dir/src/filters/admame.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/filters/admame.cpp.o -c /home/ben/workspace/massplay/server/src/filters/admame.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/filters/admame.cpp.o -c /root/massplay/server/src/filters/admame.cpp
 
 CMakeFiles/vbamcore.dir/src/filters/admame.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vbamcore.dir/src/filters/admame.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/filters/admame.cpp > CMakeFiles/vbamcore.dir/src/filters/admame.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/filters/admame.cpp > CMakeFiles/vbamcore.dir/src/filters/admame.cpp.i
 
 CMakeFiles/vbamcore.dir/src/filters/admame.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vbamcore.dir/src/filters/admame.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/filters/admame.cpp -o CMakeFiles/vbamcore.dir/src/filters/admame.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/filters/admame.cpp -o CMakeFiles/vbamcore.dir/src/filters/admame.cpp.s
 
 CMakeFiles/vbamcore.dir/src/filters/admame.cpp.o.requires:
 .PHONY : CMakeFiles/vbamcore.dir/src/filters/admame.cpp.o.requires
@@ -1066,17 +1060,17 @@ CMakeFiles/vbamcore.dir/src/filters/admame.cpp.o.provides.build: CMakeFiles/vbam
 
 CMakeFiles/vbamcore.dir/src/filters/bilinear.cpp.o: CMakeFiles/vbamcore.dir/flags.make
 CMakeFiles/vbamcore.dir/src/filters/bilinear.cpp.o: src/filters/bilinear.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_45)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_45)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/vbamcore.dir/src/filters/bilinear.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/filters/bilinear.cpp.o -c /home/ben/workspace/massplay/server/src/filters/bilinear.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/filters/bilinear.cpp.o -c /root/massplay/server/src/filters/bilinear.cpp
 
 CMakeFiles/vbamcore.dir/src/filters/bilinear.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vbamcore.dir/src/filters/bilinear.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/filters/bilinear.cpp > CMakeFiles/vbamcore.dir/src/filters/bilinear.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/filters/bilinear.cpp > CMakeFiles/vbamcore.dir/src/filters/bilinear.cpp.i
 
 CMakeFiles/vbamcore.dir/src/filters/bilinear.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vbamcore.dir/src/filters/bilinear.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/filters/bilinear.cpp -o CMakeFiles/vbamcore.dir/src/filters/bilinear.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/filters/bilinear.cpp -o CMakeFiles/vbamcore.dir/src/filters/bilinear.cpp.s
 
 CMakeFiles/vbamcore.dir/src/filters/bilinear.cpp.o.requires:
 .PHONY : CMakeFiles/vbamcore.dir/src/filters/bilinear.cpp.o.requires
@@ -1089,17 +1083,17 @@ CMakeFiles/vbamcore.dir/src/filters/bilinear.cpp.o.provides.build: CMakeFiles/vb
 
 CMakeFiles/vbamcore.dir/src/filters/hq2x.cpp.o: CMakeFiles/vbamcore.dir/flags.make
 CMakeFiles/vbamcore.dir/src/filters/hq2x.cpp.o: src/filters/hq2x.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_46)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_46)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/vbamcore.dir/src/filters/hq2x.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/filters/hq2x.cpp.o -c /home/ben/workspace/massplay/server/src/filters/hq2x.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/filters/hq2x.cpp.o -c /root/massplay/server/src/filters/hq2x.cpp
 
 CMakeFiles/vbamcore.dir/src/filters/hq2x.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vbamcore.dir/src/filters/hq2x.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/filters/hq2x.cpp > CMakeFiles/vbamcore.dir/src/filters/hq2x.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/filters/hq2x.cpp > CMakeFiles/vbamcore.dir/src/filters/hq2x.cpp.i
 
 CMakeFiles/vbamcore.dir/src/filters/hq2x.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vbamcore.dir/src/filters/hq2x.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/filters/hq2x.cpp -o CMakeFiles/vbamcore.dir/src/filters/hq2x.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/filters/hq2x.cpp -o CMakeFiles/vbamcore.dir/src/filters/hq2x.cpp.s
 
 CMakeFiles/vbamcore.dir/src/filters/hq2x.cpp.o.requires:
 .PHONY : CMakeFiles/vbamcore.dir/src/filters/hq2x.cpp.o.requires
@@ -1112,17 +1106,17 @@ CMakeFiles/vbamcore.dir/src/filters/hq2x.cpp.o.provides.build: CMakeFiles/vbamco
 
 CMakeFiles/vbamcore.dir/src/filters/interframe.cpp.o: CMakeFiles/vbamcore.dir/flags.make
 CMakeFiles/vbamcore.dir/src/filters/interframe.cpp.o: src/filters/interframe.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_47)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_47)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/vbamcore.dir/src/filters/interframe.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/filters/interframe.cpp.o -c /home/ben/workspace/massplay/server/src/filters/interframe.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/filters/interframe.cpp.o -c /root/massplay/server/src/filters/interframe.cpp
 
 CMakeFiles/vbamcore.dir/src/filters/interframe.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vbamcore.dir/src/filters/interframe.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/filters/interframe.cpp > CMakeFiles/vbamcore.dir/src/filters/interframe.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/filters/interframe.cpp > CMakeFiles/vbamcore.dir/src/filters/interframe.cpp.i
 
 CMakeFiles/vbamcore.dir/src/filters/interframe.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vbamcore.dir/src/filters/interframe.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/filters/interframe.cpp -o CMakeFiles/vbamcore.dir/src/filters/interframe.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/filters/interframe.cpp -o CMakeFiles/vbamcore.dir/src/filters/interframe.cpp.s
 
 CMakeFiles/vbamcore.dir/src/filters/interframe.cpp.o.requires:
 .PHONY : CMakeFiles/vbamcore.dir/src/filters/interframe.cpp.o.requires
@@ -1135,17 +1129,17 @@ CMakeFiles/vbamcore.dir/src/filters/interframe.cpp.o.provides.build: CMakeFiles/
 
 CMakeFiles/vbamcore.dir/src/filters/pixel.cpp.o: CMakeFiles/vbamcore.dir/flags.make
 CMakeFiles/vbamcore.dir/src/filters/pixel.cpp.o: src/filters/pixel.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_48)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_48)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/vbamcore.dir/src/filters/pixel.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/filters/pixel.cpp.o -c /home/ben/workspace/massplay/server/src/filters/pixel.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/filters/pixel.cpp.o -c /root/massplay/server/src/filters/pixel.cpp
 
 CMakeFiles/vbamcore.dir/src/filters/pixel.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vbamcore.dir/src/filters/pixel.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/filters/pixel.cpp > CMakeFiles/vbamcore.dir/src/filters/pixel.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/filters/pixel.cpp > CMakeFiles/vbamcore.dir/src/filters/pixel.cpp.i
 
 CMakeFiles/vbamcore.dir/src/filters/pixel.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vbamcore.dir/src/filters/pixel.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/filters/pixel.cpp -o CMakeFiles/vbamcore.dir/src/filters/pixel.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/filters/pixel.cpp -o CMakeFiles/vbamcore.dir/src/filters/pixel.cpp.s
 
 CMakeFiles/vbamcore.dir/src/filters/pixel.cpp.o.requires:
 .PHONY : CMakeFiles/vbamcore.dir/src/filters/pixel.cpp.o.requires
@@ -1158,17 +1152,17 @@ CMakeFiles/vbamcore.dir/src/filters/pixel.cpp.o.provides.build: CMakeFiles/vbamc
 
 CMakeFiles/vbamcore.dir/src/filters/scanline.cpp.o: CMakeFiles/vbamcore.dir/flags.make
 CMakeFiles/vbamcore.dir/src/filters/scanline.cpp.o: src/filters/scanline.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_49)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_49)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/vbamcore.dir/src/filters/scanline.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/filters/scanline.cpp.o -c /home/ben/workspace/massplay/server/src/filters/scanline.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/filters/scanline.cpp.o -c /root/massplay/server/src/filters/scanline.cpp
 
 CMakeFiles/vbamcore.dir/src/filters/scanline.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vbamcore.dir/src/filters/scanline.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/filters/scanline.cpp > CMakeFiles/vbamcore.dir/src/filters/scanline.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/filters/scanline.cpp > CMakeFiles/vbamcore.dir/src/filters/scanline.cpp.i
 
 CMakeFiles/vbamcore.dir/src/filters/scanline.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vbamcore.dir/src/filters/scanline.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/filters/scanline.cpp -o CMakeFiles/vbamcore.dir/src/filters/scanline.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/filters/scanline.cpp -o CMakeFiles/vbamcore.dir/src/filters/scanline.cpp.s
 
 CMakeFiles/vbamcore.dir/src/filters/scanline.cpp.o.requires:
 .PHONY : CMakeFiles/vbamcore.dir/src/filters/scanline.cpp.o.requires
@@ -1181,17 +1175,17 @@ CMakeFiles/vbamcore.dir/src/filters/scanline.cpp.o.provides.build: CMakeFiles/vb
 
 CMakeFiles/vbamcore.dir/src/filters/simpleFilter.cpp.o: CMakeFiles/vbamcore.dir/flags.make
 CMakeFiles/vbamcore.dir/src/filters/simpleFilter.cpp.o: src/filters/simpleFilter.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_50)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_50)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/vbamcore.dir/src/filters/simpleFilter.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/filters/simpleFilter.cpp.o -c /home/ben/workspace/massplay/server/src/filters/simpleFilter.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/filters/simpleFilter.cpp.o -c /root/massplay/server/src/filters/simpleFilter.cpp
 
 CMakeFiles/vbamcore.dir/src/filters/simpleFilter.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vbamcore.dir/src/filters/simpleFilter.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/filters/simpleFilter.cpp > CMakeFiles/vbamcore.dir/src/filters/simpleFilter.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/filters/simpleFilter.cpp > CMakeFiles/vbamcore.dir/src/filters/simpleFilter.cpp.i
 
 CMakeFiles/vbamcore.dir/src/filters/simpleFilter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vbamcore.dir/src/filters/simpleFilter.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/filters/simpleFilter.cpp -o CMakeFiles/vbamcore.dir/src/filters/simpleFilter.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/filters/simpleFilter.cpp -o CMakeFiles/vbamcore.dir/src/filters/simpleFilter.cpp.s
 
 CMakeFiles/vbamcore.dir/src/filters/simpleFilter.cpp.o.requires:
 .PHONY : CMakeFiles/vbamcore.dir/src/filters/simpleFilter.cpp.o.requires
@@ -1204,17 +1198,17 @@ CMakeFiles/vbamcore.dir/src/filters/simpleFilter.cpp.o.provides.build: CMakeFile
 
 CMakeFiles/vbamcore.dir/src/filters/hq/c/hq_implementation.cpp.o: CMakeFiles/vbamcore.dir/flags.make
 CMakeFiles/vbamcore.dir/src/filters/hq/c/hq_implementation.cpp.o: src/filters/hq/c/hq_implementation.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_51)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_51)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/vbamcore.dir/src/filters/hq/c/hq_implementation.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/filters/hq/c/hq_implementation.cpp.o -c /home/ben/workspace/massplay/server/src/filters/hq/c/hq_implementation.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/filters/hq/c/hq_implementation.cpp.o -c /root/massplay/server/src/filters/hq/c/hq_implementation.cpp
 
 CMakeFiles/vbamcore.dir/src/filters/hq/c/hq_implementation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vbamcore.dir/src/filters/hq/c/hq_implementation.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/filters/hq/c/hq_implementation.cpp > CMakeFiles/vbamcore.dir/src/filters/hq/c/hq_implementation.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/filters/hq/c/hq_implementation.cpp > CMakeFiles/vbamcore.dir/src/filters/hq/c/hq_implementation.cpp.i
 
 CMakeFiles/vbamcore.dir/src/filters/hq/c/hq_implementation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vbamcore.dir/src/filters/hq/c/hq_implementation.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/filters/hq/c/hq_implementation.cpp -o CMakeFiles/vbamcore.dir/src/filters/hq/c/hq_implementation.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/filters/hq/c/hq_implementation.cpp -o CMakeFiles/vbamcore.dir/src/filters/hq/c/hq_implementation.cpp.s
 
 CMakeFiles/vbamcore.dir/src/filters/hq/c/hq_implementation.cpp.o.requires:
 .PHONY : CMakeFiles/vbamcore.dir/src/filters/hq/c/hq_implementation.cpp.o.requires
@@ -1227,17 +1221,17 @@ CMakeFiles/vbamcore.dir/src/filters/hq/c/hq_implementation.cpp.o.provides.build:
 
 CMakeFiles/vbamcore.dir/src/gba/armdis.cpp.o: CMakeFiles/vbamcore.dir/flags.make
 CMakeFiles/vbamcore.dir/src/gba/armdis.cpp.o: src/gba/armdis.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_52)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_52)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/vbamcore.dir/src/gba/armdis.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gba/armdis.cpp.o -c /home/ben/workspace/massplay/server/src/gba/armdis.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gba/armdis.cpp.o -c /root/massplay/server/src/gba/armdis.cpp
 
 CMakeFiles/vbamcore.dir/src/gba/armdis.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vbamcore.dir/src/gba/armdis.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/gba/armdis.cpp > CMakeFiles/vbamcore.dir/src/gba/armdis.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/gba/armdis.cpp > CMakeFiles/vbamcore.dir/src/gba/armdis.cpp.i
 
 CMakeFiles/vbamcore.dir/src/gba/armdis.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vbamcore.dir/src/gba/armdis.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/gba/armdis.cpp -o CMakeFiles/vbamcore.dir/src/gba/armdis.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/gba/armdis.cpp -o CMakeFiles/vbamcore.dir/src/gba/armdis.cpp.s
 
 CMakeFiles/vbamcore.dir/src/gba/armdis.cpp.o.requires:
 .PHONY : CMakeFiles/vbamcore.dir/src/gba/armdis.cpp.o.requires
@@ -1250,17 +1244,17 @@ CMakeFiles/vbamcore.dir/src/gba/armdis.cpp.o.provides.build: CMakeFiles/vbamcore
 
 CMakeFiles/vbamcore.dir/src/gba/elf.cpp.o: CMakeFiles/vbamcore.dir/flags.make
 CMakeFiles/vbamcore.dir/src/gba/elf.cpp.o: src/gba/elf.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_53)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_53)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/vbamcore.dir/src/gba/elf.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gba/elf.cpp.o -c /home/ben/workspace/massplay/server/src/gba/elf.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gba/elf.cpp.o -c /root/massplay/server/src/gba/elf.cpp
 
 CMakeFiles/vbamcore.dir/src/gba/elf.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vbamcore.dir/src/gba/elf.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/gba/elf.cpp > CMakeFiles/vbamcore.dir/src/gba/elf.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/gba/elf.cpp > CMakeFiles/vbamcore.dir/src/gba/elf.cpp.i
 
 CMakeFiles/vbamcore.dir/src/gba/elf.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vbamcore.dir/src/gba/elf.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/gba/elf.cpp -o CMakeFiles/vbamcore.dir/src/gba/elf.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/gba/elf.cpp -o CMakeFiles/vbamcore.dir/src/gba/elf.cpp.s
 
 CMakeFiles/vbamcore.dir/src/gba/elf.cpp.o.requires:
 .PHONY : CMakeFiles/vbamcore.dir/src/gba/elf.cpp.o.requires
@@ -1273,17 +1267,17 @@ CMakeFiles/vbamcore.dir/src/gba/elf.cpp.o.provides.build: CMakeFiles/vbamcore.di
 
 CMakeFiles/vbamcore.dir/src/gba/remote.cpp.o: CMakeFiles/vbamcore.dir/flags.make
 CMakeFiles/vbamcore.dir/src/gba/remote.cpp.o: src/gba/remote.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_54)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_54)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/vbamcore.dir/src/gba/remote.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gba/remote.cpp.o -c /home/ben/workspace/massplay/server/src/gba/remote.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/vbamcore.dir/src/gba/remote.cpp.o -c /root/massplay/server/src/gba/remote.cpp
 
 CMakeFiles/vbamcore.dir/src/gba/remote.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vbamcore.dir/src/gba/remote.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/src/gba/remote.cpp > CMakeFiles/vbamcore.dir/src/gba/remote.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/src/gba/remote.cpp > CMakeFiles/vbamcore.dir/src/gba/remote.cpp.i
 
 CMakeFiles/vbamcore.dir/src/gba/remote.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vbamcore.dir/src/gba/remote.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/src/gba/remote.cpp -o CMakeFiles/vbamcore.dir/src/gba/remote.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/src/gba/remote.cpp -o CMakeFiles/vbamcore.dir/src/gba/remote.cpp.s
 
 CMakeFiles/vbamcore.dir/src/gba/remote.cpp.o.requires:
 .PHONY : CMakeFiles/vbamcore.dir/src/gba/remote.cpp.o.requires
@@ -1479,6 +1473,6 @@ CMakeFiles/vbamcore.dir/clean:
 .PHONY : CMakeFiles/vbamcore.dir/clean
 
 CMakeFiles/vbamcore.dir/depend:
-	cd /home/ben/workspace/massplay/server && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ben/workspace/massplay/server /home/ben/workspace/massplay/server /home/ben/workspace/massplay/server /home/ben/workspace/massplay/server /home/ben/workspace/massplay/server/CMakeFiles/vbamcore.dir/DependInfo.cmake --color=$(COLOR)
+	cd /root/massplay/server && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/massplay/server /root/massplay/server /root/massplay/server /root/massplay/server /root/massplay/server/CMakeFiles/vbamcore.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/vbamcore.dir/depend
 

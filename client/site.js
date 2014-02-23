@@ -17,7 +17,7 @@ var app = express();
 
 var gamesCollectionDeffered = defer();
 var gamesCollection = gamesCollectionDeffered.promise;
-MongoClient.connect( 'mongodb://127.0.0.1/massplay', function( err, db ){
+MongoClient.connect( 'mongodb://107.170.70.149/massplay', function( err, db ){
   var collection = db.collection( 'games' );
   gamesCollectionDeffered.resolve( collection );
   console.log( 'resolved MongoDB future(s)' );
@@ -75,9 +75,7 @@ app.get( '/play/:port', function( req, res ){
   var port = req.param.port
   console.log( 'USING PORT %d', port );
   openTemplate( 'index.html' ).then( function( template ){
-    getOngoingGames().then( function( games ){
-      res.send( template( {games:  games} ) );
-    });
+      res.send( template( {games:  []} ) );
   });
 });
 
@@ -89,9 +87,7 @@ app.get( '*', function(req, res) {
     console.log( path );
     if( path == '' ){
       openTemplate( 'index.html' ).then( function( template ){
-        getOngoingGames().then( function( games ){
-          res.send( template( {games:  games} ) );
-        });
+          res.send( template( {games:  []} ) );
       });
 
     }else{
