@@ -79,10 +79,10 @@
         <div class="col-sm-2 sidebar">
           <ul class="nav nav-sidebar">
 						<li><h2>Game Browser</h2></li>
-            <li class="active"><a href="#">Game1</a></li>
-            <li><a href="#">Game2</a></li>
-            <li><a href="#">Game3</a></li>
-            <li><a href="#">Game4</a></li>
+            {{#games}}
+              <li><a href="/play/{{port}}">{{name}} ({{roomname}})</a>
+            {{/games}}
+            <a class="" href="/start.html">Create your own &nbsp; <span class="glyphicon glyphicon-plus"</span></a>
           </ul>
         </div>
 				<!-- Begin main page content -->

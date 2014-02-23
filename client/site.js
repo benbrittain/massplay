@@ -53,6 +53,15 @@ app.post( '/newgame', function( req, res ){
 });
 
 
+app.get( ['/start.html', '/start' ], function( req, res ){
+  openTemplate( 'start.html' ).then( function( tpl ){
+    getOngoingGames().then( function(games){
+      res.send( tpl( {games: games} ) );
+    });
+  });
+});
+
+
 app.get( '/play/:port', function( req, res ){
   var port = req.param.port
   console.log( 'USING PORT %d', port );
