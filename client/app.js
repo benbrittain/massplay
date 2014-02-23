@@ -21,20 +21,26 @@ function _arrayBufferToBase64( buffer ) {
 }
 
 
+count = -1;
 ws.onmessage = function( message ){
-      if(1) {
 
-      console.log( 'got a frame' );
+      var nextCount = parseInt( message.substring( 0, 8 ) );
+      var payload = message.substring( 8 );
 
-      var img = document.createElement( 'img' );
-      img.src = 'data:image/bmp;base64,' + message.data;
-      img.width = 'auto';
-      img.height = 'auto';
+      if( nextCount >= count ){
+
+        count = nextCount;
+        var img = document.createElement( 'img' );
+        img.src = 'data:image/bmp;base64,' + payload;
+        img.width = 'auto';
+        img.height = 'auto';
 
 
-      img.onload = function(){
-        console.log( 'loaded' );
-        context.drawImage( img, 0, 0, 240, 160 );
+        img.onload = function(){
+          console.log( 'loaded' );
+          context.drawImage( img, 0, 0, 240, 160 );
+        }
+
       }
   }
 };
