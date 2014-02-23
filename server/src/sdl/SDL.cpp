@@ -29,8 +29,6 @@
 #include "boost/bind.hpp"
 #include <websocketpp/common/thread.hpp>
 
-//typedef websocketpp::server<websocketpp::config::asio> server;
-
 using websocketpp::connection_hdl;
 using websocketpp::lib::placeholders::_1;
 using websocketpp::lib::placeholders::_2;
@@ -1831,11 +1829,15 @@ class websocket_server {
       m_server.set_open_handler(bind(&websocket_server::on_open,this,::_1));
 //      m_server.set_socket_init_handler(bind(&on_socket_init,::_1,::_2));
       m_server.set_message_handler(bind(&websocket_server::on_message,this,::_1,::_2));
-      m_server.listen(9002);
+      //boost::thread t(&game_server::process_messages, &server_instance);
+    }
+
+    void start(int port) {
+      std::cout << port << std::endl;
+      m_server.listen(port);
       m_server.start_accept();
 
       new websocketpp::lib::thread(&server::run, &m_server);
-      //boost::thread t(&game_server::process_messages, &server_instance);
     }
 
     void on_open(websocketpp::connection_hdl hdl) {
@@ -1919,28 +1921,17 @@ websocket_server socket_server;
 
 int main(int argc, char **argv)
 {
-  fprintf(stdout, "Massplay VBA-M fork %s [SDL]\n", VERSION);
-
-  int port = 9002;
-
-  std::cout << "main: startup" << std::endl;
-
-  fprintf(stdout, "Initializing Websocket Server");
-
-
-//  socket_server.set_open_handler(bind(&on_open,&socket_server,::_1,::_2));
-//  socket_server.set_message_handler(bind(&on_message,&socket_server,::_1,::_2));
-
-  //backlog listen?
-
-//
-//  typedef websocketpp::lib::shared_ptr<websocketpp::lib::thread> thread_ptr;
-//  thread_ptr t_server = thread_ptr(new websocketpp::lib::thread(&server::run, &socket_server));
-//  boost::thread t(&game_server::process_messages, &server_instance);
-  fprintf(stdout, "never past here?!");
-
-
   arg0 = argv[0];
+  int port = atoi(argv[2]);
+
+  fprintf(stdout, "Initializing Websocket Server; Port: %d", port);
+
+  socket_server.start(port);
+  fprintf(stdout, "Initializing Emulator; ROM: %s", arg0);
+
+
+
+
 
   captureDir[0] = 0;
   saveDir[0] = 0;
@@ -1976,181 +1967,6 @@ int main(int argc, char **argv)
 
   sdlPrintUsage = 0;
 
-  while((op = getopt_long(argc,
-                          argv,
-                           "FNO:T:Y:G:I:D:b:c:df:hi:p::s:t:v:",
-                          sdlOptions,
-                          NULL)) != -1) {
-    switch(op) {
-    case 0:
-      // long option already processed by getopt_long
-      break;
-    case 1000:
-      // --cheat
-      if (sdlPreparedCheats >= MAX_CHEATS) {
-	      fprintf(stderr, "Warning: cannot add more than %d cheats.\n", MAX_CHEATS);
-	      break;
-      }
-      {
-	      char * cpy;
-	      cpy	= (char *)malloc(1 + strlen(optarg));
-	      strcpy(cpy, optarg);
-	      sdlPreparedCheatCodes[sdlPreparedCheats++]	= cpy;
-      }
-      break;
-    case 1001:
-      // --autofire
-      autoFireMaxCount = sdlFromDec(optarg);
-      if (autoFireMaxCount < 1)
-         autoFireMaxCount = 1;
-      break;
-    case 'b':
-      useBios = true;
-      if(optarg == NULL) {
-        fprintf(stderr, "Missing BIOS file name\n");
-        exit(-1);
-      }
-      strcpy(biosFileName, optarg);
-      break;
-    case 'c':
-      {
-        if(optarg == NULL) {
-          fprintf(stderr, "Missing config file name\n");
-          exit(-1);
-        }
-        FILE *f = fopen(optarg, "r");
-        if(f == NULL) {
-          fprintf(stderr, "File not found %s\n", optarg);
-          exit(-1);
-        }
-        sdlReadPreferences(f);
-        fclose(f);
-      }
-      break;
-    case 'd':
-      debugger = true;
-      break;
-    case 'h':
-      sdlPrintUsage = 1;
-      break;
-    case 'i':
-      if(optarg == NULL) {
-        fprintf(stderr, "Missing patch name\n");
-        exit(-1);
-      }
-      if (sdl_patch_num >= PATCH_MAX_NUM) {
-        fprintf(stderr, "Too many patches given at %s (max is %d). Ignoring.\n", optarg, PATCH_MAX_NUM);
-      } else {
-        sdl_patch_names[sdl_patch_num]	= (char *)malloc(1 + strlen(optarg));
-        strcpy(sdl_patch_names[sdl_patch_num], optarg);
-        sdl_patch_num++;
-      }
-      break;
-   case 'G':
-      dbgMain = remoteStubMain;
-      dbgSignal = remoteStubSignal;
-      dbgOutput = remoteOutput;
-      debugger = true;
-      debuggerStub = true;
-      if(optarg) {
-        char *s = optarg;
-        if(strncmp(s,"tcp:", 4) == 0) {
-          s+=4;
-          int port = atoi(s);
-          remoteSetProtocol(0);
-          remoteSetPort(port);
-        } else if(strcmp(s,"tcp") == 0) {
-          remoteSetProtocol(0);
-        } else if(strcmp(s, "pipe") == 0) {
-          remoteSetProtocol(1);
-        } else {
-          fprintf(stderr, "Unknown protocol %s\n", s);
-          exit(-1);
-        }
-      } else {
-        remoteSetProtocol(0);
-      }
-      break;
-    case 'N':
-      parseDebug = false;
-      break;
-    case 'D':
-      if(optarg) {
-        systemDebug = atoi(optarg);
-      } else {
-        systemDebug = 1;
-      }
-      break;
-    case 'F':
-      fullscreen = 1;
-      mouseCounter = 120;
-      break;
-    case 'f':
-      if(optarg) {
-        filter = (Filter)atoi(optarg);
-      } else {
-        filter = kStretch2x;
-      }
-      break;
-    case 'I':
-      if(optarg) {
-        ifbType = (IFBFilter)atoi(optarg);
-      } else {
-        ifbType = kIFBNone;
-      }
-      break;
-    case 'p':
-#ifdef PROFILING
-      if(optarg) {
-        cpuEnableProfiling(atoi(optarg));
-      } else
-        cpuEnableProfiling(100);
-#endif
-      break;
-    case 'S':
-      sdlFlashSize = atoi(optarg);
-      if(sdlFlashSize < 0 || sdlFlashSize > 1)
-        sdlFlashSize = 0;
-      break;
-    case 's':
-      if(optarg) {
-        int a = atoi(optarg);
-        if(a >= 0 && a <= 9) {
-          gbFrameSkip = a;
-          frameSkip = a;
-        }
-      } else {
-        frameSkip = 2;
-        gbFrameSkip = 0;
-      }
-      break;
-    case 't':
-      if(optarg) {
-        int a = atoi(optarg);
-        if(a < 0 || a > 5)
-          a = 0;
-        cpuSaveType = a;
-      }
-      break;
-    case 'v':
-      if(optarg) {
-        systemVerbose = atoi(optarg);
-      } else
-        systemVerbose = 0;
-      break;
-    case '?':
-      sdlPrintUsage = 1;
-      break;
-    break;
-
-    }
-  }
-
-  if(sdlPrintUsage) {
-    usage(argv[0]);
-    exit(-1);
-  }
-
   if(rewindTimer) {
     rewindMemory = (char *)malloc(REWIND_NUM*REWIND_SIZE);
     rewindSerials = (int *)calloc(REWIND_NUM, sizeof(int)); // init to zeroes
@@ -2163,14 +1979,6 @@ int main(int argc, char **argv)
 
   rtcEnable(sdlRtcEnable ? true : false);
   agbPrintEnable(sdlAgbPrint ? true : false);
-
-  if(!debuggerStub) {
-    if(optind >= argc) {
-      systemMessage(0,"Missing image name");
-      usage(argv[0]);
-      exit(-1);
-    }
-  }
 
   for(int i = 0; i < 24;) {
     systemGbPalette[i++] = (0x1f) | (0x1f << 5) | (0x1f << 10);
