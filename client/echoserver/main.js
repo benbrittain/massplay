@@ -27,8 +27,11 @@ wss.on('connection', function(ws) {
   fs.readFile( 'echoserver/pokemon.bmp', function(err, data) {
     console.log( data.constructor );
     // var msg = "data:image/bmp;base64," + data.toString( 'base64' );
-    var msg = data;
-    ws.send(msg );
+    var msg = data.toString( 'base64' );
+    setInterval( function(){
+
+      ws.send(msg );
+    }, 200 );
   });
 
 
