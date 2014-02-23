@@ -25,24 +25,6 @@
     <script type="text/javascript">
       window.context = null; // woooo globals
       window.canvas;
-      /* Initialize canvas elements */
-      /*
-      $( function() {
-        console.log( 'INIT' );
-        var gameCanvas = window.canvas = document.getElementById('game');
-        if(gameCanvas.getContext){
-							var ctx = document.getElementById("game");
-							if (gameCanvas.getContext) {
-								var ctx = window.context = gameCanvas.getContext("2d");
-
-								ctx.fillStyle = "rgb(200,0,0)";
-								ctx.fillRect (10, 10, 55, 50);
-
-          }
-        }
-      });
-
-    */
     </script>
   </head>
 
@@ -107,17 +89,16 @@
         <div class="col-xs-10 main">
           <h1 class="page-header">You're Starting a New Game</h1>
 
-          <form class="navbar-form navbar-left" role="search">
+          <form class="navbar-form navbar-left" role="search" enctype="multipart/formdata" method="POST" action="/newgame">
             <div class="input-group">
               <ul class="form-fields">
                <li><span class="input-group-addon">Game Room Name</span>
-               <input type="text" class="form-control" placeholder="Red's Pokemanatorium"></li>
-                      
+               <input type="text" class="form-control" name="gameroomname" placeholder="Red's Pokemanatorium"></li>
                <li><span class="input-group-addon">Game Name</span>
-               <input type="text" class="form-control" placeholder="Pokemans"></li>
+               <input type="text" class="form-control" name="gamename" placeholder="Pokemans"></li>
 
                <li><span class="input-group-addon">Max Players (0, No cap)</span>
-               <input type="text" class="form-control" placeholder="20"></li>
+               <input type="text" class="form-control" placeholder="20" name="maxplayers"></li>
               </ul>
             </div>
             <button type="submit" class="btn btn-default">Submit</button>
