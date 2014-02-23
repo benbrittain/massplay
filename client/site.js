@@ -75,9 +75,7 @@ app.get( '/play/:port', function( req, res ){
   var port = req.param.port
   console.log( 'USING PORT %d', port );
   openTemplate( 'index.html' ).then( function( template ){
-    getOngoingGames().then( function( games ){
-      res.send( template( {games:  games} ) );
-    });
+      res.send( template( {games:  []} ) );
   });
 });
 
@@ -89,9 +87,7 @@ app.get( '*', function(req, res) {
     console.log( path );
     if( path == '' ){
       openTemplate( 'index.html' ).then( function( template ){
-        getOngoingGames().then( function( games ){
-          res.send( template( {games:  games} ) );
-        });
+          res.send( template( {games:  []} ) );
       });
 
     }else{

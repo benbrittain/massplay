@@ -149,6 +149,26 @@ h1.page-header {
   padding: 40px;
 }
 
+.main {
+  height:100%;
+}
+.controls {
+  display: block;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.controls .btn-primary {
+  background: none;
+  border: none;
+}
+
+.controls .btn {
+  margin: 0px;
+  padding: 0px;
+}
+
 /* Game browser sidebar */
 .sidebar {
 	background: #222;
@@ -171,44 +191,6 @@ h1.page-header {
 	background: #BBB;
 }
 
-/*
-.chat .input-group {
-  width: 100%;
-}
-
-.chat .input-group .text {
-  height: 50px;
-}
-
-.chat .well {
-  padding: 0px 19px;
-  height: 70%;
-  overflow: scroll;
-}
-
-.chat li {
-  list-style: none;
-}
-
-li.message {
-  margin-left: -50px;
-}
-
-[class^="user-"] {
-  display: inline-block;
-}
-
-.user-name {
-  color: #999;
-  margin-right: 16px;
-  font-size: .9em;
-}
-
-.user-name:after {
-  content: ":";
-}
-*/
-
 /**********
  * Footer *
  **********/
@@ -216,13 +198,18 @@ li.message {
 #footer {
   background: #222;
   color: #EEE;
+  display: block;
   border: none;
   border-top: 3px solid #090;
   width: 100%;
 }
 
+#footer .glyphicon-heart {
+  color: #900;
+}
+
 #footer .row{
-  padding-top: 5px;
+  padding-top: 10px;
 }
 
 .donate {
@@ -232,6 +219,7 @@ li.message {
 
 .row {
   margin-right: 0px;
+  width: 100%;
 }
 
 

@@ -35,25 +35,19 @@ CMAKE_COMMAND = /usr/bin/cmake
 # The command to remove a file.
 RM = /usr/bin/cmake -E remove -f
 
-# Escaping for special characters.
-EQUALS = =
-
-# The program to use to edit the cache.
-CMAKE_EDIT_COMMAND = /usr/bin/ccmake
-
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ben/workspace/massplay/server
+CMAKE_SOURCE_DIR = /root/massplay/server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ben/workspace/massplay/server
+CMAKE_BINARY_DIR = /root/massplay/server
 
 #=============================================================================
 # Targets provided globally by CMake.
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running interactive CMake command-line interface..."
+	/usr/bin/cmake -i .
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -113,9 +107,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ben/workspace/massplay/server/CMakeFiles /home/ben/workspace/massplay/server/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/massplay/server/CMakeFiles /root/massplay/server/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ben/workspace/massplay/server/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/massplay/server/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -206,19 +200,6 @@ translations: cmake_check_build_system
 translations/fast:
 	$(MAKE) -f po/gvbam/CMakeFiles/translations.dir/build.make po/gvbam/CMakeFiles/translations.dir/build
 .PHONY : translations/fast
-
-#=============================================================================
-# Target rules for targets named translations_1
-
-# Build rule for target.
-translations_1: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 translations_1
-.PHONY : translations_1
-
-# fast build rule for target.
-translations_1/fast:
-	$(MAKE) -f po/gvbam/CMakeFiles/translations_1.dir/build.make po/gvbam/CMakeFiles/translations_1.dir/build
-.PHONY : translations_1/fast
 
 fex/7z_C/7zAlloc.o: fex/7z_C/7zAlloc.c.o
 .PHONY : fex/7z_C/7zAlloc.o
@@ -2880,7 +2861,6 @@ help:
 	@echo "... vbam"
 	@echo "... vbamcore"
 	@echo "... translations"
-	@echo "... translations_1"
 	@echo "... fex/7z_C/7zAlloc.o"
 	@echo "... fex/7z_C/7zAlloc.i"
 	@echo "... fex/7z_C/7zAlloc.s"

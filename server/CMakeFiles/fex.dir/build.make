@@ -31,17 +31,11 @@ CMAKE_COMMAND = /usr/bin/cmake
 # The command to remove a file.
 RM = /usr/bin/cmake -E remove -f
 
-# Escaping for special characters.
-EQUALS = =
-
-# The program to use to edit the cache.
-CMAKE_EDIT_COMMAND = /usr/bin/ccmake
-
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ben/workspace/massplay/server
+CMAKE_SOURCE_DIR = /root/massplay/server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ben/workspace/massplay/server
+CMAKE_BINARY_DIR = /root/massplay/server
 
 # Include any dependencies generated for this target.
 include CMakeFiles/fex.dir/depend.make
@@ -54,17 +48,17 @@ include CMakeFiles/fex.dir/flags.make
 
 CMakeFiles/fex.dir/fex/7z_C/7zAlloc.c.o: CMakeFiles/fex.dir/flags.make
 CMakeFiles/fex.dir/fex/7z_C/7zAlloc.c.o: fex/7z_C/7zAlloc.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/fex.dir/fex/7z_C/7zAlloc.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/fex.dir/fex/7z_C/7zAlloc.c.o   -c /home/ben/workspace/massplay/server/fex/7z_C/7zAlloc.c
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/fex.dir/fex/7z_C/7zAlloc.c.o   -c /root/massplay/server/fex/7z_C/7zAlloc.c
 
 CMakeFiles/fex.dir/fex/7z_C/7zAlloc.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/fex.dir/fex/7z_C/7zAlloc.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/ben/workspace/massplay/server/fex/7z_C/7zAlloc.c > CMakeFiles/fex.dir/fex/7z_C/7zAlloc.c.i
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /root/massplay/server/fex/7z_C/7zAlloc.c > CMakeFiles/fex.dir/fex/7z_C/7zAlloc.c.i
 
 CMakeFiles/fex.dir/fex/7z_C/7zAlloc.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fex.dir/fex/7z_C/7zAlloc.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/ben/workspace/massplay/server/fex/7z_C/7zAlloc.c -o CMakeFiles/fex.dir/fex/7z_C/7zAlloc.c.s
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /root/massplay/server/fex/7z_C/7zAlloc.c -o CMakeFiles/fex.dir/fex/7z_C/7zAlloc.c.s
 
 CMakeFiles/fex.dir/fex/7z_C/7zAlloc.c.o.requires:
 .PHONY : CMakeFiles/fex.dir/fex/7z_C/7zAlloc.c.o.requires
@@ -77,17 +71,17 @@ CMakeFiles/fex.dir/fex/7z_C/7zAlloc.c.o.provides.build: CMakeFiles/fex.dir/fex/7
 
 CMakeFiles/fex.dir/fex/7z_C/7zBuf.c.o: CMakeFiles/fex.dir/flags.make
 CMakeFiles/fex.dir/fex/7z_C/7zBuf.c.o: fex/7z_C/7zBuf.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/fex.dir/fex/7z_C/7zBuf.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/fex.dir/fex/7z_C/7zBuf.c.o   -c /home/ben/workspace/massplay/server/fex/7z_C/7zBuf.c
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/fex.dir/fex/7z_C/7zBuf.c.o   -c /root/massplay/server/fex/7z_C/7zBuf.c
 
 CMakeFiles/fex.dir/fex/7z_C/7zBuf.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/fex.dir/fex/7z_C/7zBuf.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/ben/workspace/massplay/server/fex/7z_C/7zBuf.c > CMakeFiles/fex.dir/fex/7z_C/7zBuf.c.i
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /root/massplay/server/fex/7z_C/7zBuf.c > CMakeFiles/fex.dir/fex/7z_C/7zBuf.c.i
 
 CMakeFiles/fex.dir/fex/7z_C/7zBuf.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fex.dir/fex/7z_C/7zBuf.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/ben/workspace/massplay/server/fex/7z_C/7zBuf.c -o CMakeFiles/fex.dir/fex/7z_C/7zBuf.c.s
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /root/massplay/server/fex/7z_C/7zBuf.c -o CMakeFiles/fex.dir/fex/7z_C/7zBuf.c.s
 
 CMakeFiles/fex.dir/fex/7z_C/7zBuf.c.o.requires:
 .PHONY : CMakeFiles/fex.dir/fex/7z_C/7zBuf.c.o.requires
@@ -100,17 +94,17 @@ CMakeFiles/fex.dir/fex/7z_C/7zBuf.c.o.provides.build: CMakeFiles/fex.dir/fex/7z_
 
 CMakeFiles/fex.dir/fex/7z_C/7zCrc.c.o: CMakeFiles/fex.dir/flags.make
 CMakeFiles/fex.dir/fex/7z_C/7zCrc.c.o: fex/7z_C/7zCrc.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/fex.dir/fex/7z_C/7zCrc.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/fex.dir/fex/7z_C/7zCrc.c.o   -c /home/ben/workspace/massplay/server/fex/7z_C/7zCrc.c
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/fex.dir/fex/7z_C/7zCrc.c.o   -c /root/massplay/server/fex/7z_C/7zCrc.c
 
 CMakeFiles/fex.dir/fex/7z_C/7zCrc.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/fex.dir/fex/7z_C/7zCrc.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/ben/workspace/massplay/server/fex/7z_C/7zCrc.c > CMakeFiles/fex.dir/fex/7z_C/7zCrc.c.i
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /root/massplay/server/fex/7z_C/7zCrc.c > CMakeFiles/fex.dir/fex/7z_C/7zCrc.c.i
 
 CMakeFiles/fex.dir/fex/7z_C/7zCrc.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fex.dir/fex/7z_C/7zCrc.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/ben/workspace/massplay/server/fex/7z_C/7zCrc.c -o CMakeFiles/fex.dir/fex/7z_C/7zCrc.c.s
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /root/massplay/server/fex/7z_C/7zCrc.c -o CMakeFiles/fex.dir/fex/7z_C/7zCrc.c.s
 
 CMakeFiles/fex.dir/fex/7z_C/7zCrc.c.o.requires:
 .PHONY : CMakeFiles/fex.dir/fex/7z_C/7zCrc.c.o.requires
@@ -123,17 +117,17 @@ CMakeFiles/fex.dir/fex/7z_C/7zCrc.c.o.provides.build: CMakeFiles/fex.dir/fex/7z_
 
 CMakeFiles/fex.dir/fex/7z_C/7zCrcOpt.c.o: CMakeFiles/fex.dir/flags.make
 CMakeFiles/fex.dir/fex/7z_C/7zCrcOpt.c.o: fex/7z_C/7zCrcOpt.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/fex.dir/fex/7z_C/7zCrcOpt.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/fex.dir/fex/7z_C/7zCrcOpt.c.o   -c /home/ben/workspace/massplay/server/fex/7z_C/7zCrcOpt.c
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/fex.dir/fex/7z_C/7zCrcOpt.c.o   -c /root/massplay/server/fex/7z_C/7zCrcOpt.c
 
 CMakeFiles/fex.dir/fex/7z_C/7zCrcOpt.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/fex.dir/fex/7z_C/7zCrcOpt.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/ben/workspace/massplay/server/fex/7z_C/7zCrcOpt.c > CMakeFiles/fex.dir/fex/7z_C/7zCrcOpt.c.i
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /root/massplay/server/fex/7z_C/7zCrcOpt.c > CMakeFiles/fex.dir/fex/7z_C/7zCrcOpt.c.i
 
 CMakeFiles/fex.dir/fex/7z_C/7zCrcOpt.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fex.dir/fex/7z_C/7zCrcOpt.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/ben/workspace/massplay/server/fex/7z_C/7zCrcOpt.c -o CMakeFiles/fex.dir/fex/7z_C/7zCrcOpt.c.s
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /root/massplay/server/fex/7z_C/7zCrcOpt.c -o CMakeFiles/fex.dir/fex/7z_C/7zCrcOpt.c.s
 
 CMakeFiles/fex.dir/fex/7z_C/7zCrcOpt.c.o.requires:
 .PHONY : CMakeFiles/fex.dir/fex/7z_C/7zCrcOpt.c.o.requires
@@ -146,17 +140,17 @@ CMakeFiles/fex.dir/fex/7z_C/7zCrcOpt.c.o.provides.build: CMakeFiles/fex.dir/fex/
 
 CMakeFiles/fex.dir/fex/7z_C/7zDec.c.o: CMakeFiles/fex.dir/flags.make
 CMakeFiles/fex.dir/fex/7z_C/7zDec.c.o: fex/7z_C/7zDec.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/fex.dir/fex/7z_C/7zDec.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/fex.dir/fex/7z_C/7zDec.c.o   -c /home/ben/workspace/massplay/server/fex/7z_C/7zDec.c
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/fex.dir/fex/7z_C/7zDec.c.o   -c /root/massplay/server/fex/7z_C/7zDec.c
 
 CMakeFiles/fex.dir/fex/7z_C/7zDec.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/fex.dir/fex/7z_C/7zDec.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/ben/workspace/massplay/server/fex/7z_C/7zDec.c > CMakeFiles/fex.dir/fex/7z_C/7zDec.c.i
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /root/massplay/server/fex/7z_C/7zDec.c > CMakeFiles/fex.dir/fex/7z_C/7zDec.c.i
 
 CMakeFiles/fex.dir/fex/7z_C/7zDec.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fex.dir/fex/7z_C/7zDec.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/ben/workspace/massplay/server/fex/7z_C/7zDec.c -o CMakeFiles/fex.dir/fex/7z_C/7zDec.c.s
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /root/massplay/server/fex/7z_C/7zDec.c -o CMakeFiles/fex.dir/fex/7z_C/7zDec.c.s
 
 CMakeFiles/fex.dir/fex/7z_C/7zDec.c.o.requires:
 .PHONY : CMakeFiles/fex.dir/fex/7z_C/7zDec.c.o.requires
@@ -169,17 +163,17 @@ CMakeFiles/fex.dir/fex/7z_C/7zDec.c.o.provides.build: CMakeFiles/fex.dir/fex/7z_
 
 CMakeFiles/fex.dir/fex/7z_C/7zIn.c.o: CMakeFiles/fex.dir/flags.make
 CMakeFiles/fex.dir/fex/7z_C/7zIn.c.o: fex/7z_C/7zIn.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_6)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/fex.dir/fex/7z_C/7zIn.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/fex.dir/fex/7z_C/7zIn.c.o   -c /home/ben/workspace/massplay/server/fex/7z_C/7zIn.c
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/fex.dir/fex/7z_C/7zIn.c.o   -c /root/massplay/server/fex/7z_C/7zIn.c
 
 CMakeFiles/fex.dir/fex/7z_C/7zIn.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/fex.dir/fex/7z_C/7zIn.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/ben/workspace/massplay/server/fex/7z_C/7zIn.c > CMakeFiles/fex.dir/fex/7z_C/7zIn.c.i
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /root/massplay/server/fex/7z_C/7zIn.c > CMakeFiles/fex.dir/fex/7z_C/7zIn.c.i
 
 CMakeFiles/fex.dir/fex/7z_C/7zIn.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fex.dir/fex/7z_C/7zIn.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/ben/workspace/massplay/server/fex/7z_C/7zIn.c -o CMakeFiles/fex.dir/fex/7z_C/7zIn.c.s
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /root/massplay/server/fex/7z_C/7zIn.c -o CMakeFiles/fex.dir/fex/7z_C/7zIn.c.s
 
 CMakeFiles/fex.dir/fex/7z_C/7zIn.c.o.requires:
 .PHONY : CMakeFiles/fex.dir/fex/7z_C/7zIn.c.o.requires
@@ -192,17 +186,17 @@ CMakeFiles/fex.dir/fex/7z_C/7zIn.c.o.provides.build: CMakeFiles/fex.dir/fex/7z_C
 
 CMakeFiles/fex.dir/fex/7z_C/7zStream.c.o: CMakeFiles/fex.dir/flags.make
 CMakeFiles/fex.dir/fex/7z_C/7zStream.c.o: fex/7z_C/7zStream.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_7)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_7)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/fex.dir/fex/7z_C/7zStream.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/fex.dir/fex/7z_C/7zStream.c.o   -c /home/ben/workspace/massplay/server/fex/7z_C/7zStream.c
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/fex.dir/fex/7z_C/7zStream.c.o   -c /root/massplay/server/fex/7z_C/7zStream.c
 
 CMakeFiles/fex.dir/fex/7z_C/7zStream.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/fex.dir/fex/7z_C/7zStream.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/ben/workspace/massplay/server/fex/7z_C/7zStream.c > CMakeFiles/fex.dir/fex/7z_C/7zStream.c.i
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /root/massplay/server/fex/7z_C/7zStream.c > CMakeFiles/fex.dir/fex/7z_C/7zStream.c.i
 
 CMakeFiles/fex.dir/fex/7z_C/7zStream.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fex.dir/fex/7z_C/7zStream.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/ben/workspace/massplay/server/fex/7z_C/7zStream.c -o CMakeFiles/fex.dir/fex/7z_C/7zStream.c.s
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /root/massplay/server/fex/7z_C/7zStream.c -o CMakeFiles/fex.dir/fex/7z_C/7zStream.c.s
 
 CMakeFiles/fex.dir/fex/7z_C/7zStream.c.o.requires:
 .PHONY : CMakeFiles/fex.dir/fex/7z_C/7zStream.c.o.requires
@@ -215,17 +209,17 @@ CMakeFiles/fex.dir/fex/7z_C/7zStream.c.o.provides.build: CMakeFiles/fex.dir/fex/
 
 CMakeFiles/fex.dir/fex/7z_C/Bcj2.c.o: CMakeFiles/fex.dir/flags.make
 CMakeFiles/fex.dir/fex/7z_C/Bcj2.c.o: fex/7z_C/Bcj2.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_8)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_8)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/fex.dir/fex/7z_C/Bcj2.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/fex.dir/fex/7z_C/Bcj2.c.o   -c /home/ben/workspace/massplay/server/fex/7z_C/Bcj2.c
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/fex.dir/fex/7z_C/Bcj2.c.o   -c /root/massplay/server/fex/7z_C/Bcj2.c
 
 CMakeFiles/fex.dir/fex/7z_C/Bcj2.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/fex.dir/fex/7z_C/Bcj2.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/ben/workspace/massplay/server/fex/7z_C/Bcj2.c > CMakeFiles/fex.dir/fex/7z_C/Bcj2.c.i
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /root/massplay/server/fex/7z_C/Bcj2.c > CMakeFiles/fex.dir/fex/7z_C/Bcj2.c.i
 
 CMakeFiles/fex.dir/fex/7z_C/Bcj2.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fex.dir/fex/7z_C/Bcj2.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/ben/workspace/massplay/server/fex/7z_C/Bcj2.c -o CMakeFiles/fex.dir/fex/7z_C/Bcj2.c.s
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /root/massplay/server/fex/7z_C/Bcj2.c -o CMakeFiles/fex.dir/fex/7z_C/Bcj2.c.s
 
 CMakeFiles/fex.dir/fex/7z_C/Bcj2.c.o.requires:
 .PHONY : CMakeFiles/fex.dir/fex/7z_C/Bcj2.c.o.requires
@@ -238,17 +232,17 @@ CMakeFiles/fex.dir/fex/7z_C/Bcj2.c.o.provides.build: CMakeFiles/fex.dir/fex/7z_C
 
 CMakeFiles/fex.dir/fex/7z_C/Bra86.c.o: CMakeFiles/fex.dir/flags.make
 CMakeFiles/fex.dir/fex/7z_C/Bra86.c.o: fex/7z_C/Bra86.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_9)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_9)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/fex.dir/fex/7z_C/Bra86.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/fex.dir/fex/7z_C/Bra86.c.o   -c /home/ben/workspace/massplay/server/fex/7z_C/Bra86.c
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/fex.dir/fex/7z_C/Bra86.c.o   -c /root/massplay/server/fex/7z_C/Bra86.c
 
 CMakeFiles/fex.dir/fex/7z_C/Bra86.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/fex.dir/fex/7z_C/Bra86.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/ben/workspace/massplay/server/fex/7z_C/Bra86.c > CMakeFiles/fex.dir/fex/7z_C/Bra86.c.i
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /root/massplay/server/fex/7z_C/Bra86.c > CMakeFiles/fex.dir/fex/7z_C/Bra86.c.i
 
 CMakeFiles/fex.dir/fex/7z_C/Bra86.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fex.dir/fex/7z_C/Bra86.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/ben/workspace/massplay/server/fex/7z_C/Bra86.c -o CMakeFiles/fex.dir/fex/7z_C/Bra86.c.s
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /root/massplay/server/fex/7z_C/Bra86.c -o CMakeFiles/fex.dir/fex/7z_C/Bra86.c.s
 
 CMakeFiles/fex.dir/fex/7z_C/Bra86.c.o.requires:
 .PHONY : CMakeFiles/fex.dir/fex/7z_C/Bra86.c.o.requires
@@ -261,17 +255,17 @@ CMakeFiles/fex.dir/fex/7z_C/Bra86.c.o.provides.build: CMakeFiles/fex.dir/fex/7z_
 
 CMakeFiles/fex.dir/fex/7z_C/Bra.c.o: CMakeFiles/fex.dir/flags.make
 CMakeFiles/fex.dir/fex/7z_C/Bra.c.o: fex/7z_C/Bra.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_10)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_10)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/fex.dir/fex/7z_C/Bra.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/fex.dir/fex/7z_C/Bra.c.o   -c /home/ben/workspace/massplay/server/fex/7z_C/Bra.c
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/fex.dir/fex/7z_C/Bra.c.o   -c /root/massplay/server/fex/7z_C/Bra.c
 
 CMakeFiles/fex.dir/fex/7z_C/Bra.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/fex.dir/fex/7z_C/Bra.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/ben/workspace/massplay/server/fex/7z_C/Bra.c > CMakeFiles/fex.dir/fex/7z_C/Bra.c.i
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /root/massplay/server/fex/7z_C/Bra.c > CMakeFiles/fex.dir/fex/7z_C/Bra.c.i
 
 CMakeFiles/fex.dir/fex/7z_C/Bra.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fex.dir/fex/7z_C/Bra.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/ben/workspace/massplay/server/fex/7z_C/Bra.c -o CMakeFiles/fex.dir/fex/7z_C/Bra.c.s
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /root/massplay/server/fex/7z_C/Bra.c -o CMakeFiles/fex.dir/fex/7z_C/Bra.c.s
 
 CMakeFiles/fex.dir/fex/7z_C/Bra.c.o.requires:
 .PHONY : CMakeFiles/fex.dir/fex/7z_C/Bra.c.o.requires
@@ -284,17 +278,17 @@ CMakeFiles/fex.dir/fex/7z_C/Bra.c.o.provides.build: CMakeFiles/fex.dir/fex/7z_C/
 
 CMakeFiles/fex.dir/fex/7z_C/CpuArch.c.o: CMakeFiles/fex.dir/flags.make
 CMakeFiles/fex.dir/fex/7z_C/CpuArch.c.o: fex/7z_C/CpuArch.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_11)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_11)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/fex.dir/fex/7z_C/CpuArch.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/fex.dir/fex/7z_C/CpuArch.c.o   -c /home/ben/workspace/massplay/server/fex/7z_C/CpuArch.c
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/fex.dir/fex/7z_C/CpuArch.c.o   -c /root/massplay/server/fex/7z_C/CpuArch.c
 
 CMakeFiles/fex.dir/fex/7z_C/CpuArch.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/fex.dir/fex/7z_C/CpuArch.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/ben/workspace/massplay/server/fex/7z_C/CpuArch.c > CMakeFiles/fex.dir/fex/7z_C/CpuArch.c.i
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /root/massplay/server/fex/7z_C/CpuArch.c > CMakeFiles/fex.dir/fex/7z_C/CpuArch.c.i
 
 CMakeFiles/fex.dir/fex/7z_C/CpuArch.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fex.dir/fex/7z_C/CpuArch.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/ben/workspace/massplay/server/fex/7z_C/CpuArch.c -o CMakeFiles/fex.dir/fex/7z_C/CpuArch.c.s
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /root/massplay/server/fex/7z_C/CpuArch.c -o CMakeFiles/fex.dir/fex/7z_C/CpuArch.c.s
 
 CMakeFiles/fex.dir/fex/7z_C/CpuArch.c.o.requires:
 .PHONY : CMakeFiles/fex.dir/fex/7z_C/CpuArch.c.o.requires
@@ -307,17 +301,17 @@ CMakeFiles/fex.dir/fex/7z_C/CpuArch.c.o.provides.build: CMakeFiles/fex.dir/fex/7
 
 CMakeFiles/fex.dir/fex/7z_C/Lzma2Dec.c.o: CMakeFiles/fex.dir/flags.make
 CMakeFiles/fex.dir/fex/7z_C/Lzma2Dec.c.o: fex/7z_C/Lzma2Dec.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_12)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_12)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/fex.dir/fex/7z_C/Lzma2Dec.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/fex.dir/fex/7z_C/Lzma2Dec.c.o   -c /home/ben/workspace/massplay/server/fex/7z_C/Lzma2Dec.c
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/fex.dir/fex/7z_C/Lzma2Dec.c.o   -c /root/massplay/server/fex/7z_C/Lzma2Dec.c
 
 CMakeFiles/fex.dir/fex/7z_C/Lzma2Dec.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/fex.dir/fex/7z_C/Lzma2Dec.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/ben/workspace/massplay/server/fex/7z_C/Lzma2Dec.c > CMakeFiles/fex.dir/fex/7z_C/Lzma2Dec.c.i
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /root/massplay/server/fex/7z_C/Lzma2Dec.c > CMakeFiles/fex.dir/fex/7z_C/Lzma2Dec.c.i
 
 CMakeFiles/fex.dir/fex/7z_C/Lzma2Dec.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fex.dir/fex/7z_C/Lzma2Dec.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/ben/workspace/massplay/server/fex/7z_C/Lzma2Dec.c -o CMakeFiles/fex.dir/fex/7z_C/Lzma2Dec.c.s
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /root/massplay/server/fex/7z_C/Lzma2Dec.c -o CMakeFiles/fex.dir/fex/7z_C/Lzma2Dec.c.s
 
 CMakeFiles/fex.dir/fex/7z_C/Lzma2Dec.c.o.requires:
 .PHONY : CMakeFiles/fex.dir/fex/7z_C/Lzma2Dec.c.o.requires
@@ -330,17 +324,17 @@ CMakeFiles/fex.dir/fex/7z_C/Lzma2Dec.c.o.provides.build: CMakeFiles/fex.dir/fex/
 
 CMakeFiles/fex.dir/fex/7z_C/LzmaDec.c.o: CMakeFiles/fex.dir/flags.make
 CMakeFiles/fex.dir/fex/7z_C/LzmaDec.c.o: fex/7z_C/LzmaDec.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_13)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_13)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/fex.dir/fex/7z_C/LzmaDec.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/fex.dir/fex/7z_C/LzmaDec.c.o   -c /home/ben/workspace/massplay/server/fex/7z_C/LzmaDec.c
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/fex.dir/fex/7z_C/LzmaDec.c.o   -c /root/massplay/server/fex/7z_C/LzmaDec.c
 
 CMakeFiles/fex.dir/fex/7z_C/LzmaDec.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/fex.dir/fex/7z_C/LzmaDec.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/ben/workspace/massplay/server/fex/7z_C/LzmaDec.c > CMakeFiles/fex.dir/fex/7z_C/LzmaDec.c.i
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /root/massplay/server/fex/7z_C/LzmaDec.c > CMakeFiles/fex.dir/fex/7z_C/LzmaDec.c.i
 
 CMakeFiles/fex.dir/fex/7z_C/LzmaDec.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fex.dir/fex/7z_C/LzmaDec.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/ben/workspace/massplay/server/fex/7z_C/LzmaDec.c -o CMakeFiles/fex.dir/fex/7z_C/LzmaDec.c.s
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /root/massplay/server/fex/7z_C/LzmaDec.c -o CMakeFiles/fex.dir/fex/7z_C/LzmaDec.c.s
 
 CMakeFiles/fex.dir/fex/7z_C/LzmaDec.c.o.requires:
 .PHONY : CMakeFiles/fex.dir/fex/7z_C/LzmaDec.c.o.requires
@@ -353,17 +347,17 @@ CMakeFiles/fex.dir/fex/7z_C/LzmaDec.c.o.provides.build: CMakeFiles/fex.dir/fex/7
 
 CMakeFiles/fex.dir/fex/7z_C/Ppmd7.c.o: CMakeFiles/fex.dir/flags.make
 CMakeFiles/fex.dir/fex/7z_C/Ppmd7.c.o: fex/7z_C/Ppmd7.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_14)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_14)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/fex.dir/fex/7z_C/Ppmd7.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/fex.dir/fex/7z_C/Ppmd7.c.o   -c /home/ben/workspace/massplay/server/fex/7z_C/Ppmd7.c
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/fex.dir/fex/7z_C/Ppmd7.c.o   -c /root/massplay/server/fex/7z_C/Ppmd7.c
 
 CMakeFiles/fex.dir/fex/7z_C/Ppmd7.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/fex.dir/fex/7z_C/Ppmd7.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/ben/workspace/massplay/server/fex/7z_C/Ppmd7.c > CMakeFiles/fex.dir/fex/7z_C/Ppmd7.c.i
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /root/massplay/server/fex/7z_C/Ppmd7.c > CMakeFiles/fex.dir/fex/7z_C/Ppmd7.c.i
 
 CMakeFiles/fex.dir/fex/7z_C/Ppmd7.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fex.dir/fex/7z_C/Ppmd7.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/ben/workspace/massplay/server/fex/7z_C/Ppmd7.c -o CMakeFiles/fex.dir/fex/7z_C/Ppmd7.c.s
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /root/massplay/server/fex/7z_C/Ppmd7.c -o CMakeFiles/fex.dir/fex/7z_C/Ppmd7.c.s
 
 CMakeFiles/fex.dir/fex/7z_C/Ppmd7.c.o.requires:
 .PHONY : CMakeFiles/fex.dir/fex/7z_C/Ppmd7.c.o.requires
@@ -376,17 +370,17 @@ CMakeFiles/fex.dir/fex/7z_C/Ppmd7.c.o.provides.build: CMakeFiles/fex.dir/fex/7z_
 
 CMakeFiles/fex.dir/fex/7z_C/Ppmd7Dec.c.o: CMakeFiles/fex.dir/flags.make
 CMakeFiles/fex.dir/fex/7z_C/Ppmd7Dec.c.o: fex/7z_C/Ppmd7Dec.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_15)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_15)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/fex.dir/fex/7z_C/Ppmd7Dec.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/fex.dir/fex/7z_C/Ppmd7Dec.c.o   -c /home/ben/workspace/massplay/server/fex/7z_C/Ppmd7Dec.c
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/fex.dir/fex/7z_C/Ppmd7Dec.c.o   -c /root/massplay/server/fex/7z_C/Ppmd7Dec.c
 
 CMakeFiles/fex.dir/fex/7z_C/Ppmd7Dec.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/fex.dir/fex/7z_C/Ppmd7Dec.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/ben/workspace/massplay/server/fex/7z_C/Ppmd7Dec.c > CMakeFiles/fex.dir/fex/7z_C/Ppmd7Dec.c.i
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /root/massplay/server/fex/7z_C/Ppmd7Dec.c > CMakeFiles/fex.dir/fex/7z_C/Ppmd7Dec.c.i
 
 CMakeFiles/fex.dir/fex/7z_C/Ppmd7Dec.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fex.dir/fex/7z_C/Ppmd7Dec.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/ben/workspace/massplay/server/fex/7z_C/Ppmd7Dec.c -o CMakeFiles/fex.dir/fex/7z_C/Ppmd7Dec.c.s
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /root/massplay/server/fex/7z_C/Ppmd7Dec.c -o CMakeFiles/fex.dir/fex/7z_C/Ppmd7Dec.c.s
 
 CMakeFiles/fex.dir/fex/7z_C/Ppmd7Dec.c.o.requires:
 .PHONY : CMakeFiles/fex.dir/fex/7z_C/Ppmd7Dec.c.o.requires
@@ -399,17 +393,17 @@ CMakeFiles/fex.dir/fex/7z_C/Ppmd7Dec.c.o.provides.build: CMakeFiles/fex.dir/fex/
 
 CMakeFiles/fex.dir/fex/fex/Binary_Extractor.cpp.o: CMakeFiles/fex.dir/flags.make
 CMakeFiles/fex.dir/fex/fex/Binary_Extractor.cpp.o: fex/fex/Binary_Extractor.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_16)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_16)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/fex.dir/fex/fex/Binary_Extractor.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/fex.dir/fex/fex/Binary_Extractor.cpp.o -c /home/ben/workspace/massplay/server/fex/fex/Binary_Extractor.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/fex.dir/fex/fex/Binary_Extractor.cpp.o -c /root/massplay/server/fex/fex/Binary_Extractor.cpp
 
 CMakeFiles/fex.dir/fex/fex/Binary_Extractor.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fex.dir/fex/fex/Binary_Extractor.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/fex/fex/Binary_Extractor.cpp > CMakeFiles/fex.dir/fex/fex/Binary_Extractor.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/fex/fex/Binary_Extractor.cpp > CMakeFiles/fex.dir/fex/fex/Binary_Extractor.cpp.i
 
 CMakeFiles/fex.dir/fex/fex/Binary_Extractor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fex.dir/fex/fex/Binary_Extractor.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/fex/fex/Binary_Extractor.cpp -o CMakeFiles/fex.dir/fex/fex/Binary_Extractor.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/fex/fex/Binary_Extractor.cpp -o CMakeFiles/fex.dir/fex/fex/Binary_Extractor.cpp.s
 
 CMakeFiles/fex.dir/fex/fex/Binary_Extractor.cpp.o.requires:
 .PHONY : CMakeFiles/fex.dir/fex/fex/Binary_Extractor.cpp.o.requires
@@ -422,17 +416,17 @@ CMakeFiles/fex.dir/fex/fex/Binary_Extractor.cpp.o.provides.build: CMakeFiles/fex
 
 CMakeFiles/fex.dir/fex/fex/blargg_common.cpp.o: CMakeFiles/fex.dir/flags.make
 CMakeFiles/fex.dir/fex/fex/blargg_common.cpp.o: fex/fex/blargg_common.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_17)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_17)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/fex.dir/fex/fex/blargg_common.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/fex.dir/fex/fex/blargg_common.cpp.o -c /home/ben/workspace/massplay/server/fex/fex/blargg_common.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/fex.dir/fex/fex/blargg_common.cpp.o -c /root/massplay/server/fex/fex/blargg_common.cpp
 
 CMakeFiles/fex.dir/fex/fex/blargg_common.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fex.dir/fex/fex/blargg_common.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/fex/fex/blargg_common.cpp > CMakeFiles/fex.dir/fex/fex/blargg_common.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/fex/fex/blargg_common.cpp > CMakeFiles/fex.dir/fex/fex/blargg_common.cpp.i
 
 CMakeFiles/fex.dir/fex/fex/blargg_common.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fex.dir/fex/fex/blargg_common.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/fex/fex/blargg_common.cpp -o CMakeFiles/fex.dir/fex/fex/blargg_common.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/fex/fex/blargg_common.cpp -o CMakeFiles/fex.dir/fex/fex/blargg_common.cpp.s
 
 CMakeFiles/fex.dir/fex/fex/blargg_common.cpp.o.requires:
 .PHONY : CMakeFiles/fex.dir/fex/fex/blargg_common.cpp.o.requires
@@ -445,17 +439,17 @@ CMakeFiles/fex.dir/fex/fex/blargg_common.cpp.o.provides.build: CMakeFiles/fex.di
 
 CMakeFiles/fex.dir/fex/fex/blargg_errors.cpp.o: CMakeFiles/fex.dir/flags.make
 CMakeFiles/fex.dir/fex/fex/blargg_errors.cpp.o: fex/fex/blargg_errors.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_18)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_18)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/fex.dir/fex/fex/blargg_errors.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/fex.dir/fex/fex/blargg_errors.cpp.o -c /home/ben/workspace/massplay/server/fex/fex/blargg_errors.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/fex.dir/fex/fex/blargg_errors.cpp.o -c /root/massplay/server/fex/fex/blargg_errors.cpp
 
 CMakeFiles/fex.dir/fex/fex/blargg_errors.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fex.dir/fex/fex/blargg_errors.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/fex/fex/blargg_errors.cpp > CMakeFiles/fex.dir/fex/fex/blargg_errors.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/fex/fex/blargg_errors.cpp > CMakeFiles/fex.dir/fex/fex/blargg_errors.cpp.i
 
 CMakeFiles/fex.dir/fex/fex/blargg_errors.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fex.dir/fex/fex/blargg_errors.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/fex/fex/blargg_errors.cpp -o CMakeFiles/fex.dir/fex/fex/blargg_errors.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/fex/fex/blargg_errors.cpp -o CMakeFiles/fex.dir/fex/fex/blargg_errors.cpp.s
 
 CMakeFiles/fex.dir/fex/fex/blargg_errors.cpp.o.requires:
 .PHONY : CMakeFiles/fex.dir/fex/fex/blargg_errors.cpp.o.requires
@@ -468,17 +462,17 @@ CMakeFiles/fex.dir/fex/fex/blargg_errors.cpp.o.provides.build: CMakeFiles/fex.di
 
 CMakeFiles/fex.dir/fex/fex/Data_Reader.cpp.o: CMakeFiles/fex.dir/flags.make
 CMakeFiles/fex.dir/fex/fex/Data_Reader.cpp.o: fex/fex/Data_Reader.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_19)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_19)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/fex.dir/fex/fex/Data_Reader.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/fex.dir/fex/fex/Data_Reader.cpp.o -c /home/ben/workspace/massplay/server/fex/fex/Data_Reader.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/fex.dir/fex/fex/Data_Reader.cpp.o -c /root/massplay/server/fex/fex/Data_Reader.cpp
 
 CMakeFiles/fex.dir/fex/fex/Data_Reader.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fex.dir/fex/fex/Data_Reader.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/fex/fex/Data_Reader.cpp > CMakeFiles/fex.dir/fex/fex/Data_Reader.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/fex/fex/Data_Reader.cpp > CMakeFiles/fex.dir/fex/fex/Data_Reader.cpp.i
 
 CMakeFiles/fex.dir/fex/fex/Data_Reader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fex.dir/fex/fex/Data_Reader.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/fex/fex/Data_Reader.cpp -o CMakeFiles/fex.dir/fex/fex/Data_Reader.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/fex/fex/Data_Reader.cpp -o CMakeFiles/fex.dir/fex/fex/Data_Reader.cpp.s
 
 CMakeFiles/fex.dir/fex/fex/Data_Reader.cpp.o.requires:
 .PHONY : CMakeFiles/fex.dir/fex/fex/Data_Reader.cpp.o.requires
@@ -491,17 +485,17 @@ CMakeFiles/fex.dir/fex/fex/Data_Reader.cpp.o.provides.build: CMakeFiles/fex.dir/
 
 CMakeFiles/fex.dir/fex/fex/fex.cpp.o: CMakeFiles/fex.dir/flags.make
 CMakeFiles/fex.dir/fex/fex/fex.cpp.o: fex/fex/fex.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_20)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_20)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/fex.dir/fex/fex/fex.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/fex.dir/fex/fex/fex.cpp.o -c /home/ben/workspace/massplay/server/fex/fex/fex.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/fex.dir/fex/fex/fex.cpp.o -c /root/massplay/server/fex/fex/fex.cpp
 
 CMakeFiles/fex.dir/fex/fex/fex.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fex.dir/fex/fex/fex.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/fex/fex/fex.cpp > CMakeFiles/fex.dir/fex/fex/fex.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/fex/fex/fex.cpp > CMakeFiles/fex.dir/fex/fex/fex.cpp.i
 
 CMakeFiles/fex.dir/fex/fex/fex.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fex.dir/fex/fex/fex.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/fex/fex/fex.cpp -o CMakeFiles/fex.dir/fex/fex/fex.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/fex/fex/fex.cpp -o CMakeFiles/fex.dir/fex/fex/fex.cpp.s
 
 CMakeFiles/fex.dir/fex/fex/fex.cpp.o.requires:
 .PHONY : CMakeFiles/fex.dir/fex/fex/fex.cpp.o.requires
@@ -514,17 +508,17 @@ CMakeFiles/fex.dir/fex/fex/fex.cpp.o.provides.build: CMakeFiles/fex.dir/fex/fex/
 
 CMakeFiles/fex.dir/fex/fex/File_Extractor.cpp.o: CMakeFiles/fex.dir/flags.make
 CMakeFiles/fex.dir/fex/fex/File_Extractor.cpp.o: fex/fex/File_Extractor.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_21)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_21)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/fex.dir/fex/fex/File_Extractor.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/fex.dir/fex/fex/File_Extractor.cpp.o -c /home/ben/workspace/massplay/server/fex/fex/File_Extractor.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/fex.dir/fex/fex/File_Extractor.cpp.o -c /root/massplay/server/fex/fex/File_Extractor.cpp
 
 CMakeFiles/fex.dir/fex/fex/File_Extractor.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fex.dir/fex/fex/File_Extractor.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/fex/fex/File_Extractor.cpp > CMakeFiles/fex.dir/fex/fex/File_Extractor.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/fex/fex/File_Extractor.cpp > CMakeFiles/fex.dir/fex/fex/File_Extractor.cpp.i
 
 CMakeFiles/fex.dir/fex/fex/File_Extractor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fex.dir/fex/fex/File_Extractor.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/fex/fex/File_Extractor.cpp -o CMakeFiles/fex.dir/fex/fex/File_Extractor.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/fex/fex/File_Extractor.cpp -o CMakeFiles/fex.dir/fex/fex/File_Extractor.cpp.s
 
 CMakeFiles/fex.dir/fex/fex/File_Extractor.cpp.o.requires:
 .PHONY : CMakeFiles/fex.dir/fex/fex/File_Extractor.cpp.o.requires
@@ -537,17 +531,17 @@ CMakeFiles/fex.dir/fex/fex/File_Extractor.cpp.o.provides.build: CMakeFiles/fex.d
 
 CMakeFiles/fex.dir/fex/fex/Gzip_Extractor.cpp.o: CMakeFiles/fex.dir/flags.make
 CMakeFiles/fex.dir/fex/fex/Gzip_Extractor.cpp.o: fex/fex/Gzip_Extractor.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_22)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_22)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/fex.dir/fex/fex/Gzip_Extractor.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/fex.dir/fex/fex/Gzip_Extractor.cpp.o -c /home/ben/workspace/massplay/server/fex/fex/Gzip_Extractor.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/fex.dir/fex/fex/Gzip_Extractor.cpp.o -c /root/massplay/server/fex/fex/Gzip_Extractor.cpp
 
 CMakeFiles/fex.dir/fex/fex/Gzip_Extractor.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fex.dir/fex/fex/Gzip_Extractor.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/fex/fex/Gzip_Extractor.cpp > CMakeFiles/fex.dir/fex/fex/Gzip_Extractor.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/fex/fex/Gzip_Extractor.cpp > CMakeFiles/fex.dir/fex/fex/Gzip_Extractor.cpp.i
 
 CMakeFiles/fex.dir/fex/fex/Gzip_Extractor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fex.dir/fex/fex/Gzip_Extractor.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/fex/fex/Gzip_Extractor.cpp -o CMakeFiles/fex.dir/fex/fex/Gzip_Extractor.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/fex/fex/Gzip_Extractor.cpp -o CMakeFiles/fex.dir/fex/fex/Gzip_Extractor.cpp.s
 
 CMakeFiles/fex.dir/fex/fex/Gzip_Extractor.cpp.o.requires:
 .PHONY : CMakeFiles/fex.dir/fex/fex/Gzip_Extractor.cpp.o.requires
@@ -560,17 +554,17 @@ CMakeFiles/fex.dir/fex/fex/Gzip_Extractor.cpp.o.provides.build: CMakeFiles/fex.d
 
 CMakeFiles/fex.dir/fex/fex/Gzip_Reader.cpp.o: CMakeFiles/fex.dir/flags.make
 CMakeFiles/fex.dir/fex/fex/Gzip_Reader.cpp.o: fex/fex/Gzip_Reader.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_23)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_23)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/fex.dir/fex/fex/Gzip_Reader.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/fex.dir/fex/fex/Gzip_Reader.cpp.o -c /home/ben/workspace/massplay/server/fex/fex/Gzip_Reader.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/fex.dir/fex/fex/Gzip_Reader.cpp.o -c /root/massplay/server/fex/fex/Gzip_Reader.cpp
 
 CMakeFiles/fex.dir/fex/fex/Gzip_Reader.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fex.dir/fex/fex/Gzip_Reader.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/fex/fex/Gzip_Reader.cpp > CMakeFiles/fex.dir/fex/fex/Gzip_Reader.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/fex/fex/Gzip_Reader.cpp > CMakeFiles/fex.dir/fex/fex/Gzip_Reader.cpp.i
 
 CMakeFiles/fex.dir/fex/fex/Gzip_Reader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fex.dir/fex/fex/Gzip_Reader.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/fex/fex/Gzip_Reader.cpp -o CMakeFiles/fex.dir/fex/fex/Gzip_Reader.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/fex/fex/Gzip_Reader.cpp -o CMakeFiles/fex.dir/fex/fex/Gzip_Reader.cpp.s
 
 CMakeFiles/fex.dir/fex/fex/Gzip_Reader.cpp.o.requires:
 .PHONY : CMakeFiles/fex.dir/fex/fex/Gzip_Reader.cpp.o.requires
@@ -583,17 +577,17 @@ CMakeFiles/fex.dir/fex/fex/Gzip_Reader.cpp.o.provides.build: CMakeFiles/fex.dir/
 
 CMakeFiles/fex.dir/fex/fex/Rar_Extractor.cpp.o: CMakeFiles/fex.dir/flags.make
 CMakeFiles/fex.dir/fex/fex/Rar_Extractor.cpp.o: fex/fex/Rar_Extractor.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_24)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_24)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/fex.dir/fex/fex/Rar_Extractor.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/fex.dir/fex/fex/Rar_Extractor.cpp.o -c /home/ben/workspace/massplay/server/fex/fex/Rar_Extractor.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/fex.dir/fex/fex/Rar_Extractor.cpp.o -c /root/massplay/server/fex/fex/Rar_Extractor.cpp
 
 CMakeFiles/fex.dir/fex/fex/Rar_Extractor.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fex.dir/fex/fex/Rar_Extractor.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/fex/fex/Rar_Extractor.cpp > CMakeFiles/fex.dir/fex/fex/Rar_Extractor.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/fex/fex/Rar_Extractor.cpp > CMakeFiles/fex.dir/fex/fex/Rar_Extractor.cpp.i
 
 CMakeFiles/fex.dir/fex/fex/Rar_Extractor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fex.dir/fex/fex/Rar_Extractor.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/fex/fex/Rar_Extractor.cpp -o CMakeFiles/fex.dir/fex/fex/Rar_Extractor.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/fex/fex/Rar_Extractor.cpp -o CMakeFiles/fex.dir/fex/fex/Rar_Extractor.cpp.s
 
 CMakeFiles/fex.dir/fex/fex/Rar_Extractor.cpp.o.requires:
 .PHONY : CMakeFiles/fex.dir/fex/fex/Rar_Extractor.cpp.o.requires
@@ -606,17 +600,17 @@ CMakeFiles/fex.dir/fex/fex/Rar_Extractor.cpp.o.provides.build: CMakeFiles/fex.di
 
 CMakeFiles/fex.dir/fex/fex/Zip7_Extractor.cpp.o: CMakeFiles/fex.dir/flags.make
 CMakeFiles/fex.dir/fex/fex/Zip7_Extractor.cpp.o: fex/fex/Zip7_Extractor.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_25)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_25)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/fex.dir/fex/fex/Zip7_Extractor.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/fex.dir/fex/fex/Zip7_Extractor.cpp.o -c /home/ben/workspace/massplay/server/fex/fex/Zip7_Extractor.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/fex.dir/fex/fex/Zip7_Extractor.cpp.o -c /root/massplay/server/fex/fex/Zip7_Extractor.cpp
 
 CMakeFiles/fex.dir/fex/fex/Zip7_Extractor.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fex.dir/fex/fex/Zip7_Extractor.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/fex/fex/Zip7_Extractor.cpp > CMakeFiles/fex.dir/fex/fex/Zip7_Extractor.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/fex/fex/Zip7_Extractor.cpp > CMakeFiles/fex.dir/fex/fex/Zip7_Extractor.cpp.i
 
 CMakeFiles/fex.dir/fex/fex/Zip7_Extractor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fex.dir/fex/fex/Zip7_Extractor.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/fex/fex/Zip7_Extractor.cpp -o CMakeFiles/fex.dir/fex/fex/Zip7_Extractor.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/fex/fex/Zip7_Extractor.cpp -o CMakeFiles/fex.dir/fex/fex/Zip7_Extractor.cpp.s
 
 CMakeFiles/fex.dir/fex/fex/Zip7_Extractor.cpp.o.requires:
 .PHONY : CMakeFiles/fex.dir/fex/fex/Zip7_Extractor.cpp.o.requires
@@ -629,17 +623,17 @@ CMakeFiles/fex.dir/fex/fex/Zip7_Extractor.cpp.o.provides.build: CMakeFiles/fex.d
 
 CMakeFiles/fex.dir/fex/fex/Zip_Extractor.cpp.o: CMakeFiles/fex.dir/flags.make
 CMakeFiles/fex.dir/fex/fex/Zip_Extractor.cpp.o: fex/fex/Zip_Extractor.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_26)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_26)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/fex.dir/fex/fex/Zip_Extractor.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/fex.dir/fex/fex/Zip_Extractor.cpp.o -c /home/ben/workspace/massplay/server/fex/fex/Zip_Extractor.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/fex.dir/fex/fex/Zip_Extractor.cpp.o -c /root/massplay/server/fex/fex/Zip_Extractor.cpp
 
 CMakeFiles/fex.dir/fex/fex/Zip_Extractor.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fex.dir/fex/fex/Zip_Extractor.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/fex/fex/Zip_Extractor.cpp > CMakeFiles/fex.dir/fex/fex/Zip_Extractor.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/fex/fex/Zip_Extractor.cpp > CMakeFiles/fex.dir/fex/fex/Zip_Extractor.cpp.i
 
 CMakeFiles/fex.dir/fex/fex/Zip_Extractor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fex.dir/fex/fex/Zip_Extractor.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/fex/fex/Zip_Extractor.cpp -o CMakeFiles/fex.dir/fex/fex/Zip_Extractor.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/fex/fex/Zip_Extractor.cpp -o CMakeFiles/fex.dir/fex/fex/Zip_Extractor.cpp.s
 
 CMakeFiles/fex.dir/fex/fex/Zip_Extractor.cpp.o.requires:
 .PHONY : CMakeFiles/fex.dir/fex/fex/Zip_Extractor.cpp.o.requires
@@ -652,17 +646,17 @@ CMakeFiles/fex.dir/fex/fex/Zip_Extractor.cpp.o.provides.build: CMakeFiles/fex.di
 
 CMakeFiles/fex.dir/fex/fex/Zlib_Inflater.cpp.o: CMakeFiles/fex.dir/flags.make
 CMakeFiles/fex.dir/fex/fex/Zlib_Inflater.cpp.o: fex/fex/Zlib_Inflater.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ben/workspace/massplay/server/CMakeFiles $(CMAKE_PROGRESS_27)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/massplay/server/CMakeFiles $(CMAKE_PROGRESS_27)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/fex.dir/fex/fex/Zlib_Inflater.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/fex.dir/fex/fex/Zlib_Inflater.cpp.o -c /home/ben/workspace/massplay/server/fex/fex/Zlib_Inflater.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/fex.dir/fex/fex/Zlib_Inflater.cpp.o -c /root/massplay/server/fex/fex/Zlib_Inflater.cpp
 
 CMakeFiles/fex.dir/fex/fex/Zlib_Inflater.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fex.dir/fex/fex/Zlib_Inflater.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ben/workspace/massplay/server/fex/fex/Zlib_Inflater.cpp > CMakeFiles/fex.dir/fex/fex/Zlib_Inflater.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/massplay/server/fex/fex/Zlib_Inflater.cpp > CMakeFiles/fex.dir/fex/fex/Zlib_Inflater.cpp.i
 
 CMakeFiles/fex.dir/fex/fex/Zlib_Inflater.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fex.dir/fex/fex/Zlib_Inflater.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ben/workspace/massplay/server/fex/fex/Zlib_Inflater.cpp -o CMakeFiles/fex.dir/fex/fex/Zlib_Inflater.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/massplay/server/fex/fex/Zlib_Inflater.cpp -o CMakeFiles/fex.dir/fex/fex/Zlib_Inflater.cpp.s
 
 CMakeFiles/fex.dir/fex/fex/Zlib_Inflater.cpp.o.requires:
 .PHONY : CMakeFiles/fex.dir/fex/fex/Zlib_Inflater.cpp.o.requires
@@ -777,6 +771,6 @@ CMakeFiles/fex.dir/clean:
 .PHONY : CMakeFiles/fex.dir/clean
 
 CMakeFiles/fex.dir/depend:
-	cd /home/ben/workspace/massplay/server && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ben/workspace/massplay/server /home/ben/workspace/massplay/server /home/ben/workspace/massplay/server /home/ben/workspace/massplay/server /home/ben/workspace/massplay/server/CMakeFiles/fex.dir/DependInfo.cmake --color=$(COLOR)
+	cd /root/massplay/server && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/massplay/server /root/massplay/server /root/massplay/server /root/massplay/server /root/massplay/server/CMakeFiles/fex.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/fex.dir/depend
 

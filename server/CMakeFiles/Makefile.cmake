@@ -7,9 +7,9 @@ SET(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 SET(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
-  "CMakeFiles/2.8.12/CMakeCCompiler.cmake"
-  "CMakeFiles/2.8.12/CMakeCXXCompiler.cmake"
-  "CMakeFiles/2.8.12/CMakeSystem.cmake"
+  "CMakeFiles/CMakeCCompiler.cmake"
+  "CMakeFiles/CMakeCXXCompiler.cmake"
+  "CMakeFiles/CMakeSystem.cmake"
   "CMakeLists.txt"
   "po/CMakeLists.txt"
   "po/gvbam/CMakeLists.txt"
@@ -19,12 +19,10 @@ SET(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-2.8/Modules/CMakeCXXCompiler.cmake.in"
   "/usr/share/cmake-2.8/Modules/CMakeCXXCompilerABI.cpp"
   "/usr/share/cmake-2.8/Modules/CMakeCXXInformation.cmake"
-  "/usr/share/cmake-2.8/Modules/CMakeClDeps.cmake"
   "/usr/share/cmake-2.8/Modules/CMakeCommonLanguageInclude.cmake"
   "/usr/share/cmake-2.8/Modules/CMakeConfigurableFile.in"
   "/usr/share/cmake-2.8/Modules/CMakeDetermineCCompiler.cmake"
   "/usr/share/cmake-2.8/Modules/CMakeDetermineCXXCompiler.cmake"
-  "/usr/share/cmake-2.8/Modules/CMakeDetermineCompiler.cmake"
   "/usr/share/cmake-2.8/Modules/CMakeDetermineCompilerABI.cmake"
   "/usr/share/cmake-2.8/Modules/CMakeDetermineCompilerId.cmake"
   "/usr/share/cmake-2.8/Modules/CMakeDetermineSystem.cmake"
@@ -42,7 +40,6 @@ SET(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-2.8/Modules/CheckFunctionExists.cmake"
   "/usr/share/cmake-2.8/Modules/CheckIncludeFiles.cmake"
   "/usr/share/cmake-2.8/Modules/CheckLibraryExists.cmake"
-  "/usr/share/cmake-2.8/Modules/CheckSymbolExists.cmake"
   "/usr/share/cmake-2.8/Modules/Compiler/GNU-C.cmake"
   "/usr/share/cmake-2.8/Modules/Compiler/GNU-CXX.cmake"
   "/usr/share/cmake-2.8/Modules/Compiler/GNU.cmake"
@@ -57,13 +54,11 @@ SET(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-2.8/Modules/FindThreads.cmake"
   "/usr/share/cmake-2.8/Modules/FindX11.cmake"
   "/usr/share/cmake-2.8/Modules/FindZLIB.cmake"
-  "/usr/share/cmake-2.8/Modules/Platform/Linux-CXX.cmake"
   "/usr/share/cmake-2.8/Modules/Platform/Linux-GNU-C.cmake"
   "/usr/share/cmake-2.8/Modules/Platform/Linux-GNU-CXX.cmake"
   "/usr/share/cmake-2.8/Modules/Platform/Linux-GNU.cmake"
   "/usr/share/cmake-2.8/Modules/Platform/Linux.cmake"
   "/usr/share/cmake-2.8/Modules/Platform/UnixPaths.cmake"
-  "/usr/share/cmake-2.8/Modules/SelectLibraryConfigurations.cmake"
   )
 
 # The corresponding makefile is:
@@ -74,11 +69,6 @@ SET(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 SET(CMAKE_MAKEFILE_PRODUCTS
-  "CMakeFiles/2.8.12/CMakeSystem.cmake"
-  "CMakeFiles/2.8.12/CMakeCCompiler.cmake"
-  "CMakeFiles/2.8.12/CMakeCXXCompiler.cmake"
-  "CMakeFiles/2.8.12/CMakeCCompiler.cmake"
-  "CMakeFiles/2.8.12/CMakeCXXCompiler.cmake"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "po/CMakeFiles/CMakeDirectoryInformation.cmake"
   "po/gvbam/CMakeFiles/CMakeDirectoryInformation.cmake"
@@ -91,5 +81,4 @@ SET(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/vbam.dir/DependInfo.cmake"
   "CMakeFiles/vbamcore.dir/DependInfo.cmake"
   "po/gvbam/CMakeFiles/translations.dir/DependInfo.cmake"
-  "po/gvbam/CMakeFiles/translations_1.dir/DependInfo.cmake"
   )
