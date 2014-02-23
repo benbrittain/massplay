@@ -59,7 +59,24 @@ app.get( '*', function(req, res) {
 
     console.log( path );
     if( path == '' ){
-      res.sendfile( 'index.html' );
+      openTemplate( 'index.html' ).then( function( template ){
+          var gamesrst = gamesCollection.then( function( coll) {
+            return coll.find({gamename: {'$ne': ''} }).toArray( function( err, results ){
+
+              var toSend =  results.map( function( elm ){
+                return {
+                  name: elm.gamename,
+                  roomname: elm.roomname || elm.gamename,
+                  port: elm.port
+                };
+              });
+              console.log( toSend );
+
+              res.send( template( {games:  toSend} ) );
+            });
+        });
+      });
+
     }else{
       res.sendfile(path );
     }
@@ -76,9 +93,11 @@ app.listen( 8000 );
 // HELPER FUNCTIONS
 
 function openTemplate( path ){
-  var deferred;
-  fs.readFile( path, function(err, data){
-      deferred.resolve( Handlebars.compile( data ) );
+  var deferred = defer();
+  fs.readFile( path, 'utf-8', function(err, data){
+      console.log( data );
+      console.log( data );
+      deferred.resolve( Handlebars.compile( data )  );
   });
-  return deffered.promise;
+  return deferred.promise;
 }
