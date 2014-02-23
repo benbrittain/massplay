@@ -27,8 +27,6 @@ wss.on('connection', function(ws) {
   fs.readFile( 'echoserver/duck.bmp', function(err, data) {
     var msg = "data:image/bmp;base64," + data.toString( 'base64' );
     ws.send(msg );
-    
-
   });
 
 
