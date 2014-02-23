@@ -35,6 +35,7 @@ app.post( '/newgame', function( req, res ){
   fs.readFile( infilepath, function(err, data){
     fs.writeFile( __dirname + '/uploads/file' + nextPort , data, function(err){
       gamesCollection.then( function( collection ){
+        console.warn( 'WE SHOULD START THE GAME HERE' );
         collection.insert({
           gamename: req.body.gamename,
           roomname: req.body.roomname,
