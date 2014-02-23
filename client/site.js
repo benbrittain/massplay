@@ -41,6 +41,7 @@ app.post( '/newgame', function( req, res ){
           port: nextPort
         }, function(){});
         nextPort += 1;
+        res.redirect('back');
       });
 
     });
