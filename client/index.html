@@ -9,10 +9,11 @@
     <title>Mass Play</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="/style.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <!--<link href="css/buttons.css" rel="stylesheet">-->
 
 
     <!--[if lt IE 9]>
@@ -21,7 +22,7 @@
     <![endif]-->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script type="text/javascript" src="/app.js"></script>
+    <script type="text/javascript" src="app.js"></script>
     <script type="text/javascript">
       window.context = null; // woooo globals
       window.canvas;
@@ -130,15 +131,15 @@
           <!-- Controls -->
           <h2>Controls</h2>
           <button data-ctl-seq="CTRL_A" type="button" class="ab_button ctl-button ">
-          <img src="/assets/controller/abutton.png"/></button>
+          <img src="assets/controller/abutton.png"/></button>
           <button data-ctl-seq="CTRL_B" type="button" class="ab_button ctl-button ">
-          <img src="/assets/controller/bbutton.png"/></button>
+          <img src="assets/controller/bbutton.png"/></button>
           <button data-ctl-seq="CTRL_LEFT" type="button" class="ctl-button btn btn-primary">
-          <img src="/assets/controller/left.png"/></button>
+          <img src="assets/controller/left.png"/></button>
           <button data-ctl-seq="CTRL_RIGHT" type="button" class="ctl-button btn btn-primary">
-          <img src="/assets/controller/right.png"/></button>
+          <img src="assets/controller/right.png"/></button>
           <button data-ctl-seq="CTRL_UP" type="button" class="ctl-button btn btn-primary">
-          <img src="/assets/controller/up.png"/></button>
+          <img src="assets/controller/up.png"/></button>
           <button data-ctl-seq="CTRL_DOWN" type="button" class="ctl-button btn btn-primary">
           <img src="assets/controller/down.png"/></button>
           <button data-ctl-seq="CTRL_LSHOULDER" type="button" class="ctl-button btn btn-primary">
@@ -146,21 +147,24 @@
           <button data-ctl-seq="CTRL_RSHOULDER" type="button" class="ctl-button btn btn-primary">
           <img src="assets/controller/rb.png"/></button>
           <button data-ctl-seq="CTRL_START" type="button" class="ctl-button btn btn-primary">
-          <img src="/assets/controller/start.png"/></button>
+          <img src="assets/controller/start.png"/></button>
           <button data-ctl-seq="CTRL_SELECT" type="button" class="ctl-button btn btn-primary">
-          <img src="/assets/controller/select.png"/></button>
+          <img src="assets/controller/select.png"/></button>
         </div>
 				<!-- End page content -->
 				<!-- Begin chat -->
 				<div class="col-md-3 chat">
           <h3>Chat here</h3>
+          <div class="well">
             <div class="messages-wrapper">
               <ul class="messages"></ul>
             </div>
-            <div class="input">
-              <input type="text" class="name" placeholder="Your Name"/>
-              <input type="text" class="text" placeholder="Type a message!" />
-            </div>
+          </div>
+          <div class="input">
+            <input type="text" class="name" placeholder="Your Name"/>
+            <input type="text" class="text" placeholder="Type a message!" />
+          </div>
+        </div>
         <!-- End chat -->
       </div><!-- row -->
     </div><!-- container -->
@@ -195,7 +199,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/chat.js"></script>
-    <script src="/bootstrap/js/bootstrap.min.js"></script>
 
 
   </body>

@@ -158,6 +158,11 @@ h1.page-header {
 /* Controller buttons */
 
 
+
+/********
+ * Chat *
+ ********/
+
 /* Chat bar */
 .chat {
 	height: 100%;
@@ -165,12 +170,37 @@ h1.page-header {
 	background: #BBB;
 }
 
-
-/* Sidebars for chat and menu */
-
-#chat-box{
-
+.chat .well {
+  padding: 0px 19px;
+  height: 70%;
 }
+
+.chat li {
+  list-style: none;
+}
+
+li.message {
+  margin-left: -50px;
+}
+
+[class^="user-"] {
+  display: inline-block;
+}
+
+.user-name {
+  color: #999;
+  margin-right: 16px;
+  font-size: .9em;
+}
+
+.user-name:after {
+  content: ":";
+}
+
+
+/**********
+ * Footer *
+ **********/
 
 #footer {
   background: #222;
