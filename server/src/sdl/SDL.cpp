@@ -28,7 +28,7 @@
 #include "boost/bind.hpp"
 #include <websocketpp/common/thread.hpp>
 
-typedef websocketpp::server<websocketpp::config::asio> server;
+//typedef websocketpp::server<websocketpp::config::asio> server;
 
 using websocketpp::connection_hdl;
 using websocketpp::lib::placeholders::_1;
@@ -39,6 +39,7 @@ using websocketpp::lib::thread;
 using websocketpp::lib::mutex;
 using websocketpp::lib::unique_lock;
 using websocketpp::lib::condition_variable;
+
 
 #include <stdarg.h>
 #include <stdlib.h>
@@ -1796,153 +1797,307 @@ SDL_Surface *LoadXBM(SDL_Surface *screen, int w, int h, Uint8 *bits) {
   }
   return(bitmap);
 }
+//
+//enum action_type {
+//    SUBSCRIBE,
+//    UNSUBSCRIBE,
+//    MESSAGE
+//};
+//
+//struct action {
+//    action(action_type t, connection_hdl h) : type(t), hdl(h) {}
+//    action(action_type t, server::message_ptr m) : type(t), msg(m) {}
+//
+//    action_type type;
+//    websocketpp::connection_hdl hdl;
+//    server::message_ptr msg;
+//};
+//
+//class game_server {
+//public:
+//    game_server() {
+//        // Initialize Asio Transport
+////        m_server.init_asio();
+////
+////        // Register handler callbacks
+////        m_server.set_open_handler(bind(&game_server::on_open,this,::_1));
+////        m_server.set_close_handler(bind(&game_server::on_close,this,::_1));
+////        m_server.set_message_handler(bind(&game_server::on_message,this,::_1,::_2));
+////    }
+////
+////    void run(uint16_t port) {
+////        // listen on specified port
+////        m_server.listen(port);
+////
+////        // Start the server accept loop
+////            m_server.start_accept();
+////
+////            // Start the ASIO io_service run loop
+////        try {
+////            m_server.run();
+////        } catch (const std::exception & e) {
+////            std::cout << e.what() << std::endl;
+////        } catch (websocketpp::lib::error_code e) {
+////            std::cout << e.message() << std::endl;
+////        } catch (...) {
+////            std::cout << "other exception" << std::endl;
+////        }
+////    }
+////
+////    void on_close(connection_hdl hdl) {
+////        unique_lock<mutex> lock(m_action_lock);
+////        //std::cout << "on_close" << std::endl;
+////        m_actions.push(action(UNSUBSCRIBE,hdl));
+////        lock.unlock();
+////        m_action_cond.notify_one();
+////    }
+////
+////    void on_message(connection_hdl hdl, server::message_ptr msg) {
+////        // queue message up for sending by processing thread
+////        unique_lock<mutex> lock(m_action_lock);
+////        //std::cout << "on_message" << std::endl;
+////        m_actions.push(action(MESSAGE,msg));
+////        std::cout << msg << std::endl;
+////        lock.unlock();
+////        m_action_cond.notify_one();
+////    }
+////
+////    void send_frame(u8* a_frame) {
+////      websocketpp::lib::error_code ec;
+////      unique_lock<mutex> lock(m_action_lock);
+////      con_list::iterator it;
+////      for (it = m_connections.begin(); it != m_connections.end(); ++it) {
+////        server::message_ptr msg;
+////        for(int i = 0; i < sizeof(a_frame); i++){
+////          std::cout << a_frame[i] << std::endl;
+////        }
+////        msg->set_opcode(websocketpp::frame::opcode::BINARY);
+////        msg->set_payload(a_frame, sizeof(a_frame));
+////        m_server.send(*it, msg);
+////        //m_server.send(*it, *a_frame);
+////      }
+////
+////      lock.unlock();
+////    }
+////
+//}
+//    void process_messages() {
+//        while(1) {
+//
+//            unique_lock<mutex> lock(m_action_lock);
+//
+//            while(m_actions.empty()) {
+//                m_action_cond.wait(lock);
+//            }
+//
+//            action a = m_actions.front();
+//            m_actions.pop();
+//
+//            lock.unlock();
+//
+//            if (a.type == SUBSCRIBE) {
+//                unique_lock<mutex> con_lock(m_connection_lock);
+//                std::cout << "subscribed" << std::endl;
+//            } else if (a.type == UNSUBSCRIBE) {
+//                unique_lock<mutex> con_lock(m_connection_lock);
+//
+//                //TODO actually disconnect clients
+//                //m_connections.erase(a.hdl);
+//            } else if (a.type == MESSAGE) {
+//                unique_lock<mutex> con_lock(m_connection_lock);
+//
+//                con_list::iterator it;
+//                for (it = m_connections.begin(); it != m_connections.end(); ++it) {
+//                    m_server.send(*it,a.msg);
+//                }
+//            } else {
+//                // undefined.
+//            }
+//        }
+//    }
+//private:
+//    typedef std::deque<connection_hdl> con_list;
+////    typedef std::set<connection_hdl, std::owner_less<connection_hdl>> con_list;
+//    server m_server;
+//    con_list m_connections;
+//    std::queue<action> m_actions;
+//
+//    mutex m_action_lock;
+//    mutex m_connection_lock;
+//    condition_variable m_action_cond;
+//};
 
-enum action_type {
-    SUBSCRIBE,
-    UNSUBSCRIBE,
-    MESSAGE
+
+
+
+
+struct socket_config : public websocketpp::config::asio {
+    // pull default settings from our core config
+    typedef websocketpp::config::asio core;
+
+    typedef core::concurrency_type concurrency_type;
+    typedef core::request_type request_type;
+    typedef core::response_type response_type;
+    typedef core::message_type message_type;
+    typedef core::con_msg_manager_type con_msg_manager_type;
+    typedef core::endpoint_msg_manager_type endpoint_msg_manager_type;
+
+    typedef core::alog_type alog_type;
+    typedef core::elog_type elog_type;
+    typedef core::rng_type rng_type;
+    typedef core::endpoint_base endpoint_base;
+
+    static bool const enable_multithreading = false;
+
+    struct transport_config : public core::transport_config {
+        typedef core::concurrency_type concurrency_type;
+        typedef core::elog_type elog_type;
+        typedef core::alog_type alog_type;
+        typedef core::request_type request_type;
+        typedef core::response_type response_type;
+
+        static bool const enable_multithreading = false;
+    };
+
+    typedef websocketpp::transport::asio::endpoint<transport_config>
+        transport_type;
+
+    static const websocketpp::log::level elog_level =
+        websocketpp::log::elevel::none;
+    static const websocketpp::log::level alog_level =
+        websocketpp::log::alevel::none;
 };
 
-struct action {
-    action(action_type t, connection_hdl h) : type(t), hdl(h) {}
-    action(action_type t, server::message_ptr m) : type(t), msg(m) {}
+// pull out the type of messages sent by our config
+//typedef server::message_ptr message_ptr;
 
-    action_type type;
-    websocketpp::connection_hdl hdl;
-    server::message_ptr msg;
-};
 
-class game_server {
-public:
-    game_server() {
-        // Initialize Asio Transport
-        m_server.init_asio();
+//// Define a callback to handle incoming messages
+//void on_message(server* s, websocketpp::connection_hdl hdl, message_ptr msg) {
+//  std::cout << "got a message:" << msg->get_payload() << std::endl;
+////  if (a.type == SUBSCRIBE) {
+////    unique_lock<mutex> con_lock(connection_lock);
+////    connections.push_back(hdl);
+////    std::cout << "subscribed" << std::endl;
+////  } else if (a.type == UNSUBSCRIBE) {
+////    unique_lock<mutex> con_lock(connection_lock);
+////    //TODO actually disconnect clients
+////    //m_connections.erase(a.hdl);
+////  } else if (a.type == MESSAGE) {
+////    unique_lock<mutex> con_lock(connection_lock);
+////
+////    con_list::iterator it;
+////    for (it = connections.begin(); it != connections.end(); ++it) {
+////      *s->send(hdl, msg->get_payload(), msg->get_opcode());
+////      //m_server.send(*it,a.msg);
+////    }
+////  }
+//}
 
-        // Register handler callbacks
-        m_server.set_open_handler(bind(&game_server::on_open,this,::_1));
-        m_server.set_close_handler(bind(&game_server::on_close,this,::_1));
-        m_server.set_message_handler(bind(&game_server::on_message,this,::_1,::_2));
+
+//server socket_server;// server_instance;
+
+//void send_frame(u8* a_frame) {
+//  std::cout << "GOT A FRAME" << std::endl;
+//  websocketpp::lib::error_code ec;
+//  unique_lock<mutex> lock(action_lock);
+//  con_list::iterator it;
+////  std::cout << connections << std::endl;
+//  for (it = connections.begin(); it != connections.end(); ++it) {
+//    server::message_ptr msg;
+//////    for(int i = 0; i < sizeof(a_frame); i++){
+//////      std::cout << a_frame[i] << std::endl;
+//////    }
+//    msg->set_opcode(websocketpp::frame::opcode::BINARY);
+//    msg->set_payload(a_frame, sizeof(a_frame));
+//  }
+////    socket_server.send(*it, msg);
+////    lock.unlock();
+////    std::cout << "------SENT A FRAME?" << std::endl;
+////  }
+//}
+
+void on_socket_init(websocketpp::connection_hdl hdl, boost::asio::ip::tcp::socket & s) {
+  boost::asio::ip::tcp::no_delay option(true);
+  s.set_option(option);
+}
+
+class websocket_server {
+  public:
+    websocket_server() {
+      m_server.clear_access_channels(websocketpp::log::alevel::all);
+      m_server.clear_error_channels(websocketpp::log::alevel::all);
+
+      m_server.init_asio();
+
+      m_server.set_open_handler(bind(&websocket_server::on_open,this,::_1));
+//      m_server.set_socket_init_handler(bind(&on_socket_init,::_1,::_2));
+      m_server.listen(9002);
+      m_server.start_accept();
+
+      new websocketpp::lib::thread(&server::run, &m_server);
+      //boost::thread t(&game_server::process_messages, &server_instance);
     }
-
-    void run(uint16_t port) {
-        // listen on specified port
-        m_server.listen(port);
-
-        // Start the server accept loop
-            m_server.start_accept();
-
-            // Start the ASIO io_service run loop
-        try {
-            m_server.run();
-        } catch (const std::exception & e) {
-            std::cout << e.what() << std::endl;
-        } catch (websocketpp::lib::error_code e) {
-            std::cout << e.message() << std::endl;
-        } catch (...) {
-            std::cout << "other exception" << std::endl;
-        }
-    }
-    void on_open(connection_hdl hdl) {
-        unique_lock<mutex> lock(m_action_lock);
-        //std::cout << "on_open" << std::endl;
-        m_actions.push(action(SUBSCRIBE,hdl));
-        lock.unlock();
-        m_action_cond.notify_one();
-    }
-
-    void on_close(connection_hdl hdl) {
-        unique_lock<mutex> lock(m_action_lock);
-        //std::cout << "on_close" << std::endl;
-        m_actions.push(action(UNSUBSCRIBE,hdl));
-        lock.unlock();
-        m_action_cond.notify_one();
-    }
-
-    void on_message(connection_hdl hdl, server::message_ptr msg) {
-        // queue message up for sending by processing thread
-        unique_lock<mutex> lock(m_action_lock);
-        //std::cout << "on_message" << std::endl;
-        m_actions.push(action(MESSAGE,msg));
-        lock.unlock();
-        m_action_cond.notify_one();
-    }
-
-    void send_frame(u8* a_frame) {
-      websocketpp::lib::error_code ec;
+    void on_open(websocketpp::connection_hdl hdl) {
       unique_lock<mutex> lock(m_action_lock);
-      con_list::iterator it;
-      for (it = m_connections.begin(); it != m_connections.end(); ++it) {
-        server::message_ptr msg;
-        msg->set_opcode(websocketpp::frame::opcode::BINARY);
-        msg->set_payload(a_frame, sizeof(a_frame));
-        m_server.send(*it, msg);
-        //m_server.send(*it, *a_frame);
-      }
-
+      std::cout << "on_open called!" << std::endl;
+      m_connections.push_back(hdl);
       lock.unlock();
     }
 
-    void process_messages() {
-        while(1) {
+    void send_frame(u8* a_frame) {
+      unique_lock<mutex> lock(m_action_lock);
+      std::cout << "GOT A FRAME" << std::endl;
+      websocketpp::lib::error_code ec;
+      // TODO redef in class
+      typedef websocketpp::message_buffer::message<websocketpp::message_buffer::alloc::con_msg_manager>
+        message_type;
+      typedef websocketpp::message_buffer::alloc::con_msg_manager<message_type>
+        con_msg_man_type;
+      con_msg_man_type::ptr manager(new con_msg_man_type());
 
-          std::cout << "out" << std::endl;
-            unique_lock<mutex> lock(m_action_lock);
-
-            while(m_actions.empty()) {
-                m_action_cond.wait(lock);
-            }
-
-            action a = m_actions.front();
-            m_actions.pop();
-
-            lock.unlock();
-
-            if (a.type == SUBSCRIBE) {
-                unique_lock<mutex> con_lock(m_connection_lock);
-                m_connections.push_back(a.hdl);
-            } else if (a.type == UNSUBSCRIBE) {
-                unique_lock<mutex> con_lock(m_connection_lock);
-
-                //TODO actually disconnect clients
-                //m_connections.erase(a.hdl);
-            } else if (a.type == MESSAGE) {
-                unique_lock<mutex> con_lock(m_connection_lock);
-
-                con_list::iterator it;
-                for (it = m_connections.begin(); it != m_connections.end(); ++it) {
-                    m_server.send(*it,a.msg);
-                }
-            } else {
-                // undefined.
-            }
-        }
+      con_list::iterator it;
+      for (it = m_connections.begin(); it != m_connections.end(); ++it) {
+        message_type::ptr msg = manager->get_message(websocketpp::frame::opcode::BINARY, sizeof(a_frame));
+        ////    for(int i = 0; i < sizeof(a_frame); i++){
+        ////      std::cout << a_frame[i] << std::endl;
+        ////    }
+        m_server.send(*it, msg);
+        std::cout << "SENT A FRAME!" << std::endl;
+      }
+      //    socket_server.send(*it, msg);
+      lock.unlock();
     }
-private:
-    typedef std::deque<connection_hdl> con_list;
-//    typedef std::set<connection_hdl, std::owner_less<connection_hdl>> con_list;
+  private:
+    typedef websocketpp::server<socket_config> server;
     server m_server;
+    typedef std::deque<connection_hdl> con_list;
     con_list m_connections;
-    std::queue<action> m_actions;
-
     mutex m_action_lock;
-    mutex m_connection_lock;
-    condition_variable m_action_cond;
 };
 
-
-
-
-  game_server server_instance;
+websocket_server socket_server;
 
 int main(int argc, char **argv)
 {
   fprintf(stdout, "Massplay VBA-M fork %s [SDL]\n", VERSION);
 
+  int port = 9002;
 
   std::cout << "main: startup" << std::endl;
 
   fprintf(stdout, "Initializing Websocket Server");
-  boost::thread t(&game_server::process_messages, &server_instance);
+
+
+//  socket_server.set_open_handler(bind(&on_open,&socket_server,::_1,::_2));
+//  socket_server.set_message_handler(bind(&on_message,&socket_server,::_1,::_2));
+
+  //backlog listen?
+
+//
+//  typedef websocketpp::lib::shared_ptr<websocketpp::lib::thread> thread_ptr;
+//  thread_ptr t_server = thread_ptr(new websocketpp::lib::thread(&server::run, &socket_server));
+//  boost::thread t(&game_server::process_messages, &server_instance);
   fprintf(stdout, "never past here?!");
 
 
@@ -2529,11 +2684,11 @@ void systemDrawScreen()
   u8 *screen;
 
   renderedFrames++;
-  printf("%d\n", renderedFrames);
+//  printf("%d\n", renderedFrames);
 
   screen = (u8*)surface->pixels;
 
-  server_instance.send_frame(screen);
+  socket_server.send_frame(screen);
 
 
   SDL_LockSurface(surface);
