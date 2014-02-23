@@ -53,6 +53,16 @@ app.post( '/newgame', function( req, res ){
 });
 
 
+app.get( '/play/:port', function( req, res ){
+  var port = req.param.port
+  console.log( 'USING PORT %d', port );
+  openTemplate( 'index.html' ).then( function( tmp ){
+    res.send( tmp({games: []}) );
+  });
+  
+});
+
+
 app.get( '*', function(req, res) {
 
     var path = req.params.join('/').replace( /^\//, '' );

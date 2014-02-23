@@ -1,4 +1,13 @@
+// try and get a port
+var urlTokens = window.location.toString().split( '/' );
+var port = urlTokens[ urlTokens.length - 1];
+
+
+if( parseInt( port ) ){
+var ws = new WebSocket( 'ws://localhost:' + port  );
+}else{
 var ws = new WebSocket( 'ws://localhost:9002' );
+}
 ws.binaryType = 'arraybuffer';
 
 function _arrayBufferToBase64( buffer ) {
