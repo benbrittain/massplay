@@ -131,7 +131,7 @@ int systemGreenShift = 0;
 int systemColorDepth = 0;
 int systemDebug = 0;
 int systemVerbose = 0;
-int systemFrameSkip = 0;
+int systemFrameSkip = 9;
 int systemSaveUpdateCounter = SYSTEM_SAVE_NOT_UPDATED;
 
 int srcPitch = 0;
@@ -216,7 +216,7 @@ extern int autoFireMaxCount;
 bool wasPaused = false;
 int autoFrameSkip = 0;
 int frameskipadjust = 0;
-int showRenderedFrames = 0;
+int showRenderedFrames = 50;
 int renderedFrames = 0;
 
 u32 throttleLastTime = 0;
@@ -283,7 +283,7 @@ struct option sdlOptions[] = {
   { "no-patch", no_argument, &sdlAutoPatch, 0 },
   { "no-pause-when-inactive", no_argument, &pauseWhenInactive, 0 },
   { "no-rtc", no_argument, &sdlRtcEnable, 0 },
-  { "no-show-speed", no_argument, &showSpeed, 0 },
+  { "no-show-speed", no_argument, &showSpeed, 1 },
   { "opengl", required_argument, 0, 'O' },
   { "pause-when-inactive", no_argument, &pauseWhenInactive, 1 },
   { "profile", optional_argument, 0, 'p' },
@@ -786,12 +786,6 @@ void sdlReadPreferences(FILE *f)
       ifbType = (IFBFilter)sdlFromHex(value);
      if(ifbType < kIFBNone || ifbType >= kInvalidIFBFilter)
         ifbType = kIFBNone;
-    } else if(!strcmp(key, "showSpeed")) {
-      showSpeed = sdlFromHex(value);
-      if(showSpeed < 0 || showSpeed > 2)
-        showSpeed = 1;
-    } else if(!strcmp(key, "showSpeedTransparent")) {
-      showSpeedTransparent = sdlFromHex(value);
     } else if(!strcmp(key, "autoFrameSkip")) {
       autoFrameSkip = sdlFromHex(value);
     } else if(!strcmp(key, "pauseWhenInactive")) {
@@ -1766,139 +1760,11 @@ void handleRewinds()
 	}
 }
 //
-//enum action_type {
-//    SUBSCRIBE,
-//    UNSUBSCRIBE,
-//    MESSAGE
-//};
-//
-//struct action {
-//    action(action_type t, connection_hdl h) : type(t), hdl(h) {}
-//    action(action_type t, server::message_ptr m) : type(t), msg(m) {}
-//
-//    action_type type;
-//    websocketpp::connection_hdl hdl;
-//    server::message_ptr msg;
-//};
-//
-//class game_server {
-//public:
-//    game_server() {
-//        // Initialize Asio Transport
-////        m_server.init_asio();
-////
-////        // Register handler callbacks
-////        m_server.set_open_handler(bind(&game_server::on_open,this,::_1));
-////        m_server.set_close_handler(bind(&game_server::on_close,this,::_1));
-////        m_server.set_message_handler(bind(&game_server::on_message,this,::_1,::_2));
-////    }
-////
-////    void run(uint16_t port) {
-////        // listen on specified port
-////        m_server.listen(port);
-////
-////        // Start the server accept loop
-////            m_server.start_accept();
-////
-////            // Start the ASIO io_service run loop
-////        try {
-////            m_server.run();
-////        } catch (const std::exception & e) {
-////            std::cout << e.what() << std::endl;
-////        } catch (websocketpp::lib::error_code e) {
-////            std::cout << e.message() << std::endl;
-////        } catch (...) {
-////            std::cout << "other exception" << std::endl;
-////        }
-////    }
-////
-////    void on_close(connection_hdl hdl) {
-////        unique_lock<mutex> lock(m_action_lock);
-////        //std::cout << "on_close" << std::endl;
-////        m_actions.push(action(UNSUBSCRIBE,hdl));
-////        lock.unlock();
-////        m_action_cond.notify_one();
-////    }
-////
-////    void on_message(connection_hdl hdl, server::message_ptr msg) {
-////        // queue message up for sending by processing thread
-////        unique_lock<mutex> lock(m_action_lock);
-////        //std::cout << "on_message" << std::endl;
-////        m_actions.push(action(MESSAGE,msg));
-////        std::cout << msg << std::endl;
-////        lock.unlock();
-////        m_action_cond.notify_one();
-////    }
-////
-////    void send_frame(u8* a_frame) {
-////      websocketpp::lib::error_code ec;
-////      unique_lock<mutex> lock(m_action_lock);
-////      con_list::iterator it;
-////      for (it = m_connections.begin(); it != m_connections.end(); ++it) {
-////        server::message_ptr msg;
-////        for(int i = 0; i < sizeof(a_frame); i++){
-////          std::cout << a_frame[i] << std::endl;
-////        }
-////        msg->set_opcode(websocketpp::frame::opcode::BINARY);
-////        msg->set_payload(a_frame, sizeof(a_frame));
-////        m_server.send(*it, msg);
-////        //m_server.send(*it, *a_frame);
-////      }
-////
-////      lock.unlock();
-////    }
-////
-//}
-//    void process_messages() {
-//        while(1) {
-//
-//            unique_lock<mutex> lock(m_action_lock);
-//
-//            while(m_actions.empty()) {
-//                m_action_cond.wait(lock);
-//            }
-//
-//            action a = m_actions.front();
-//            m_actions.pop();
-//
-//            lock.unlock();
-//
-//            if (a.type == SUBSCRIBE) {
-//                unique_lock<mutex> con_lock(m_connection_lock);
-//                std::cout << "subscribed" << std::endl;
-//            } else if (a.type == UNSUBSCRIBE) {
-//                unique_lock<mutex> con_lock(m_connection_lock);
-//
-//                //TODO actually disconnect clients
-//                //m_connections.erase(a.hdl);
-//            } else if (a.type == MESSAGE) {
-//                unique_lock<mutex> con_lock(m_connection_lock);
-//
-//                con_list::iterator it;
-//                for (it = m_connections.begin(); it != m_connections.end(); ++it) {
-//                    m_server.send(*it,a.msg);
-//                }
-//            } else {
-//                // undefined.
-//            }
-//        }
-//    }
-//private:
-//    typedef std::deque<connection_hdl> con_list;
-////    typedef std::set<connection_hdl, std::owner_less<connection_hdl>> con_list;
-//    server m_server;
-//    con_list m_connections;
-//    std::queue<action> m_actions;
-//
-//    mutex m_action_lock;
-//    mutex m_connection_lock;
-//    condition_variable m_action_cond;
-//};
-
-
-
-
-
+enum action_type {
+    SUBSCRIBE,
+    UNSUBSCRIBE,
+    MESSAGE
+};
 struct socket_config : public websocketpp::config::asio {
     // pull default settings from our core config
     typedef websocketpp::config::asio core;
@@ -1936,50 +1802,13 @@ struct socket_config : public websocketpp::config::asio {
         websocketpp::log::alevel::none;
 };
 
-// pull out the type of messages sent by our config
-//typedef server::message_ptr message_ptr;
-
-
-//// Define a callback to handle incoming messages
-//void on_message(server* s, websocketpp::connection_hdl hdl, message_ptr msg) {
-//  std::cout << "got a message:" << msg->get_payload() << std::endl;
-////  if (a.type == SUBSCRIBE) {
-////    unique_lock<mutex> con_lock(connection_lock);
-////    connections.push_back(hdl);
-////    std::cout << "subscribed" << std::endl;
-////  } else if (a.type == UNSUBSCRIBE) {
-////    unique_lock<mutex> con_lock(connection_lock);
-////    //TODO actually disconnect clients
-////    //m_connections.erase(a.hdl);
-////  } else if (a.type == MESSAGE) {
-////    unique_lock<mutex> con_lock(connection_lock);
-////
-////    con_list::iterator it;
-////    for (it = connections.begin(); it != connections.end(); ++it) {
-////      *s->send(hdl, msg->get_payload(), msg->get_opcode());
-////      //m_server.send(*it,a.msg);
-////    }
-////  }
-//}
-
-
-//server socket_server;// server_instance;
-
-//    server::message_ptr msg;
-//    msg->set_opcode(websocketpp::frame::opcode::BINARY);
-//    msg->set_payload(a_frame, sizeof(a_frame));
-//  }
-////    socket_server.send(*it, msg);
-////    lock.unlock();
-////    std::cout << "------SENT A FRAME?" << std::endl;
-////  }
-//}
 
 void on_socket_init(websocketpp::connection_hdl hdl, boost::asio::ip::tcp::socket & s) {
   boost::asio::ip::tcp::no_delay option(true);
   s.set_option(option);
 }
 
+typedef websocketpp::server<socket_config> server;
 class websocket_server {
   public:
     websocket_server() {
@@ -1990,12 +1819,14 @@ class websocket_server {
 
       m_server.set_open_handler(bind(&websocket_server::on_open,this,::_1));
 //      m_server.set_socket_init_handler(bind(&on_socket_init,::_1,::_2));
+//      m_server.set_message_handler(bind(&websocket_server::on_message,this,::_1,::_2));
       m_server.listen(9002);
       m_server.start_accept();
 
       new websocketpp::lib::thread(&server::run, &m_server);
       //boost::thread t(&game_server::process_messages, &server_instance);
     }
+
     void on_open(websocketpp::connection_hdl hdl) {
       unique_lock<mutex> lock(m_action_lock);
       std::cout << "on_open called!" << std::endl;
@@ -2003,7 +1834,21 @@ class websocket_server {
       lock.unlock();
     }
 
-    void send_frame(char* a_frame) {
+//    void on_close(websocketpp::connection_hdl hdl) {
+//
+//    }
+    void on_message(connection_hdl hdl, server::message_ptr msg) {
+      // queue message up for sending by processing thread
+      unique_lock<mutex> lock(m_action_lock);
+      std::cout << "on_message" << std::endl;
+
+//      std::cout << msg << std::endl;
+
+      lock.unlock();
+    }
+
+
+    void send_frame(std::string b64_a_frame) {
       unique_lock<mutex> lock(m_action_lock);
       std::cout << "GOT A FRAME" << std::endl;
       websocketpp::lib::error_code ec;
@@ -2016,14 +1861,9 @@ class websocket_server {
 
       con_list::iterator it;
       for (it = m_connections.begin(); it != m_connections.end(); ++it) {
-        message_type::ptr msg = manager->get_message(websocketpp::frame::opcode::BINARY, 240*160*3*sizeof(char));
-//        for(int i = 0; i < sizeof(a_frame); i++){
-//          std::cout << a_frame[i] << std::endl;
-//        }
-        msg->set_payload(a_frame, 240*160*3*sizeof(char));
-        ////    for(int i = 0; i < sizeof(a_frame); i++){
-        ////      std::cout << a_frame[i] << std::endl;
-        ////    }
+        message_type::ptr msg = manager->get_message(websocketpp::frame::opcode::TEXT, 240*160*3*sizeof(char));
+          //manager->get_message(websocketpp::frame::opcode::BINARY, 240*160*3*sizeof(char));
+        msg->set_payload(b64_a_frame);
         m_server.send(*it, msg);
         std::cout << "SENT A FRAME!" << std::endl;
       }
@@ -2031,7 +1871,6 @@ class websocket_server {
       lock.unlock();
     }
   private:
-    typedef websocketpp::server<socket_config> server;
     server m_server;
     typedef std::deque<connection_hdl> con_list;
     con_list m_connections;
@@ -2640,6 +2479,61 @@ void drawSpeed(u8 *screen, int pitch, int x, int y)
   drawText(screen, pitch, x, y, buffer, showSpeedTransparent);
 }
 
+
+
+static const std::string base64_chars = 
+             "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+             "abcdefghijklmnopqrstuvwxyz"
+             "0123456789+/";
+
+
+static inline bool is_base64(unsigned char c) {
+  return (isalnum(c) || (c == '+') || (c == '/'));
+}
+
+std::string base64_encode(unsigned char* bytes_to_encode, unsigned int in_len) {
+  std::string ret;
+  int i = 0;
+  int j = 0;
+  unsigned char char_array_3[3];
+  unsigned char char_array_4[4];
+
+  while (in_len--) {
+    char_array_3[i++] = *(bytes_to_encode++);
+    if (i == 3) {
+      char_array_4[0] = (char_array_3[0] & 0xfc) >> 2;
+      char_array_4[1] = ((char_array_3[0] & 0x03) << 4) + ((char_array_3[1] & 0xf0) >> 4);
+      char_array_4[2] = ((char_array_3[1] & 0x0f) << 2) + ((char_array_3[2] & 0xc0) >> 6);
+      char_array_4[3] = char_array_3[2] & 0x3f;
+
+      for(i = 0; (i <4) ; i++)
+        ret += base64_chars[char_array_4[i]];
+      i = 0;
+    }
+  }
+
+  if (i)
+  {
+    for(j = i; j < 3; j++)
+      char_array_3[j] = '\0';
+
+    char_array_4[0] = (char_array_3[0] & 0xfc) >> 2;
+    char_array_4[1] = ((char_array_3[0] & 0x03) << 4) + ((char_array_3[1] & 0xf0) >> 4);
+    char_array_4[2] = ((char_array_3[1] & 0x0f) << 2) + ((char_array_3[2] & 0xc0) >> 6);
+    char_array_4[3] = char_array_3[2] & 0x3f;
+
+    for (j = 0; (j < i + 1); j++)
+      ret += base64_chars[char_array_4[j]];
+
+    while((i++ < 3))
+      ret += '=';
+
+  }
+
+  return ret;
+
+}
+
 void systemDrawScreen()
 {
   unsigned int destPitch = destWidth * (systemColorDepth >> 3);
@@ -2650,26 +2544,31 @@ void systemDrawScreen()
 
   screen = (u8*)surface->pixels;
 
-  char bitmap[240*160*24];
+  unsigned char bitmap[240*160*24];
   SDL_RWops *rw;
 
   rw = SDL_RWFromMem(bitmap, sizeof(bitmap));
 //  SDL_SaveBMP(surface, "output.bmp");
   SDL_Surface *temp;
-  temp = SDL_LoadBMP("output.bmp");
+//  temp = SDL_LoadBMP("output.bmp");
+//  if (temp == NULL) {
+//      printf("Unable to load bitmap: %s\n", SDL_GetError());
+//  } else {
+//      printf("loaded bitmap. \n");
+//  }
 
   //Convert the surface to the appropriate display format
-  surface = SDL_DisplayFormat(temp);
-  SDL_FreeSurface(temp);
+//  surface = SDL_DisplayFormat(temp);
+//  SDL_FreeSurface(temp);
   SDL_SaveBMP_RW(surface, rw, 0);
-  std::cout << bitmap[0] << std::endl;
-  std::cout << bitmap[1] << std::endl;
+  //std::cout << bitmap[0] << std::endl;
+  //std::cout << bitmap[1] << std::endl;
 
 
   //
   //  SDL_SaveBMP_RW(image_surface, SDL_RWFromMem(scrap_buffer, scraplen), 1);
-
-  socket_server.send_frame(bitmap);
+  std::string b64_bitmap = base64_encode(bitmap, 240*160*24);
+  socket_server.send_frame(b64_bitmap);
 
 
   SDL_LockSurface(surface);

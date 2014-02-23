@@ -12,15 +12,13 @@ function _arrayBufferToBase64( buffer ) {
 }
 
 
-
 ws.onmessage = function( message ){
-
-      var b = _arrayBufferToBase64( message.data );
+      if(1) {
+//        var b = _arrayBufferToBase64( message.data );
 
 
 
       console.log( 'got a frame' );
-      console.log( b );
       // var id = window.context.createImageData( 240, 160);
       // for( var i = 0, j = 0; i < id.data.length; i+=4, j+= 3   ){
       //   id.data[i] = arr[j];
@@ -32,7 +30,7 @@ ws.onmessage = function( message ){
       // context.putImageData( id, 0, 0 );
 
       var img = document.createElement( 'img' );
-      img.src = 'data:image/bmp;base64,' + b;
+      img.src = 'data:image/bmp;base64,' + message.data;
       img.width = 240;
       img.height = 160;
 
@@ -54,6 +52,7 @@ ws.onmessage = function( message ){
   //     alert( e );
   //     alert( e.getMessage() );
   //   }
+  }
 };
 
 ws.onopen = function( ){
