@@ -59,5 +59,52 @@ $( function(){
 
 });
 
+ $( document ).keypress(function( event ) {
+    $('.ctl-button').on( 'click', function(){
+      switch(event.which){
+	case 37: 
+	  var code = $(this).data( 'CTRL_LEFT' );
+	  break;
+	case 38:
+	  var code = $(this).data( 'CTRL_UP' );
+	  break;
+	case 39:
+	  var code = $(this).data( 'CTRL_RIGHT' );
+	  break;
+	case 40:
+	  var code = $(this).data( 'CTRL_DOWN' );
+	  break;
+	case 58:      // Z
+	case 59:
+	  var code = $(this).data( 'CTRL_A' );
+	  break;
+	case 88:     // X
+	case 120:
+	  var code = $(this).data( 'CTRL_B' );
+	  break;
+	case 65:    // A
+	case 97:
+	  var code = $(this).data( 'CTRL_LSHOULDER' );
+	  break;
+	case 83:    // S
+	case 115:
+	  var code = $(this).data( 'CTRL_RSHOULDER' );
+	  break;
+	case 74:    // C
+	case 106:
+	  var code = $(this).data( 'CTRL_START' );
+	  break;
+	case 75:
+	case 107:
+	  var code = $(this).data( 'CTRL_START' );
+	  break;
+	}
+	ws.send( code.toUpperCase() );  // the toUpperCase is redundant, but safe
+    });
+  });
+  $( "#other" ).click(function() {
+  $( "#target" ).keypress();
+});
+
 
 console.log( ws );
