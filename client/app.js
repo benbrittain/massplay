@@ -6,7 +6,7 @@ var port = urlTokens[ urlTokens.length - 1];
 if( parseInt( port ) ){
 var ws = new WebSocket( 'ws://localhost:' + port  );
 }else{
-var ws = new WebSocket( 'ws://localhost:9002' );
+var ws = new WebSocket( 'ws://107.170.71.63:9002' );
 }
 ws.binaryType = 'arraybuffer';
 
