@@ -5,6 +5,12 @@ var MongoClient = require('mongodb').MongoClient
 var Handlebars = require( 'handlebars' );
 
 
+
+var sys = require('sys')
+var exec = require('child_process').exec;
+function nothingFN3(error, stdout, stderr) { };
+
+
 var app = express();
 
 
@@ -32,9 +38,10 @@ app.post( '/newgame', function( req, res ){
   // console.log( req.body );
   // console.log( req.files );
   var infilepath = req.files.ROM.path;
+  var outfilename = __dirname + '/uploads/file' + nextPort;
 
   fs.readFile( infilepath, function(err, data){
-    fs.writeFile( __dirname + '/uploads/file' + nextPort , data, function(err){
+    fs.writeFile( outfilename, data, function(err){
       gamesCollection.then( function( collection ){
         console.warn( 'WE SHOULD START THE GAME HERE' );
         collection.insert({
@@ -42,8 +49,10 @@ app.post( '/newgame', function( req, res ){
           roomname: req.body.roomname,
           port: nextPort
         }, function(){});
+        exec( '../server/vbam ' + outfilename + '  ' + nextPort, nothingFN3 );
+        redirect = '/play/' + nextPort;
         nextPort += 1;
-        res.redirect('back');
+        res.redirect(redirect);
       });
 
     });
