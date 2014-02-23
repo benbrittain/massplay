@@ -21,10 +21,16 @@
     <![endif]-->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <!-- <script type="text/javascript" src="app.js"></script> -->
+    <script type="text/javascript" src="app.js"></script>
     <script type="text/javascript">
       window.context = null; // woooo globals
       window.canvas;
+
+
+      $(function(){
+          var gameCanvas = window.canvas = document.getElementById('game');
+          var ctx = window.context = gameCanvas.getContext("2d");
+      });
       /* Initialize canvas elements */
       /*
       $( function() {
@@ -119,15 +125,19 @@
           <h1 class="page-header">You're Playing Pokemon Red</h1>
           <!-- Canvas object -->
 					<!--<canvas id="game" width=90% height=300></canvas>-->
-					<canvas id="game" style="width: 240px; height: 160px;"></canvas>
+					<canvas id="game" style="width: 500px; height: 500px;"></canvas>
           <!-- Controls -->
           <h2>Controls</h2>
-          <button type="button" class="btn btn-primary">A</button>
-          <button type="button" class="btn btn-primary">B</button>
-          <button type="button" class="btn btn-primary">Left</button>
-          <button type="button" class="btn btn-primary">Right</button>
-          <button type="button" class="btn btn-primary">Up</button>
-          <button type="button" class="btn btn-primary">Down</button>
+          <button data-ctl-seq="CTRL_A" type="button" class="ctl-button btn btn-primary">A</button>
+          <button data-ctl-seq="CTRL_B" type="button" class="ctl-button btn btn-primary">B</button>
+          <button data-ctl-seq="CTRL_LEFT" type="button" class="ctl-button btn btn-primary">Left</button>
+          <button data-ctl-seq="CTRL_RIGHT" type="button" class="ctl-button btn btn-primary">Right</button>
+          <button data-ctl-seq="CTRL_UP" type="button" class="ctl-button btn btn-primary">Up</button>
+          <button data-ctl-seq="CTRL_DOWN" type="button" class="ctl-button btn btn-primary">Down</button>
+          <button data-ctl-seq="CTRL_LSHOULDER" type="button" class="ctl-button btn btn-primary">Left Shoulder</button>
+          <button data-ctl-seq="CTRL_RSHOULDER" type="button" class="ctl-button btn btn-primary">Right Shoulder</button>
+          <button data-ctl-seq="CTRL_START" type="button" class="ctl-button btn btn-primary">Start</button>
+          <button data-ctl-seq="CTRL_SELECT" type="button" class="ctl-button btn btn-primary">Select</button>
         </div>
 				<!-- End page content -->
 				<!-- Begin chat -->

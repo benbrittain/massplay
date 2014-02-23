@@ -19,13 +19,13 @@ ws.onmessage = function( message ){
 
       var img = document.createElement( 'img' );
       img.src = 'data:image/bmp;base64,' + message.data;
-      img.width = 240;
-      img.height = 160;
+      img.width = 'auto';
+      img.height = 'auto';
 
 
       img.onload = function(){
         console.log( 'loaded' );
-        context.drawImage( img, 0, 0 );
+        context.drawImage( img, 0, 0, 240, 160 );
       }
   }
 };
@@ -41,8 +41,12 @@ ws.onerror = function( evt,  err ){
 }
 
 
-
 $( function(){
+
+    $('.ctl-button').on( 'click', function(){
+      var code = $(this).data( 'ctl-seq' );
+      ws.send( code.toUpperCase() );  // the toUpperCase is redundant, but safe
+    });
 
 });
 
