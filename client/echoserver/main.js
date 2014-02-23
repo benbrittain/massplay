@@ -24,15 +24,17 @@ var wss = new WebSocketServer({port: 9002});
 wss.on('connection', function(ws) {
 
 
-  fs.readFile( 'echoserver/duck.bmp', function(err, data) {
-    var msg = "data:image/bmp;base64," + data.toString( 'base64' );
+  fs.readFile( 'echoserver/pokemon.bmp', function(err, data) {
+    console.log( data.constructor );
+    // var msg = "data:image/bmp;base64," + data.toString( 'base64' );
+    var msg = data;
     ws.send(msg );
   });
 
 
 
-  ws.on('message', function(message) {
-    ws.send( 'message' );
-  });
-  ws.send('something');
+  // ws.on('message', function(message) {
+  //   ws.send( 'message' );
+  // });
+  // ws.send('something');
 });
