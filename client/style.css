@@ -102,6 +102,7 @@ li.account-btn:hover {
   border: none;
 	border-radius: 0;
   background: #111;
+  float: right;
 }
 
 .navbar button.dropdown-toggle:hover {
@@ -179,10 +180,25 @@ h1.page-header {
   width: 100%;
 }
 
+#footer .row{
+  padding-top: 5px;
+}
+
+.donate {
+  font-size: 6px;
+  margin-top: -5px;
+} 
+
 .row {
   margin-right: 0px;
 }
 
 
+/*********
+ * Forms *
+ *********/
 
+ul .form-fields {
+  list-style: none:
+}
 

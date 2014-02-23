@@ -13,7 +13,7 @@
 
     <!-- Custom styles for this template -->
     <link href="style.css" rel="stylesheet">
-    <link href="css/buttons.css" rel="stylesheet">
+    <!--<link href="css/buttons.css" rel="stylesheet">-->
 
 
     <!--[if lt IE 9]>
@@ -129,16 +129,26 @@
 					<canvas id="game" style="width: 500px; height: 500px;"></canvas>
           <!-- Controls -->
           <h2>Controls</h2>
-          <button data-ctl-seq="CTRL_A" type="button" class="ab_button ctl-button ">A</button>
-          <button data-ctl-seq="CTRL_B" type="button" class="ab_button ctl-button ">B</button>
-          <button data-ctl-seq="CTRL_LEFT" type="button" class="ctl-button btn btn-primary">Left</button>
-          <button data-ctl-seq="CTRL_RIGHT" type="button" class="ctl-button btn btn-primary">Right</button>
-          <button data-ctl-seq="CTRL_UP" type="button" class="ctl-button btn btn-primary">Up</button>
-          <button data-ctl-seq="CTRL_DOWN" type="button" class="ctl-button btn btn-primary">Down</button>
-          <button data-ctl-seq="CTRL_LSHOULDER" type="button" class="ctl-button btn btn-primary">Left Shoulder</button>
-          <button data-ctl-seq="CTRL_RSHOULDER" type="button" class="ctl-button btn btn-primary">Right Shoulder</button>
-          <button data-ctl-seq="CTRL_START" type="button" class="ctl-button btn btn-primary">Start</button>
-          <button data-ctl-seq="CTRL_SELECT" type="button" class="ctl-button btn btn-primary">Select</button>
+          <button data-ctl-seq="CTRL_A" type="button" class="ab_button ctl-button ">
+          <img src="assets/controller/abutton.png"/></button>
+          <button data-ctl-seq="CTRL_B" type="button" class="ab_button ctl-button ">
+          <img src="assets/controller/bbutton.png"/></button>
+          <button data-ctl-seq="CTRL_LEFT" type="button" class="ctl-button btn btn-primary">
+          <img src="assets/controller/left.png"/></button>
+          <button data-ctl-seq="CTRL_RIGHT" type="button" class="ctl-button btn btn-primary">
+          <img src="assets/controller/right.png"/></button>
+          <button data-ctl-seq="CTRL_UP" type="button" class="ctl-button btn btn-primary">
+          <img src="assets/controller/up.png"/></button>
+          <button data-ctl-seq="CTRL_DOWN" type="button" class="ctl-button btn btn-primary">
+          <img src="assets/controller/down.png"/></button>
+          <button data-ctl-seq="CTRL_LSHOULDER" type="button" class="ctl-button btn btn-primary">Left Shoulder
+          </button>
+          <button data-ctl-seq="CTRL_RSHOULDER" type="button" class="ctl-button btn btn-primary">Right Shoulder
+          </button>
+          <button data-ctl-seq="CTRL_START" type="button" class="ctl-button btn btn-primary">
+          <img src="assets/controller/start.png"/></button>
+          <button data-ctl-seq="CTRL_SELECT" type="button" class="ctl-button btn btn-primary">
+          <img src="assets/controller/select.png"/></button>
         </div>
 				<!-- End page content -->
 				<!-- Begin chat -->
@@ -155,10 +165,14 @@
         <div class="container">
           <div class="col-md-2 sidebar foot-left">
             <p>Donate BTC:</p>
-            <p>Donate DOGE: </p>
+            <p class="donate">13cTJm8cX9EJ8dFkeTboLyj1yCwzcWKL7q</p>
           </div>
           <div class="col-md-8 foot-mid">
-            <p>Made with in Montreal by: Ben Brittain, Lee Avital, and Dan Kolbman</p>
+            <p>Made with <span class="glyphicon glyphicon-heart"></span>
+                at <a href="http://mchacks.io/">McHacks</a>
+                by: <a href="http://benbrittain.com/">Ben Brittain</a>,
+                    <a href="http://leeavital.com/">Lee Avital</a>, and
+                    <a href="http://dankolbman.com/">Dan Kolbman</a></p>
           </div>
           <div class="col-md-2 sidbar foot-right">
             <p class="text-muted">Awesome Sauce!</p>
@@ -171,6 +185,8 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="bootstrap/js/bootstrap.min.js"></script>
+
+
   </body>
 </html>
 
