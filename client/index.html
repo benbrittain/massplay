@@ -59,16 +59,34 @@
           </button>
           <a class="navbar-brand" href="#">Mass Play</a>
         </div>
+        <!-- Stats -->
         <div class="navbar-collapse collapse">
+        <div class="badges">
+        <span class="badge">Games Being Played: 435</span>
+        <span class="badge">Users Online: 9,992</span>
+        </div>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Dashboard</a></li>
-            <li><a href="#">Settings</a></li>
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">Help</a></li>
+            <li class="search-btn"><a href="#">
+                <span class="glyphicon glyphicon-search"></span>
+                   Browse Games</a></li>
+            <li class="account-btn"><a href="#">PokeMaster</a></li>
+            <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+              <img src="trainer32.png"/>
+              <span class="caret"></span>
+              <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#" class="start-game">
+                <span class="glyphicon glyphicon-play-circle"></span>
+                  Start a Game</a></li>
+              <li><a href="#">
+                <span class="glyphicon glyphicon-cog"></span>
+                  Settings</a></li>
+              <li><a href="#">
+                <span class="glyphicon glyphicon-off"></span>
+                  Logout</a></li>
+            </ul>
           </ul>
-          <form class="navbar-form navbar-right">
-            <input type="text" class="form-control" placeholder="Search...">
-          </form>
         </div>
       </div>
     </div>

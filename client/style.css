@@ -4,8 +4,12 @@
 
 body,html {
 	height: 100%;
+	background: #EEE;
 }
 
+.nav h1, .nav h2, .nav h3 {
+	color: #EEE;
+}
 .container-fluid {
 	height: 100%;
 }
@@ -15,18 +19,110 @@ canvas#game {
  	height: 300px;
 }
 
+
+/************************
+ * Navigation Bar Stuff *
+ ************************/
+
+/* The navigation bar */
+.navbar, .navbar-inverse {
+	background: #A1004F;
+	color: #EEE;
+	border:none;
+	border-color: none;
+	border-width: none;
+}
+
+
+/* Brand text */
+.navbar-inverse .navbar-brand {
+	color: #FFF;
+	border: none;
+	font-size: 28px;
+}
+
+/* Badges and stats */
+.navbar .badges {
+  display: inline;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navbar .badge {
+  margin: 16px 5px;
+}
+
+/* Search button */
+li.search-btn {
+  background: #090; 
+}
+
+li.search-btn:hover {
+  background: #080;
+}
+
+/* Account button */
+li.account-btn {
+	background: #222;
+}
+
+li.account-btn:hover {
+	background: #333;
+}
+
+/* Nav bar links */
+.navbar-inverse .navbar-nav > li > a {
+  color: #EEE;
+}
+
+/* Drop down button */
+.navbar.btn, .navbar button.dropdown-toggle {
+	padding: 9px 10px;
+  border: none;
+	border-radius: 0;
+  background: #111;
+}
+
+.navbar button.dropdown-toggle:hover {
+  background: #222;
+}
+
+/* Drop down menu */
+.navbar .dropdown-menu {
+  margin: 0px;
+  border-radius: 0;
+  border: 0px;
+  background: #111;
+}
+
+/* Drop down menu text */
+.navbar .dropdown-menu a {
+  color: #EEE;
+}
+
+.navbar .dropdown-menu a.start-game {
+  background: #090;
+}
+
+.navbar .dropdown-menu a.start-game:hover {
+  background: #080;
+}
+
+/**************
+ * Body Stuff *
+ **************/
 /* for everything after the header nav */
 .row {
 	padding-top: 50px;
 	height: 100%;
 } 
+
 .game-page {
   padding: 40px;
 }
-
 /* Game browser sidebar */
 .sidebar {
-	background: #DDD;
+	background: #111;
 	height: 100%;
 }
 
@@ -35,8 +131,9 @@ canvas#game {
 
 /* Chat bar */
 .chat {
-	background: #DDD;
 	height: 100%;
+	border-left: 3px solid  #333;
+	background: #BBB;
 }
 
 
