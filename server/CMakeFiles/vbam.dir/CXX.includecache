@@ -119,6 +119,8 @@ boost/bind.hpp
 /home/ben/workspace/massplay/server/src/sdl/boost/bind.hpp
 websocketpp/common/thread.hpp
 -
+sstream
+-
 stdarg.h
 -
 stdlib.h
@@ -167,8 +169,6 @@ debugger.h
 /home/ben/workspace/massplay/server/src/sdl/debugger.h
 filters.h
 /home/ben/workspace/massplay/server/src/sdl/filters.h
-text.h
-/home/ben/workspace/massplay/server/src/sdl/text.h
 inputSDL.h
 /home/ben/workspace/massplay/server/src/sdl/inputSDL.h
 ../common/SoundSDL.h
@@ -197,8 +197,6 @@ lirc/lirc_client.h
 /home/ben/workspace/massplay/server/src/sdl/inputSDL.h
 SDL/SDL.h
 /home/ben/workspace/massplay/server/src/sdl/SDL/SDL.h
-
-/home/ben/workspace/massplay/server/src/sdl/text.h
 
 /home/ben/workspace/massplay/server/src/version.h
 svnrev.h

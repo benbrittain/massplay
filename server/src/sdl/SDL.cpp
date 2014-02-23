@@ -40,6 +40,7 @@ using websocketpp::lib::unique_lock;
 using websocketpp::lib::condition_variable;
 
 
+#include <sstream>
 #include <stdarg.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -69,7 +70,6 @@ using websocketpp::lib::condition_variable;
 
 #include "debugger.h"
 #include "filters.h"
-#include "text.h"
 #include "inputSDL.h"
 #include "../common/SoundSDL.h"
 
@@ -1084,7 +1084,7 @@ void sdlInitVideo() {
   destWidth = filter_enlarge * srcWidth;
   destHeight = filter_enlarge * srcHeight;
 
-  flags = SDL_ANYFORMAT | (fullscreen ? SDL_FULLSCREEN : 0);
+  flags = SDL_ANYFORMAT;
   flags |= SDL_HWSURFACE | SDL_DOUBLEBUF;
 
   screenWidth = destWidth;
@@ -1844,6 +1844,7 @@ class websocket_server {
       m_server.listen(port);
       m_server.start_accept();
 
+      m_frames_sent = 0;
       new websocketpp::lib::thread(&server::run, &m_server);
     }
 
@@ -1863,6 +1864,7 @@ class websocket_server {
             std::cout << "Closed connection!" << std::endl;
             std::cout<< m_connections.size() << std::endl;
             break;
+
           }
         }
         lock.unlock();
@@ -1915,10 +1917,26 @@ class websocket_server {
         con_msg_man_type;
       con_msg_man_type::ptr manager(new con_msg_man_type());
 
+
+
+      std::ostringstream ss;
+      ss << std::setw(8) << std::setfill('0') << m_frames_sent;
+      std::string result = ss.str();
+
+            // the number is converted to string with the help of stringstream
+//      std::string ret = atoi(m_frames_sent);
+//
+//      int str_length = ret.length();
+//      for (int i = 0; i < 7 - str_length; i++) {
+//        ret = "0" + ret;
+//      }
+      std::string b64_w_count = std::string(result) + b64_a_frame;
+
+      m_frames_sent++;
       con_list::iterator it;
       for (it = m_connections.begin(); it != m_connections.end(); ++it) {
         message_type::ptr msg = manager->get_message(websocketpp::frame::opcode::TEXT, 240*160*3*sizeof(char));
-        msg->set_payload(b64_a_frame);
+        msg->set_payload(b64_w_count);
         m_server.send(*it, msg);
       }
       lock.unlock();
@@ -1927,6 +1945,7 @@ class websocket_server {
     server m_server;
     typedef std::list<connection_hdl> con_list;
     con_list m_connections;
+    int m_frames_sent;
     mutex m_action_lock;
 };
 
@@ -1941,10 +1960,6 @@ int main(int argc, char **argv)
 
   socket_server.start(port);
   fprintf(stdout, "Initializing Emulator; ROM: %s", arg0);
-
-
-
-
 
   captureDir[0] = 0;
   saveDir[0] = 0;
@@ -2243,9 +2258,6 @@ int main(int argc, char **argv)
       SDL_Delay(500);
     }
     sdlPollEvents();
-    #if WITH_LIRC
-   lircCheckInput();
-   #endif
     if(mouseCounter) {
       mouseCounter--;
       if(mouseCounter == 0)
@@ -2309,21 +2321,21 @@ void systemMessage(int num, const char *msg, ...)
   va_end(valist);
 }
 
-void drawScreenMessage(u8 *screen, int pitch, int x, int y, unsigned int duration)
-{
-  if(screenMessage) {
-    if(cartridgeType == 1 && gbBorderOn) {
-      gbSgbRenderBorder();
-    }
-    if(((systemGetClock() - screenMessageTime) < duration) &&
-       !disableStatusMessages) {
-      drawText(screen, pitch, x, y,
-               screenMessageBuffer, false);
-    } else {
-      screenMessage = false;
-    }
-  }
-}
+//void drawScreenMessage(u8 *screen, int pitch, int x, int y, unsigned int duration)
+//{
+//  if(screenMessage) {
+//    if(cartridgeType == 1 && gbBorderOn) {
+//      gbSgbRenderBorder();
+//    }
+//    if(((systemGetClock() - screenMessageTime) < duration) &&
+//       !disableStatusMessages) {
+//      drawText(screen, pitch, x, y,
+//               screenMessageBuffer, false);
+//    } else {
+//      screenMessage = false;
+//    }
+//  }
+//}
 
 void drawSpeed(u8 *screen, int pitch, int x, int y)
 {
@@ -2335,7 +2347,7 @@ void drawSpeed(u8 *screen, int pitch, int x, int y)
             systemFrameSkip,
             showRenderedFrames);
 
-  drawText(screen, pitch, x, y, buffer, showSpeedTransparent);
+  //drawText(screen, pitch, x, y, buffer, showSpeedTransparent);
 }
 
 
