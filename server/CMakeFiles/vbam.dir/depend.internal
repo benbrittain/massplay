@@ -28,7 +28,6 @@ CMakeFiles/vbam.dir/src/sdl/SDL.cpp.o
  /home/ben/workspace/massplay/server/src/sdl/filters.h
  /home/ben/workspace/massplay/server/src/sdl/getopt.h
  /home/ben/workspace/massplay/server/src/sdl/inputSDL.h
- /home/ben/workspace/massplay/server/src/sdl/text.h
  /home/ben/workspace/massplay/server/src/version.h
  /usr/include/SDL/SDL.h
  /usr/include/SDL/SDL_active.h
@@ -161,6 +160,3 @@ CMakeFiles/vbam.dir/src/sdl/inputSDL.cpp.o
  /home/ben/workspace/massplay/server/src/sdl/inputSDL.cpp
  /home/ben/workspace/massplay/server/src/sdl/inputSDL.h
 CMakeFiles/vbam.dir/src/sdl/text.cpp.o
- /home/ben/workspace/massplay/server/src/System.h
- /home/ben/workspace/massplay/server/src/common/Types.h
- /home/ben/workspace/massplay/server/src/sdl/text.cpp

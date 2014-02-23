@@ -4,9 +4,9 @@ var port = urlTokens[ urlTokens.length - 1];
 
 
 if( parseInt( port ) ){
-var ws = new WebSocket( 'ws://localhost:' + port  );
+var ws = new WebSocket( 'ws://107.170.71.63:' + port  );
 }else{
-var ws = new WebSocket( 'ws://localhost:9002' );
+var ws = new WebSocket( 'ws://107.170.71.63:9002' );
 }
 ws.binaryType = 'arraybuffer';
 
@@ -21,20 +21,32 @@ function _arrayBufferToBase64( buffer ) {
 }
 
 
+count = -1;
 ws.onmessage = function( message ){
-      if(1) {
 
-      console.log( 'got a frame' );
+      var nextCount = parseInt( message.substring( 0, 8 ) );
+      var payload = message.substring( 8 );
 
-      var img = document.createElement( 'img' );
-      img.src = 'data:image/bmp;base64,' + message.data;
-      img.width = 'auto';
-      img.height = 'auto';
+      if( nextCount >= count ){
+
+        count = nextCount;
+        var img = document.createElement( 'img' );
+        img.src = 'data:image/bmp;base64,' + payload;
+        img.width = 'auto';
+        img.height = 'auto';
 
 
+        img.onload = function(){
+          console.log( 'loaded' );
+          context.drawImage( img, 0, 0, 240, 160 );
+        }
+
+<<<<<<< Updated upstream
+=======
       img.onload = function(){
         console.log( 'loaded' );
-        context.drawImage( img, 0, 0, 240, 160 );
+        context.drawImage( img, 0, 0, 240, 160);
+>>>>>>> Stashed changes
       }
   }
 };

@@ -1,8 +1,244 @@
 /*
- * Base style sheet for MassPlay
+ * Style sheet augment for bootstrap template
  */
 
-body {
-  margin: none;
-  padding: none;
+body,html {
+	height: 100%;
+	background: #EEE;
 }
+
+.nav h1, .nav h2, .nav h3 { 
+  color: #EEE;
+  border: none;
+  border-bottom: 3px solid #050;
+}
+.container-fluid {
+	height: 100%;
+}
+
+canvas#game {
+	width: 90%;
+ 	height: 300px;
+}
+
+
+/************************
+ * Navigation Bar Stuff *
+ ************************/
+
+/* The navigation bar */
+.navbar, .navbar-inverse {
+	background: #111;
+  /*
+
+  RED
+  D11717
+  */
+	color: #EEE;
+	border:none;
+	border-color: none;
+	border-width: none;
+
+  border-bottom: 3px solid #090;
+}
+
+
+/* Brand text */
+.navbar-inverse .navbar-brand {
+	color: #FFF;
+	border: none;
+	font-size: 28px;
+}
+
+.navbar img {
+  margin-top: -5px;
+  padding: 0px 10px;
+  height: 24px;
+}
+
+/* Badges and stats */
+.navbar .badges {
+  display: inline;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navbar .badge {
+  margin: 18px 5px 0px 5px;
+  background: #333;
+}
+
+/* Search button */
+li.search-btn {
+  background: #090; 
+}
+
+li.search-btn:hover {
+  background: #080;
+}
+
+/* Account button */
+li.account-btn {
+	background: #222;
+}
+
+li.account-btn:hover {
+	background: #333;
+}
+
+/* Nav bar links */
+.navbar-inverse .navbar-nav > li > a {
+  color: #EEE;
+}
+
+.navbar-right {
+  background: #222;
+}
+
+/* Drop down button */
+.navbar.btn, .navbar button.dropdown-toggle, .navbar btn-info:active,
+.btn-info:active, .btn-info.active, .open .dropdown-toggle.btn-info  {
+	padding: 14px 10px;
+  border: none;
+	border-radius: 0;
+  background: #111;
+  float: right;
+}
+
+.navbar button.dropdown-toggle:hover {
+  background: #222;
+}
+
+/* Drop down menu */
+.navbar .dropdown-menu {
+  margin: 0px;
+  border-radius: 0;
+  border: 0px;
+  background: #111;
+}
+
+/* Drop down menu text */
+.navbar .dropdown-menu a {
+  color: #EEE;
+}
+
+.navbar .dropdown-menu a.start-game {
+  background: #090;
+}
+
+.navbar .dropdown-menu a.start-game:hover,
+.navbar .dropdown-menu a.start-game:focus,
+.navbar .dropdown-menu a.start-game:active {
+  background: #080;
+}
+
+/**************
+ * Body Stuff *
+ **************/
+/* for everything after the header nav */
+.row {
+	padding-top: 50px;
+	height: 100%;
+} 
+
+h1.page-header {
+  padding-bottom: 1px;
+  border-bottom: 3px solid #BBB;
+}
+.game-page {
+  padding: 40px;
+}
+
+/* Game browser sidebar */
+.sidebar {
+	background: #222;
+	height: 100%;
+}
+
+/* Controller buttons */
+
+
+
+/********
+ * Chat *
+ ********/
+
+/* Chat bar */
+
+.chat {
+	height: 100%;
+	border-left: 3px solid  #060;
+	background: #BBB;
+}
+
+/*
+.chat .input-group {
+  width: 100%;
+}
+
+.chat .input-group .text {
+  height: 50px;
+}
+
+.chat .well {
+  padding: 0px 19px;
+  height: 70%;
+  overflow: scroll;
+}
+
+.chat li {
+  list-style: none;
+}
+
+li.message {
+  margin-left: -50px;
+}
+
+[class^="user-"] {
+  display: inline-block;
+}
+
+.user-name {
+  color: #999;
+  margin-right: 16px;
+  font-size: .9em;
+}
+
+.user-name:after {
+  content: ":";
+}
+*/
+
+/**********
+ * Footer *
+ **********/
+
+#footer {
+  background: #222;
+  color: #EEE;
+  border: none;
+  border-top: 3px solid #090;
+  width: 100%;
+}
+
+#footer .row{
+  padding-top: 5px;
+}
+
+.donate {
+  font-size: 6px;
+  margin-top: -5px;
+} 
+
+.row {
+  margin-right: 0px;
+}
+
+
+/*********
+ * Forms *
+ *********/
+ul .form-fields {
+  list-style: none:
+}
+

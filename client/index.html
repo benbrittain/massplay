@@ -12,7 +12,12 @@
     <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
+<<<<<<< HEAD
     <link href="/style.css" rel="stylesheet">
+=======
+    <link href="css/chat.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+>>>>>>> 0ea8d470405de2d0cfd89d40b232a293d5aed3df
     <!--<link href="css/buttons.css" rel="stylesheet">-->
 
 
@@ -155,16 +160,23 @@
 				<!-- Begin chat -->
 				<div class="col-md-3 chat">
           <h3>Chat here</h3>
-          <div class="well">
+          <div class="chat-container">
             <div class="messages-wrapper">
               <ul class="messages"></ul>
             </div>
+            <div class="input">
+              <div class="input-group">
+                <span class="input-group-addon">Name</span>
+                <input type="text" class="form-control name" placeholder="Username">
+              </div>
+              <div class="input-group">
+                <span class="input-group-addon"></span>
+                <input type="text" class="form-control text" placeholder="Message">
+              </div>
           </div>
-          <div class="input">
-            <input type="text" class="name" placeholder="Your Name"/>
-            <input type="text" class="text" placeholder="Type a message!" />
           </div>
         </div>
+
         <!-- End chat -->
       </div><!-- row -->
     </div><!-- container -->
