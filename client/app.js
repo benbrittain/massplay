@@ -19,8 +19,8 @@ ws.onmessage = function( message ){
 
       var img = document.createElement( 'img' );
       img.src = 'data:image/bmp;base64,' + message.data;
-      img.width = 240;
-      img.height = 160;
+      img.width = 'auto';
+      img.height = 'auto';
 
 
       img.onload = function(){

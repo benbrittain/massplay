@@ -21,10 +21,16 @@
     <![endif]-->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <!-- <script type="text/javascript" src="app.js"></script> -->
+    <script type="text/javascript" src="app.js"></script>
     <script type="text/javascript">
       window.context = null; // woooo globals
       window.canvas;
+
+
+      $(function(){
+        var gameCanvas = window.canvas = document.getElementById('game');
+				var ctx = window.context = gameCanvas.getContext("2d");
+      });
       /* Initialize canvas elements */
       /*
       $( function() {
@@ -119,7 +125,7 @@
           <h1 class="page-header">You're Playing Pokemon Red</h1>
           <!-- Canvas object -->
 					<!--<canvas id="game" width=90% height=300></canvas>-->
-					<canvas id="game" style="width: 240px; height: 160px;"></canvas>
+					<canvas id="game" style="width: 500px; height: 500px;"></canvas>
           <!-- Controls -->
           <h2>Controls</h2>
           <button type="button" class="btn btn-primary">A</button>

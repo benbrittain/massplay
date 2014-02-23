@@ -25,13 +25,27 @@ wss.on('connection', function(ws) {
 
 
   fs.readFile( 'echoserver/pokemon.bmp', function(err, data) {
-    console.log( data.constructor );
-    // var msg = "data:image/bmp;base64," + data.toString( 'base64' );
-    var msg = data.toString( 'base64' );
-    setInterval( function(){
+    fs.readFile( 'echoserver/duck.bmp', function( err, data2 ){
 
-      ws.send(msg );
-    }, 200 );
+
+
+      var i = 0;
+      console.log( data.constructor );
+      // var msg = "data:image/bmp;base64," + data.toString( 'base64' );
+      var msg = data.toString( 'base64' );
+      var msg2 = data2.toString( 'base64' );
+      setInterval( function(){
+        if( i == 0 ){
+          ws.send(msg );
+        }else{
+          ws.send( msg2 );
+        }
+        i += 1;
+        i %= 2;
+      }, 200 );
+
+
+    })
   });
 
 
