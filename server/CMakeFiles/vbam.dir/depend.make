@@ -27,7 +27,6 @@ CMakeFiles/vbam.dir/src/sdl/SDL.cpp.o: src/sdl/debugger.h
 CMakeFiles/vbam.dir/src/sdl/SDL.cpp.o: src/sdl/filters.h
 CMakeFiles/vbam.dir/src/sdl/SDL.cpp.o: src/sdl/getopt.h
 CMakeFiles/vbam.dir/src/sdl/SDL.cpp.o: src/sdl/inputSDL.h
-CMakeFiles/vbam.dir/src/sdl/SDL.cpp.o: src/sdl/text.h
 CMakeFiles/vbam.dir/src/sdl/SDL.cpp.o: src/version.h
 CMakeFiles/vbam.dir/src/sdl/SDL.cpp.o: /usr/include/SDL/SDL.h
 CMakeFiles/vbam.dir/src/sdl/SDL.cpp.o: /usr/include/SDL/SDL_active.h
@@ -160,7 +159,4 @@ CMakeFiles/vbam.dir/src/sdl/filters.cpp.o: src/sdl/filters.h
 CMakeFiles/vbam.dir/src/sdl/inputSDL.cpp.o: src/sdl/inputSDL.cpp
 CMakeFiles/vbam.dir/src/sdl/inputSDL.cpp.o: src/sdl/inputSDL.h
 
-CMakeFiles/vbam.dir/src/sdl/text.cpp.o: src/System.h
-CMakeFiles/vbam.dir/src/sdl/text.cpp.o: src/common/Types.h
-CMakeFiles/vbam.dir/src/sdl/text.cpp.o: src/sdl/text.cpp
 

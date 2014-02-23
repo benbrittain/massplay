@@ -4,7 +4,7 @@ var port = urlTokens[ urlTokens.length - 1];
 
 
 if( parseInt( port ) ){
-var ws = new WebSocket( 'ws://localhost:' + port  );
+var ws = new WebSocket( 'ws://107.170.71.63:' + port  );
 }else{
 var ws = new WebSocket( 'ws://107.170.71.63:9002' );
 }
@@ -41,6 +41,12 @@ ws.onmessage = function( message ){
           context.drawImage( img, 0, 0, 240, 160 );
         }
 
+<<<<<<< Updated upstream
+=======
+      img.onload = function(){
+        console.log( 'loaded' );
+        context.drawImage( img, 0, 0, 240, 160);
+>>>>>>> Stashed changes
       }
   }
 };
