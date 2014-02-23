@@ -46,7 +46,6 @@ $( function(){
 
     $('.ctl-button').on( 'click', function(){
       var code = $(this).data( 'ctl-seq' );
-      alert( code );
       ws.send( code.toUpperCase() );  // the toUpperCase is redundant, but safe
     });
 
