@@ -1,29 +1,41 @@
 var ws = new WebSocket( 'ws://localhost:9002' );
 ws.binaryType = 'arraybuffer';
 
+function _arrayBufferToBase64( buffer ) {
+  var binary = ''
+    var bytes = new Uint8Array( buffer )
+    var len = bytes.byteLength;
+  for (var i = 0; i < len; i++) {
+    binary += String.fromCharCode( bytes[ i ] )
+  }
+  return window.btoa( binary );
+}
+
+
 
 ws.onmessage = function( message ){
 
-  // console.log( message.data );
+      var b = _arrayBufferToBase64( message.data );
 
-      var arr = new Int8Array( message.data );
 
-      console.log( arr );
 
-      var id = window.context.createImageData( 500, 546);
-      for( var i = 0, j = 0; i < id.data.length; i+=4, j+= 3   ){
-        id.data[i] = arr[j];
-        id.data[i+1] = arr[j + 1];
-        id.data[i+2] = arr[j + 2];
-        id.data[i+3] = 255;
-      }
 
-      context.putImageData( id, 0, 0 );
+      // var id = window.context.createImageData( 240, 160);
+      // for( var i = 0, j = 0; i < id.data.length; i+=4, j+= 3   ){
+      //   id.data[i] = arr[j];
+      //   id.data[i+1] = arr[j + 1];
+      //   id.data[i+2] = arr[j + 2];
+      //   id.data[i+3] = 255;
+      // }
 
-      $('body').append(
-        // $('<img/>').attr( 'src', 'data:image/bmp;base64,' + message.data )
-      );
+      // context.putImageData( id, 0, 0 );
 
+      var img = document.createElement( 'img' );
+      img.src = 'data:image/bmp;base64,' + b;
+      img.width = 240;
+      img.height = 160;
+
+      context.drawImage( img, 0, 0 );
   // try{
   //   console.log( message.data );
   //   var bytes = new Uint8Array( message.data );
