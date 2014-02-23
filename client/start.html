@@ -89,7 +89,7 @@
         <div class="col-xs-10 main">
           <h1 class="page-header">You're Starting a New Game</h1>
 
-          <form class="navbar-form navbar-left" role="search" enctype="multipart/formdata" method="POST" action="/newgame">
+          <form class="navbar-form navbar-left" role="search" enctype="multipart/form-data" method="POST" action="/newgame">
             <div class="input-group">
               <ul class="form-fields">
                <li><span class="input-group-addon">Game Room Name</span>
@@ -99,6 +99,11 @@
 
                <li><span class="input-group-addon">Max Players (0, No cap)</span>
                <input type="text" class="form-control" placeholder="20" name="maxplayers"></li>
+
+
+               <li><span class="input-group-addon">ROM</span>
+               <input type="file" class="form-control" placeholder="20" name="ROM"></li>
+
               </ul>
             </div>
             <button type="submit" class="btn btn-default">Submit</button>

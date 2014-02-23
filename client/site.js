@@ -1,3 +1,4 @@
+var fs = require( 'fs' );
 var express = require( 'express' );
 
 var app = express();
@@ -8,9 +9,19 @@ app.use( express.bodyParser() );
 
 
 app.post( '/newgame', function( req, res ){
-  console.log( req.body.gamename );
-  console.log( req.body );
-  res.send( 'hallo world' );
+  // console.log( req.body );
+  // console.log( req.files );
+  var infilepath = req.files.ROM.path;
+
+  fs.readFile( infilepath, function(err, data){
+    fs.writeFile( __dirname + '/uploads/file' + Math.floor((Math.random() * 100) ), data, function(err){
+        res.redirect( 'back' );
+    });
+  });
+
+
+
+
 });
 
 
