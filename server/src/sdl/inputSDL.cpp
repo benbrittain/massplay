@@ -16,6 +16,7 @@
 // Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
 #include "inputSDL.h"
+#include <stdlib.h>
 
 #define SDLBUTTONS_NUM 14
 
@@ -462,26 +463,28 @@ void inputInitJoysticks()
 
 void inputProcessSDLEvent(const SDL_Event &event)
 {
-//	fprintf(stdout, "%x\n", inputGetEventCode(event));
+  fprintf(stdout, "%x\n", inputGetEventCode(event));
 
-    switch(event.type)
-    {
-        case SDL_KEYDOWN:
-            sdlUpdateKey(event.key.keysym.sym, true);
-            break;
-        case SDL_KEYUP:
-            sdlUpdateKey(event.key.keysym.sym, false);
-            break;
-        case SDL_JOYHATMOTION:
-            sdlUpdateJoyHat(event.jhat.which,
-                            event.jhat.hat,
-                            event.jhat.value);
-            break;
-        case SDL_JOYBUTTONDOWN:
-        case SDL_JOYBUTTONUP:
-            sdlUpdateJoyButton(event.jbutton.which,
-                               event.jbutton.button,
-                               event.jbutton.state == SDL_PRESSED);
+  switch(event.type)
+  {
+    case SDL_KEYDOWN:
+      //  printf("%s", event.key.keysym.sym);
+      sdlUpdateKey(event.key.keysym.sym, true);
+      break;
+    case SDL_KEYUP:
+      //   printf("%s", event.key.keysym.sym);
+      sdlUpdateKey(event.key.keysym.sym, false);
+      break;
+    case SDL_JOYHATMOTION:
+      sdlUpdateJoyHat(event.jhat.which,
+          event.jhat.hat,
+          event.jhat.value);
+      break;
+    case SDL_JOYBUTTONDOWN:
+    case SDL_JOYBUTTONUP:
+      sdlUpdateJoyButton(event.jbutton.which,
+          event.jbutton.button,
+          event.jbutton.state == SDL_PRESSED);
             break;
         case SDL_JOYAXISMOTION:
             sdlUpdateJoyAxis(event.jaxis.which,
