@@ -17,7 +17,7 @@ var app = express();
 
 var gamesCollectionDeffered = defer();
 var gamesCollection = gamesCollectionDeffered.promise;
-MongoClient.connect( 'mongodb://127.0.0.1/massplay', function( err, db ){
+MongoClient.connect( 'mongodb://107.170.70.149/massplay', function( err, db ){
   var collection = db.collection( 'games' );
   gamesCollectionDeffered.resolve( collection );
   console.log( 'resolved MongoDB future(s)' );
