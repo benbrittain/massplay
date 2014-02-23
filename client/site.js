@@ -53,13 +53,23 @@ app.post( '/newgame', function( req, res ){
 });
 
 
+app.get( ['/start.html', '/start' ], function( req, res ){
+  openTemplate( 'start.html' ).then( function( tpl ){
+    getOngoingGames().then( function(games){
+      res.send( tpl( {games: games} ) );
+    });
+  });
+});
+
+
 app.get( '/play/:port', function( req, res ){
   var port = req.param.port
   console.log( 'USING PORT %d', port );
-  openTemplate( 'index.html' ).then( function( tmp ){
-    res.send( tmp({games: []}) );
+  openTemplate( 'index.html' ).then( function( template ){
+    getOngoingGames().then( function( games ){
+      res.send( template( {games:  games} ) );
+    });
   });
-  
 });
 
 
@@ -70,20 +80,8 @@ app.get( '*', function(req, res) {
     console.log( path );
     if( path == '' ){
       openTemplate( 'index.html' ).then( function( template ){
-          var gamesrst = gamesCollection.then( function( coll) {
-            return coll.find({gamename: {'$ne': ''} }).toArray( function( err, results ){
-
-              var toSend =  results.map( function( elm ){
-                return {
-                  name: elm.gamename,
-                  roomname: elm.roomname || elm.gamename,
-                  port: elm.port
-                };
-              });
-              console.log( toSend );
-
-              res.send( template( {games:  toSend} ) );
-            });
+        getOngoingGames().then( function( games ){
+          res.send( template( {games:  games} ) );
         });
       });
 
@@ -106,6 +104,27 @@ function openTemplate( path ){
       console.log( data );
       console.log( data );
       deferred.resolve( Handlebars.compile( data )  );
+  });
+  return deferred.promise;
+}
+
+
+
+function getOngoingGames( ){
+  var  deferred  = defer();
+
+  var gamesrst = gamesCollection.then( function( coll) {
+    var res = coll.find({gamename: {'$ne': ''} }).toArray( function( err, results ){
+      var toSend =  results.map( function( elm ){
+        return {
+          name: elm.gamename,
+          roomname: elm.roomname || elm.gamename,
+          port: elm.port
+        };
+      });
+      deferred.resolve( toSend );
+
+    });
   });
   return deferred.promise;
 }

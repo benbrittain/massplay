@@ -1817,6 +1817,12 @@ void psuedo_input(SDLKey psuedo_key){
   inputProcessSDLEvent(inject_event);
 }
 
+//template <typename T>
+//bool operator == (const boost::weak_ptr<T>& a, const boost::weak_ptr<T>& b)
+//{
+//      return a.lock() == b.lock();
+//}
+
 typedef websocketpp::server<socket_config> server;
 class websocket_server {
   public:
@@ -1827,6 +1833,7 @@ class websocket_server {
       m_server.init_asio();
 
       m_server.set_open_handler(bind(&websocket_server::on_open,this,::_1));
+      m_server.set_close_handler(bind(&websocket_server::on_close,this,::_1));
 //      m_server.set_socket_init_handler(bind(&on_socket_init,::_1,::_2));
       m_server.set_message_handler(bind(&websocket_server::on_message,this,::_1,::_2));
       //boost::thread t(&game_server::process_messages, &server_instance);
@@ -1847,9 +1854,20 @@ class websocket_server {
       lock.unlock();
     }
 
-//    void on_close(websocketpp::connection_hdl hdl) {
-//
-//    }
+    void on_close(websocketpp::connection_hdl hdl) {
+      unique_lock<mutex> lock(m_action_lock);
+        for (con_list::iterator it=m_connections.begin(); it != m_connections.end(); it++){
+          if(hdl.lock() == (*it).lock()){
+            std::cout<< m_connections.size() << std::endl;
+            it = m_connections.erase(it);
+            std::cout << "Closed connection!" << std::endl;
+            std::cout<< m_connections.size() << std::endl;
+            break;
+          }
+        }
+        lock.unlock();
+    }
+
     void on_message(connection_hdl hdl, server::message_ptr msg) {
       // queue message up for sending by processing thread
       unique_lock<mutex> lock(m_action_lock);
@@ -1890,9 +1908,7 @@ class websocket_server {
 
     void send_frame(std::string b64_a_frame) {
       unique_lock<mutex> lock(m_action_lock);
-//      std::cout << "GOT A FRAME" << std::endl;
       websocketpp::lib::error_code ec;
-      // TODO redef in class
       typedef websocketpp::message_buffer::message<websocketpp::message_buffer::alloc::con_msg_manager>
         message_type;
       typedef websocketpp::message_buffer::alloc::con_msg_manager<message_type>
@@ -1902,17 +1918,14 @@ class websocket_server {
       con_list::iterator it;
       for (it = m_connections.begin(); it != m_connections.end(); ++it) {
         message_type::ptr msg = manager->get_message(websocketpp::frame::opcode::TEXT, 240*160*3*sizeof(char));
-          //manager->get_message(websocketpp::frame::opcode::BINARY, 240*160*3*sizeof(char));
         msg->set_payload(b64_a_frame);
         m_server.send(*it, msg);
-//        std::cout << "SENT A FRAME!" << std::endl;
       }
-      //    socket_server.send(*it, msg);
       lock.unlock();
     }
   private:
     server m_server;
-    typedef std::deque<connection_hdl> con_list;
+    typedef std::list<connection_hdl> con_list;
     con_list m_connections;
     mutex m_action_lock;
 };
