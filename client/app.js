@@ -7,9 +7,9 @@ ws.onmessage = function( message ){
   // console.log( message.data );
 
 
-      // $('body').append(
-      //   $('<img/>').attr( 'src', 'data:image/bmp;base64,' + message.data )
-      // );
+      $('body').append(
+        $('<img/>').attr( 'src', 'data:image/bmp;base64,' + message.data )
+      );
 
   // try{
   //   console.log( message.data );
