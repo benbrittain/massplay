@@ -89,9 +89,7 @@ app.listen( 8000 );
 
 
 
-
 // HELPER FUNCTIONS
-
 function openTemplate( path ){
   var deferred = defer();
   fs.readFile( path, 'utf-8', function(err, data){
