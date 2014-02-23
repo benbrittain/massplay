@@ -105,6 +105,8 @@ websocketpp/config/asio_no_tls.hpp
 -
 iostream
 -
+fstream
+-
 boost/thread.hpp
 -
 boost/thread/mutex.hpp

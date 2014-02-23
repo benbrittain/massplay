@@ -20,6 +20,7 @@
 #include <websocketpp/config/asio_no_tls.hpp>
 
 #include <iostream>
+#include <fstream>
 
 #include <boost/thread.hpp>
 #include <boost/thread/mutex.hpp>
@@ -1099,7 +1100,7 @@ void sdlInitVideo() {
   screenWidth = destWidth;
   screenHeight = destHeight;
 
-  surface = SDL_SetVideoMode(screenWidth, screenHeight, 0, flags);
+  surface = SDL_SetVideoMode(screenWidth, screenHeight, 24, flags);
 
   if(surface == NULL) {
     systemMessage(0, "Failed to set video mode");
@@ -1764,39 +1765,6 @@ void handleRewinds()
 		// for the rest of the code, rewindTopPos will be where the newest rewind got stored
 	}
 }
-SDL_Surface *LoadXBM(SDL_Surface *screen, int w, int h, Uint8 *bits) {
-  SDL_Surface *bitmap;
-  Uint8 *line;
-
-  /* Allocate the bitmap */
-  bitmap = SDL_CreateRGBSurface(SDL_SWSURFACE, w, h, 1, 0, 0, 0, 0);
-  if ( bitmap == NULL ) {
-    fprintf(stderr, "Couldn't allocate bitmap: %s\n",
-        SDL_GetError());
-    return(NULL);
-  }
-
-  /* Copy the pixels */
-  line = (Uint8 *)bitmap->pixels;
-  w = (w+7)/8;
-  while ( h-- ) {
-    memcpy(line, bits, w);
-    /* X11 Bitmap images have the bits reversed */
-    { int i, j; Uint8 *buf, byte;
-      for ( buf=line, i=0; i<w; ++i, ++buf ) {
-        byte = *buf;
-        *buf = 0;
-        for ( j=7; j>=0; --j ) {
-          *buf |= (byte&0x01)<<j;
-          byte >>= 1;
-        }
-      }
-    }
-    line += bitmap->pitch;
-    bits += w;
-  }
-  return(bitmap);
-}
 //
 //enum action_type {
 //    SUBSCRIBE,
@@ -1997,17 +1965,7 @@ struct socket_config : public websocketpp::config::asio {
 
 //server socket_server;// server_instance;
 
-//void send_frame(u8* a_frame) {
-//  std::cout << "GOT A FRAME" << std::endl;
-//  websocketpp::lib::error_code ec;
-//  unique_lock<mutex> lock(action_lock);
-//  con_list::iterator it;
-////  std::cout << connections << std::endl;
-//  for (it = connections.begin(); it != connections.end(); ++it) {
 //    server::message_ptr msg;
-//////    for(int i = 0; i < sizeof(a_frame); i++){
-//////      std::cout << a_frame[i] << std::endl;
-//////    }
 //    msg->set_opcode(websocketpp::frame::opcode::BINARY);
 //    msg->set_payload(a_frame, sizeof(a_frame));
 //  }
@@ -2045,7 +2003,7 @@ class websocket_server {
       lock.unlock();
     }
 
-    void send_frame(u8* a_frame) {
+    void send_frame(char* a_frame) {
       unique_lock<mutex> lock(m_action_lock);
       std::cout << "GOT A FRAME" << std::endl;
       websocketpp::lib::error_code ec;
@@ -2058,7 +2016,11 @@ class websocket_server {
 
       con_list::iterator it;
       for (it = m_connections.begin(); it != m_connections.end(); ++it) {
-        message_type::ptr msg = manager->get_message(websocketpp::frame::opcode::BINARY, sizeof(a_frame));
+        message_type::ptr msg = manager->get_message(websocketpp::frame::opcode::BINARY, 240*160*3*sizeof(char));
+//        for(int i = 0; i < sizeof(a_frame); i++){
+//          std::cout << a_frame[i] << std::endl;
+//        }
+        msg->set_payload(a_frame, 240*160*3*sizeof(char));
         ////    for(int i = 0; i < sizeof(a_frame); i++){
         ////      std::cout << a_frame[i] << std::endl;
         ////    }
@@ -2688,7 +2650,26 @@ void systemDrawScreen()
 
   screen = (u8*)surface->pixels;
 
-  socket_server.send_frame(screen);
+  char bitmap[240*160*24];
+  SDL_RWops *rw;
+
+  rw = SDL_RWFromMem(bitmap, sizeof(bitmap));
+//  SDL_SaveBMP(surface, "output.bmp");
+  SDL_Surface *temp;
+  temp = SDL_LoadBMP("output.bmp");
+
+  //Convert the surface to the appropriate display format
+  surface = SDL_DisplayFormat(temp);
+  SDL_FreeSurface(temp);
+  SDL_SaveBMP_RW(surface, rw, 0);
+  std::cout << bitmap[0] << std::endl;
+  std::cout << bitmap[1] << std::endl;
+
+
+  //
+  //  SDL_SaveBMP_RW(image_surface, SDL_RWFromMem(scrap_buffer, scraplen), 1);
+
+  socket_server.send_frame(bitmap);
 
 
   SDL_LockSurface(surface);
